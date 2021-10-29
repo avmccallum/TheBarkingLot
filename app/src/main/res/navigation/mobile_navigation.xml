@@ -19,4 +19,9 @@
         android:name="com.ashleymccallum.thebarkinglot.SurveyFragment"
         android:label="@string/menu_survey"
         tools:layout="@layout/fragment_survey" />
+    <fragment
+        android:id="@+id/nav_resources"
+        android:name="com.ashleymccallum.thebarkinglot.ResourcesFragment"
+        android:label="fragment_resources"
+        tools:layout="@layout/fragment_resources" />
 </navigation>
