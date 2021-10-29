@@ -9,4 +9,9 @@
         android:name="com.ashleymccallum.thebarkinglot.HomeFragment"
         android:label="@string/store_name"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.ashleymccallum.thebarkinglot.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" />
 </navigation>
