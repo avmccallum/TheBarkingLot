@@ -10,9 +10,10 @@
     <string name="menu_home">Home</string>
     <string name="store_name">The Barking Lot</string>
     <string name="emergency_services">FIND EMERGENCY PET CARE</string>
+    <string name="emergency_title">Need Help Urgently?</string>
     <string name="home_intro">Who We Are</string>
-    <string name="mission_statement">The Barking Lot is a Windsor/Essex County pet rescue and
+    <string name="mission_statement">\t\tThe Barking Lot is a Windsor/Essex County pet rescue and
         fostering agency. We are dedicated to providing compassionate care to pets and assistance
-        to pet owners.</string>
+        to pet owners. </string>
 
 </resources>
