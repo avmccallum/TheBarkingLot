@@ -28,12 +28,11 @@
     <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
     <string name="map_button">View on map</string>
 
-
     <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
     <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
         lifestyle. Keep in mind this is just a recommendation, and there are a lot of factors that
         should be considered when adopting or fostering an animal. Visit our website to see all
-        the animals we have available!</string>
+        the animals we have available, or contact us to chat with a pet expert!</string>
     <string name="quiz_start_button">Begin the quiz</string>
 
 </resources>
