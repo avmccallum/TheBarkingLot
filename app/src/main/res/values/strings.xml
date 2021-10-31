@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TheBarkingLot</string>
+    <string name="app_name">The Barking Lot</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -13,16 +13,21 @@
     <string name="menu_resources">Resources</string>
     <string name="menu_credits">Credits</string>
 
-
-    <string name="store_name">The Barking Lot</string>
     <string name="emergency_services">FIND EMERGENCY PET CARE</string>
     <string name="emergency_title">Need Help Urgently?</string>
     <string name="home_intro">Who We Are</string>
     <string name="mission_statement">\t\tThe Barking Lot is a Windsor/Essex County pet rescue and
         fostering agency. We are dedicated to providing compassionate care to pets and assistance
         to pet owners. </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="contact_message">Have questions?</string>
+    <string name="contact_message_2">Reach us by phone or email:</string>
+    <string name="phone_button">Phone</string>
+    <string name="email_button">Email</string>
+    <string name="address_message">Come visit us and our furry friends:</string>
+    <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
+    <string name="map_button">View on map</string>
+
 
     <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
     <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
