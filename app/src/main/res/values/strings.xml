@@ -24,4 +24,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
+    <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
+        lifestyle. Keep in mind this is just a recommendation, and there are a lot of factors that
+        should be considered when adopting or fostering an animal. Visit our website to see all
+        the animals we have available!</string>
+    <string name="quiz_start_button">Begin the quiz</string>
+
 </resources>
