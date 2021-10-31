@@ -3,19 +3,17 @@ package com.ashleymccallum.thebarkinglot;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SurveyFragment#newInstance} factory method to
+ * Use the {@link PetSurveyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SurveyFragment extends Fragment {
+public class PetSurveyFragment extends Fragment {
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -24,7 +22,7 @@ public class SurveyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SurveyFragment() {
+    public PetSurveyFragment() {
         // Required empty public constructor
     }
 
@@ -34,10 +32,10 @@ public class SurveyFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SurveyFragment.
+     * @return A new instance of fragment PetSurveyFragment.
      */
-    public static SurveyFragment newInstance(String param1, String param2) {
-        SurveyFragment fragment = new SurveyFragment();
+    public static PetSurveyFragment newInstance(String param1, String param2) {
+        PetSurveyFragment fragment = new PetSurveyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,15 +56,6 @@ public class SurveyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_survey, container, false);
-        //TODO - add image slideshow of possible pet results??
-        Button beginButton = view.findViewById(R.id.quizButton);
-        beginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_nav_survey_to_petSurveyFragment);
-            }
-        });
-        return view;
+        return inflater.inflate(R.layout.fragment_pet_survey, container, false);
     }
 }
