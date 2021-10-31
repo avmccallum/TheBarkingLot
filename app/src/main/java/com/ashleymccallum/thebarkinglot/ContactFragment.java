@@ -1,5 +1,8 @@
 package com.ashleymccallum.thebarkinglot;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +10,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,12 +21,10 @@ import android.view.ViewGroup;
  */
 public class ContactFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -36,7 +40,6 @@ public class ContactFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment ContactFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static ContactFragment newInstance(String param1, String param2) {
         ContactFragment fragment = new ContactFragment();
         Bundle args = new Bundle();
@@ -59,6 +62,47 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+        Button phoneButton = view.findViewById(R.id.phoneButton);
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:5191234567"));
+                try {
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+        Button emailButton = view.findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
+                i.putExtra(Intent.EXTRA_EMAIL, new String[] {"contact@thebarkinglot.ca"});
+                try {
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                }
+                //TODO - test this intent, emulator does not have an email app?
+            }
+        });
+        Button mapButton = view.findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri location = Uri.parse("geo:0,0?q=42.271614841603736,-82.92161566608964(The Barking Lot)");
+                //TODO - label not working for map location
+                Intent i = new Intent(Intent.ACTION_VIEW, location);
+                try {
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return view;
     }
 }
