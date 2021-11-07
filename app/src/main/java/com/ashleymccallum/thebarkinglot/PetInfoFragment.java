@@ -3,10 +3,17 @@ package com.ashleymccallum.thebarkinglot;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.ashleymccallum.thebarkinglot.RecyclerView.CustomRecyclerViewAdapter;
+import com.ashleymccallum.thebarkinglot.RecyclerView.PetInfo;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,12 +22,10 @@ import android.view.ViewGroup;
  */
 public class PetInfoFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -36,7 +41,6 @@ public class PetInfoFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment PetInfoFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static PetInfoFragment newInstance(String param1, String param2) {
         PetInfoFragment fragment = new PetInfoFragment();
         Bundle args = new Bundle();
@@ -59,6 +63,18 @@ public class PetInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pet_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_pet_info, container, false);
+        ArrayList<PetInfo> pets = new ArrayList<>();
+        pets.add(new PetInfo(getString(R.string.kitten), R.drawable.cat_young));
+//        pets.add(new PetInfo());
+//        pets.add(new PetInfo());
+//        pets.add(new PetInfo());
+//        pets.add(new PetInfo());
+//        pets.add(new PetInfo());
+//        pets.add(new PetInfo());
+        RecyclerView petInfoRecycler = view.findViewById(R.id.petInfoRecycler);
+        petInfoRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        petInfoRecycler.setAdapter(new CustomRecyclerViewAdapter(pets));
+        return view;
     }
 }
