@@ -35,6 +35,12 @@
         the animals we have available, or contact us to chat with a pet expert!</string>
     <string name="quiz_start_button">Begin the quiz</string>
 
+    <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
+    <string name="credit_item1">Assets</string>
+    <string name="credit_info1">Animal images and logos created by me</string>
+
+    <string name="hello_blank_fragment">aksjdhaksj</string>
+
     <string name="resource1">Emergency Animal Hospitals</string>
     <string name="resourceLink1">emergency+animal+hospital</string>
     <string name="resource2">Veterinary Clinics</string>
@@ -45,6 +51,5 @@
     <string name="resourceLink4">pet+supplies+near+me</string>
     <string name="resource5">Animal Information</string>
 
-    <string name="hello_blank_fragment">akjfhakjfh</string>
 
 </resources>

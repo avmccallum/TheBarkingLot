@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link CreditsFragment#newInstance} factory method to
@@ -57,5 +58,6 @@ public class CreditsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_credits, container, false);
+
     }
 }
