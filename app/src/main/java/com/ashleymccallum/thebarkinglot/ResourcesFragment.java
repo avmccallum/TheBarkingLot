@@ -7,6 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import com.ashleymccallum.thebarkinglot.ListView.CustomListViewAdapter;
+import com.ashleymccallum.thebarkinglot.ListView.Resource;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,6 +62,15 @@ public class ResourcesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_resources, container, false);
+        View view = inflater.inflate(R.layout.fragment_resources, container, false);
+        ListView resourceList = view.findViewById(R.id.resourceList);
+        ArrayList<Resource> resources = new ArrayList<>();
+        resources.add(new Resource(getString(R.string.resource1), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink1)));
+        resources.add(new Resource(getString(R.string.resource2), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink2)));
+        resources.add(new Resource(getString(R.string.resource3), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink3)));
+        resources.add(new Resource(getString(R.string.resource4), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink4)));
+        resources.add(new Resource(getString(R.string.resource5), R.drawable.ic_launcher_foreground));
+        resourceList.setAdapter(new CustomListViewAdapter(getContext(), resources));
+        return view;
     }
 }
