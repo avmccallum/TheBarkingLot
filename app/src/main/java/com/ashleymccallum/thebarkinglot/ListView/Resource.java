@@ -11,6 +11,11 @@ public class Resource {
         this.resourceLink = resourceLink;
     }
 
+    public Resource(String resourceItem, int resourceImage) {
+        this.resourceItem = resourceItem;
+        this.resourceImage = resourceImage;
+    }
+
     public String getResourceItem() {
         return resourceItem;
     }

@@ -65,11 +65,11 @@ public class ResourcesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_resources, container, false);
         ListView resourceList = view.findViewById(R.id.resourceList);
         ArrayList<Resource> resources = new ArrayList<>();
-//        resources.add(new Resource(getString(R.string.resource1), R.drawable.ic_launcher_foreground));
-//        resources.add(new Resource(getString(R.string.resource2), R.drawable.ic_launcher_foreground));
-//        resources.add(new Resource(getString(R.string.resource3), R.drawable.ic_launcher_foreground));
-//        resources.add(new Resource(getString(R.string.resource4), R.drawable.ic_launcher_foreground));
-//        resources.add(new Resource(getString(R.string.resource5), R.drawable.ic_launcher_foreground));
+        resources.add(new Resource(getString(R.string.resource1), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink1)));
+        resources.add(new Resource(getString(R.string.resource2), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink2)));
+        resources.add(new Resource(getString(R.string.resource3), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink3)));
+        resources.add(new Resource(getString(R.string.resource4), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink4)));
+        resources.add(new Resource(getString(R.string.resource5), R.drawable.ic_launcher_foreground));
         resourceList.setAdapter(new CustomListViewAdapter(getContext(), resources));
         return view;
     }
