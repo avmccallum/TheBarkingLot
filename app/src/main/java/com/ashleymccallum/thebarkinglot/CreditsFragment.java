@@ -7,11 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
-import com.ashleymccallum.thebarkinglot.ListView.Credits;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,10 +57,7 @@ public class CreditsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_credits, container, false);
-        ListView creditsList = view.findViewById(R.id.creditsList);
-        ArrayList<Credits> credits = new ArrayList<>();
-        credits.add(new Credits())
-        return view;
+        return inflater.inflate(R.layout.fragment_credits, container, false);
+
     }
 }
