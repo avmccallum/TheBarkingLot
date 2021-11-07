@@ -5,12 +5,14 @@ public class PetInfo {
     private int petImage;
     private String description;
     private String petLink;
+    private String petButtonName;
 
-    public PetInfo(String petName, int petImage, String description, String petLink) {
+    public PetInfo(String petName, int petImage, String description, String petLink, String petButtonName) {
         this.petName = petName;
         this.petImage = petImage;
         this.description = description;
         this.petLink = petLink;
+        this.petButtonName = petButtonName;
     }
 
     public String getPetName() {
@@ -43,5 +45,13 @@ public class PetInfo {
 
     public void setPetLink(String petLink) {
         this.petLink = petLink;
+    }
+
+    public String getPetButtonName() {
+        return petButtonName;
+    }
+
+    public void setPetButtonName(String petButtonName) {
+        this.petButtonName = petButtonName;
     }
 }

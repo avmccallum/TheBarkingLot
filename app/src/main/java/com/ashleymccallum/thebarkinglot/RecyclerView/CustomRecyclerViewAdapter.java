@@ -40,6 +40,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         holder.petName.setText(pet.getPetName());
         holder.petImage.setImageResource(pet.getPetImage());
         holder.petDesc.setText(pet.getDescription());
+        holder.petListButton.setText(pet.getPetButtonName());
         holder.petListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
