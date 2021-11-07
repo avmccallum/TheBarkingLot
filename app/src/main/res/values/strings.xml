@@ -2,8 +2,16 @@
     <string name="app_name">The Barking Lot</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_desc">The Barking Lot logo</string>
     <string name="action_settings">Settings</string>
+
+    <string name="nav_header_desc">The Barking Lot logo</string>
+    <string name="kitten_img_desc">Cartoon image of a kitten</string>
+    <string name="cat_img_desc">Cartoon image of a cat</string>
+    <string name="elderly_cat_img_desc">Cartoon image of an elderly cat</string>
+    <string name="puppy_img_desc">Cartoon image of a puppy</string>
+    <string name="dog_img_desc">Cartoon image of a dog</string>
+    <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
+    <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact Us</string>

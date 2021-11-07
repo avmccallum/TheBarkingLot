@@ -6,13 +6,15 @@ public class PetInfo {
     private String description;
     private String petLink;
     private String petButtonName;
+    private String petImageDesc;
 
-    public PetInfo(String petName, int petImage, String description, String petLink, String petButtonName) {
+    public PetInfo(String petName, int petImage, String description, String petLink, String petButtonName, String petImageDesc) {
         this.petName = petName;
         this.petImage = petImage;
         this.description = description;
         this.petLink = petLink;
         this.petButtonName = petButtonName;
+        this.petImageDesc = petImageDesc;
     }
 
     public String getPetName() {
@@ -53,5 +55,13 @@ public class PetInfo {
 
     public void setPetButtonName(String petButtonName) {
         this.petButtonName = petButtonName;
+    }
+
+    public String getPetImageDesc() {
+        return petImageDesc;
+    }
+
+    public void setPetImageDesc(String petImageDesc) {
+        this.petImageDesc = petImageDesc;
     }
 }
