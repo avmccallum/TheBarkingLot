@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.ashleymccallum.thebarkinglot.ListView.Credits;
+
 import java.util.ArrayList;
 
 /**
@@ -61,8 +63,8 @@ public class CreditsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_credits, container, false);
         ListView creditsList = view.findViewById(R.id.creditsList);
-        ArrayList<String> credits = new ArrayList<>();
-
+        ArrayList<Credits> credits = new ArrayList<>();
+        credits.add(new Credits())
         return view;
     }
 }
