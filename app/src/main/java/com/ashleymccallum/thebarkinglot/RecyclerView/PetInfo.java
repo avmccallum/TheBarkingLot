@@ -13,11 +13,6 @@ public class PetInfo {
         this.petLink = petLink;
     }
 
-    public PetInfo(String petName, int petImage) {
-        this.petName = petName;
-        this.petImage = petImage;
-    }
-
     public String getPetName() {
         return petName;
     }

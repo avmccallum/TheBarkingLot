@@ -65,7 +65,7 @@ public class PetInfoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_info, container, false);
         ArrayList<PetInfo> pets = new ArrayList<>();
-        pets.add(new PetInfo(getString(R.string.kitten), R.drawable.cat_young));
+        pets.add(new PetInfo(getString(R.string.kitten), R.drawable.cat_young, getString(R.string.kitten_desc), getString(R.string.kitten_link)));
 //        pets.add(new PetInfo());
 //        pets.add(new PetInfo());
 //        pets.add(new PetInfo());
