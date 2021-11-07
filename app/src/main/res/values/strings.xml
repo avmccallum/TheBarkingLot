@@ -41,4 +41,15 @@
 
     <string name="hello_blank_fragment">aksjdhaksj</string>
 
+    <string name="resource1">Emergency Animal Hospitals</string>
+    <string name="resourceLink1">emergency+animal+hospital</string>
+    <string name="resource2">Veterinary Clinics</string>
+    <string name="resourceLink2">vet+clinic+near+me</string>
+    <string name="resource3">Grooming Services</string>
+    <string name="resourceLink3">pet+grooming+near+me</string>
+    <string name="resource4">Supply Retailers</string>
+    <string name="resourceLink4">pet+supplies+near+me</string>
+    <string name="resource5">Animal Information</string>
+
+
 </resources>
