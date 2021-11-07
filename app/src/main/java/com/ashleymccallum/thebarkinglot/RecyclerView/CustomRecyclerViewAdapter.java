@@ -4,6 +4,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ import com.ashleymccallum.thebarkinglot.R;
 
 import java.util.ArrayList;
 
-public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> implements View.OnClickListener {
+public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> {
     private ArrayList<PetInfo> pets;
 
     public CustomRecyclerViewAdapter(ArrayList<PetInfo> pets) {
@@ -33,6 +34,13 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         PetInfo pet = pets.get(position);
         holder.petName.setText(pet.getPetName());
         holder.petImage.setImageResource(pet.getPetImage());
+        holder.petDesc.setText(pet.getDescription());
+        holder.petListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO - add button intent
+            }
+        });
     }
 
     @Override
@@ -42,20 +50,19 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         }
         return 0;
     }
-
-    @Override
-    public void onClick (View view) {
-        Log.d("*****************", "click working");
-    }
 }
 
 class CustomViewHolder extends RecyclerView.ViewHolder {
     protected TextView petName;
     protected ImageView petImage;
+    protected TextView petDesc;
+    protected Button petListButton;
 
     public CustomViewHolder(@NonNull View itemView) {
         super(itemView);
         this.petName = itemView.findViewById(R.id.petListName);
         this.petImage = itemView.findViewById(R.id.petInfoImage);
+        this.petDesc = itemView.findViewById(R.id.petListDesc);
+        this.petListButton = itemView.findViewById(R.id.petListButton);
     }
 }

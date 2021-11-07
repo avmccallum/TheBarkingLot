@@ -50,11 +50,32 @@
     <string name="resource5">Animal Information</string>
 
     <string name="kitten">Kittens</string>
+    <string name="kitten_desc">**KITTEN DESC HERE**</string>
+    <string name="kitten_link"></string>
+    <string name="kitten_button">Visit our website to see our kittens!</string>
     <string name="cat_adult">Adult Cats</string>
+    <string name="cat_adult_desc">**CAT DESC HERE**</string>
+    <string name="cat_adult_link"></string>
+    <string name="cat_adult_button">Visit our website to see our cats!</string>
     <string name="cat_elderly">Elderly Cats</string>
+    <string name="cat_elderly_desc">**ELDERLY CAT DESC HERE**</string>
+    <string name="cat_elderly_link"></string>
+    <string name="cat_elderly_button">Visit our website to see our elderly cats!</string>
     <string name="puppy">Puppies</string>
+    <string name="puppy_desc">**PUPPY DESC HERE**</string>
+    <string name="puppy_link"></string>
+    <string name="puppy_button">Visit our website to see our puppies!</string>
     <string name="dog_adult">Adult Dogs</string>
+    <string name="dog_adult_desc">**DOG DESC HERE**</string>
+    <string name="dog_adult_link"></string>
+    <string name="dog_adult_button">Visit our website to see our dogs!</string>
     <string name="dog_elderly">Elderly Dogs</string>
+    <string name="dog_elderly_desc">**ELDERLY DOG DESC HERE**</string>
+    <string name="dog_elderly_link"></string>
+    <string name="dog_elderly_button">Visit our website to see our elderly dogs!</string>
     <string name="misc_pets">Other Pets</string>
+    <string name="misc_pet_desc">**MISC PET DESC HERE**</string>
+    <string name="misc_pet_link"></string>
+    <string name="misc_pet_button">Visit our website to see all our other pets!</string>
 
 </resources>
