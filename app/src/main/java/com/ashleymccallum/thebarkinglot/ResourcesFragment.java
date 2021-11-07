@@ -9,6 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.ashleymccallum.thebarkinglot.ListView.CustomListViewAdapter;
+import com.ashleymccallum.thebarkinglot.ListView.Resource;
+
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ResourcesFragment#newInstance} factory method to
@@ -58,6 +63,14 @@ public class ResourcesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_resources, container, false);
-//        ListView resourceList = view.findViewById(R.id.)
+        ListView resourceList = view.findViewById(R.id.resourceList);
+        ArrayList<Resource> resources = new ArrayList<>();
+//        resources.add(new Resource(getString(R.string.resource1), R.drawable.ic_launcher_foreground));
+//        resources.add(new Resource(getString(R.string.resource2), R.drawable.ic_launcher_foreground));
+//        resources.add(new Resource(getString(R.string.resource3), R.drawable.ic_launcher_foreground));
+//        resources.add(new Resource(getString(R.string.resource4), R.drawable.ic_launcher_foreground));
+//        resources.add(new Resource(getString(R.string.resource5), R.drawable.ic_launcher_foreground));
+        resourceList.setAdapter(new CustomListViewAdapter(getContext(), resources));
+        return view;
     }
 }

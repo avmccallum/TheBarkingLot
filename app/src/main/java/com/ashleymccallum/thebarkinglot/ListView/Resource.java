@@ -1,27 +1,37 @@
 package com.ashleymccallum.thebarkinglot.ListView;
 
 public class Resource {
-    private String item;
-    private int image;
+    private String resourceItem;
+    private int resourceImage;
+    private String resourceLink;
 
-    public Resource(String item, int image) {
-        this.item = item;
-        this.image = image;
+    public Resource(String resourceItem, int resourceImage, String resourceLink) {
+        this.resourceItem = resourceItem;
+        this.resourceImage = resourceImage;
+        this.resourceLink = resourceLink;
     }
 
-    public String getItem() {
-        return item;
+    public String getResourceItem() {
+        return resourceItem;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setResourceItem(String resourceItem) {
+        this.resourceItem = resourceItem;
     }
 
-    public int getImage() {
-        return image;
+    public int getResourceImage() {
+        return resourceImage;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setResourceImage(int resourceImage) {
+        this.resourceImage = resourceImage;
+    }
+
+    public String getResourceLink() {
+        return resourceLink;
+    }
+
+    public void setResourceLink(String resourceLink) {
+        this.resourceLink = resourceLink;
     }
 }

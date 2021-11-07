@@ -35,4 +35,12 @@
         the animals we have available, or contact us to chat with a pet expert!</string>
     <string name="quiz_start_button">Begin the quiz</string>
 
+    <string name="resource1">Emergency Animal Hospitals</string>
+    <string name="resource2">Veterinary Clinics</string>
+    <string name="resource3">Grooming Services</string>
+    <string name="resource4">Supply Retailers</string>
+    <string name="resource5">Animal Information</string>
+
+    <string name="hello_blank_fragment">akjfhakjfh</string>
+
 </resources>

@@ -1,6 +1,8 @@
 package com.ashleymccallum.thebarkinglot.ListView;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +30,20 @@ public class CustomListViewAdapter extends ArrayAdapter<Resource> {
         }
         ImageView image = convertView.findViewById(R.id.resourceImage);
         TextView text = convertView.findViewById(R.id.resourceText);
-        image.setImageResource(getItem(position).getImage());
-        text.setText(getItem(position).getItem());
+        image.setImageResource(getItem(position).getResourceImage());
+        text.setText(getItem(position).getResourceItem());
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(text.getText() != getContext().getString(R.string.resource5)) {
+                    Uri location = Uri.parse("geo:0,0?q=" + getItem(position).getResourceLink());
+                    Intent i = new Intent(Intent.ACTION_VIEW, location);
+                } else {
+                    
+                }
+            }
+        });
         return convertView;
     }
 }
