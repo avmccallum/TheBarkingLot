@@ -4,6 +4,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Content descriptions -->
     <string name="nav_header_desc">The Barking Lot logo</string>
     <string name="kitten_img_desc">Cartoon image of a kitten</string>
     <string name="cat_img_desc">Cartoon image of a cat</string>
@@ -13,12 +14,14 @@
     <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
     <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
 
+    <!-- Main navigation -->
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact Us</string>
     <string name="menu_survey">PetMatcher Quiz</string>
     <string name="menu_resources">Resources</string>
     <string name="menu_credits">Credits</string>
 
+    <!-- Home page -->
     <string name="emergency_services">FIND EMERGENCY PET CARE</string>
     <string name="emergency_title">Need Help Urgently?</string>
     <string name="home_intro">Who We Are</string>
@@ -26,6 +29,7 @@
         fostering agency. We are dedicated to providing compassionate care to pets and assistance
         to pet owners. </string>
 
+    <!-- Contact info -->
     <string name="contact_message">Have questions?</string>
     <string name="contact_message_2">Reach us by phone or email:</string>
     <string name="phone_button">Phone</string>
@@ -34,19 +38,14 @@
     <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
     <string name="map_button">View on map</string>
 
-    <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
-    <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
-        lifestyle. Keep in mind this is just a recommendation, and there are a lot of factors that
-        should be considered when adopting or fostering an animal. Visit our website to see all
-        the animals we have available, or contact us to chat with a pet expert!</string>
-    <string name="quiz_start_button">Begin the quiz</string>
-
+    <!-- Credits -->
     <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
     <string name="credit_item1">Assets</string>
     <string name="credit_info1">Animal images and logos created by me</string>
 
     <string name="hello_blank_fragment">aksjdhaksj</string>
 
+    <!-- Resources -->
     <string name="resource1">Emergency Animal Hospitals</string>
     <string name="resourceLink1">emergency+animal+hospital</string>
     <string name="resource2">Veterinary Clinics</string>
@@ -57,6 +56,7 @@
     <string name="resourceLink4">pet+supplies+near+me</string>
     <string name="resource5">Animal Information</string>
 
+    <!-- Pet names, links, descriptions -->
     <string name="kitten">Kittens</string>
     <string name="kitten_desc">**KITTEN DESC HERE**</string>
     <string name="kitten_link">https://www.google.com/search?q=kitten</string>
@@ -86,4 +86,24 @@
     <string name="misc_pet_link">https://www.google.com/search?q=other+pets</string>
     <string name="misc_pet_button">Visit our website to see all our other pets!</string>
 
+    <!-- Pet survey intro -->
+    <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
+    <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
+        lifestyle. Keep in mind this is just a recommendation, and there are a lot of factors that
+        should be considered when adopting or fostering an animal. Visit our website to see all
+        the animals we have available, or contact us to chat with a pet expert!</string>
+    <string name="quiz_start_button">Begin the quiz</string>
+
+    <!-- Pet survey questions -->
+    <string name="q_hours_free">How many hours of free time do you usually have?</string>
+    <string name="q_activity">How active are you? (Or how active do you want to be?)</string>
+    <string name="q_activity_1">Inactive</string>
+    <string name="q_activity_2">Moderately active</string>
+    <string name="q_activity_3">Very active</string>
+    <string name="q_grooming">Are you okay with regular grooming?</string>
+    <string name="q_grooming_1"></string>
+    <string name="q_grooming_2"></string>
+    <string name="q_grooming_3"></string>
+    <string name="q_looking_for">What are you looking for?</string>
+    <string name="submit_quiz">Submit</string>
 </resources>
