@@ -96,6 +96,7 @@
 
     <!-- Pet survey questions -->
     <string name="q_hours_free">How many hours of free time do you usually have?</string>
+    <string name="q_hours_hint">Enter hours</string>
     <string name="q_activity">How active are you? (Or how active do you want to be?)</string>
     <string name="q_activity_1">Inactive</string>
     <string name="q_activity_2">Moderately active</string>

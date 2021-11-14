@@ -95,6 +95,9 @@
         android:id="@+id/hoursInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/q_hours_hint"
+        android:inputType="number"
+        android:padding="@dimen/button_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
