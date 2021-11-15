@@ -21,47 +21,23 @@ public class PetInfo {
         return petName;
     }
 
-    public void setPetName(String petName) {
-        this.petName = petName;
-    }
-
     public int getPetImage() {
         return petImage;
-    }
-
-    public void setPetImage(int petImage) {
-        this.petImage = petImage;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getPetLink() {
         return petLink;
-    }
-
-    public void setPetLink(String petLink) {
-        this.petLink = petLink;
     }
 
     public String getPetButtonName() {
         return petButtonName;
     }
 
-    public void setPetButtonName(String petButtonName) {
-        this.petButtonName = petButtonName;
-    }
-
     public String getPetImageDesc() {
         return petImageDesc;
-    }
-
-    public void setPetImageDesc(String petImageDesc) {
-        this.petImageDesc = petImageDesc;
     }
 }

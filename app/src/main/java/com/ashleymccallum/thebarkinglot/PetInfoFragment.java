@@ -64,14 +64,7 @@ public class PetInfoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_info, container, false);
-        ArrayList<PetInfo> pets = new ArrayList<>();
-        pets.add(new PetInfo(getString(R.string.kitten), R.drawable.cat_young, getString(R.string.kitten_desc), getString(R.string.kitten_link), getString(R.string.kitten_button), getString(R.string.kitten_img_desc)));
-        pets.add(new PetInfo(getString(R.string.cat_adult), R.drawable.cat_adult, getString(R.string.cat_adult_desc), getString(R.string.cat_adult_link), getString(R.string.cat_adult_button), getString(R.string.cat_img_desc)));
-        pets.add(new PetInfo(getString(R.string.cat_elderly), R.drawable.cat_elderly, getString(R.string.cat_elderly_desc), getString(R.string.cat_elderly_link), getString(R.string.cat_elderly_button), getString(R.string.elderly_cat_img_desc)));
-        pets.add(new PetInfo(getString(R.string.puppy), R.drawable.dog_young, getString(R.string.puppy_desc), getString(R.string.puppy_link), getString(R.string.puppy_button), getString(R.string.puppy_img_desc)));
-        pets.add(new PetInfo(getString(R.string.dog_adult), R.drawable.dog_adult, getString(R.string.dog_adult_desc), getString(R.string.dog_adult_link), getString(R.string.dog_adult_button), getString(R.string.dog_img_desc)));
-        pets.add(new PetInfo(getString(R.string.dog_elderly), R.drawable.dog_elderly, getString(R.string.dog_elderly_desc), getString(R.string.dog_elderly_link), getString(R.string.dog_elderly_button), getString(R.string.elderly_dog_img_desc)));
-        pets.add(new PetInfo(getString(R.string.misc_pets), R.drawable.misc_pets, getString(R.string.misc_pet_desc), getString(R.string.misc_pet_link), getString(R.string.misc_pet_button), getString(R.string.misc_pet_img_desc)));
+        ArrayList<PetInfo> pets = Pet.addPetInfo(getContext());
         RecyclerView petInfoRecycler = view.findViewById(R.id.petInfoRecycler);
         petInfoRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         petInfoRecycler.setAdapter(new CustomRecyclerViewAdapter(pets));
