@@ -1,20 +1,28 @@
-package com.ashleymccallum.thebarkinglot;
+package com.ashleymccallum.thebarkinglot.Fragments;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ashleymccallum.thebarkinglot.PetProperty;
+import com.ashleymccallum.thebarkinglot.R;
+import com.ashleymccallum.thebarkinglot.RecyclerView.CustomRecyclerViewAdapter;
+import com.ashleymccallum.thebarkinglot.PetInfo;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CreditsFragment#newInstance} factory method to
+ * Use the {@link PetInfoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CreditsFragment extends Fragment {
+public class PetInfoFragment extends Fragment {
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -23,7 +31,7 @@ public class CreditsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CreditsFragment() {
+    public PetInfoFragment() {
         // Required empty public constructor
     }
 
@@ -33,10 +41,10 @@ public class CreditsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CreditsFragment.
+     * @return A new instance of fragment PetInfoFragment.
      */
-    public static CreditsFragment newInstance(String param1, String param2) {
-        CreditsFragment fragment = new CreditsFragment();
+    public static PetInfoFragment newInstance(String param1, String param2) {
+        PetInfoFragment fragment = new PetInfoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,7 +65,11 @@ public class CreditsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_credits, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_pet_info, container, false);
+        ArrayList<PetInfo> pets = PetProperty.addPetInfo(getContext());
+        RecyclerView petInfoRecycler = view.findViewById(R.id.petInfoRecycler);
+        petInfoRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        petInfoRecycler.setAdapter(new CustomRecyclerViewAdapter(pets));
+        return view;
     }
 }

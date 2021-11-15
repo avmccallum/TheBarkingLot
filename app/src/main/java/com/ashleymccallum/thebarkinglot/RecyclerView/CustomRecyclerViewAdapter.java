@@ -3,7 +3,6 @@ package com.ashleymccallum.thebarkinglot.RecyclerView;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +13,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ashleymccallum.thebarkinglot.PetInfo;
 import com.ashleymccallum.thebarkinglot.R;
-import com.google.android.material.snackbar.Snackbar;
 
-import java.net.URI;
 import java.util.ArrayList;
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> {

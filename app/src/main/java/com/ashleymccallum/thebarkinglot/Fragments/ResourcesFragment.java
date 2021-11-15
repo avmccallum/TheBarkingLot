@@ -1,4 +1,4 @@
-package com.ashleymccallum.thebarkinglot;
+package com.ashleymccallum.thebarkinglot.Fragments;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.ashleymccallum.thebarkinglot.ListView.CustomListViewAdapter;
 import com.ashleymccallum.thebarkinglot.ListView.Resource;
+import com.ashleymccallum.thebarkinglot.R;
 
 import java.util.ArrayList;
 

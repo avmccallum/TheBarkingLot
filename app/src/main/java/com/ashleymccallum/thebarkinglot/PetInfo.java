@@ -1,4 +1,4 @@
-package com.ashleymccallum.thebarkinglot.RecyclerView;
+package com.ashleymccallum.thebarkinglot;
 
 public class PetInfo {
     private String petName;
