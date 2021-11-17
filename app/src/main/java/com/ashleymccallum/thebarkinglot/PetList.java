@@ -8,12 +8,23 @@ import java.util.Map;
 
 public class PetList {
 
-//    private ArrayList<Pet> allPets;
-//
-//    public PetList(ArrayList<Pet> allPets) {
-//        this.allPets = allPets;
-//    }
+    public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
+        ArrayList<Pet> petResults = new ArrayList<>();
+        int propertyMatches = 0;
+        for(int i = 0; i < allPets.size(); i++) {
+            for(String property : searchPet.getPetProperties().keySet()) {
 
+            }
+        }
+        return petResults;
+    }
+
+
+    /**
+     * addAllPets initializes an arraylist of all pet options
+     * @param context allows use of String resources
+     * @return ArrayList of all pets
+     */
     public static ArrayList<Pet> addAllPets(Context context) {
         ArrayList<Pet> pets = new ArrayList<>();
         Map<String, String> properties = new HashMap<>();
@@ -21,9 +32,14 @@ public class PetList {
         properties.put("petDesc", context.getString(R.string.kitten_desc));
         properties.put("petLink", context.getString(R.string.kitten_link));
         properties.put("petButton", context.getString(R.string.kitten_button));
-        properties.put("petImgDesc", context.getString(R.string.kitten_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet kitten = new Pet(properties, R.drawable.cat_young);
+        Pet kitten = new Pet(properties, R.drawable.cat_young, 25);
         pets.add(kitten);
 
         properties.put("petName", context.getString(R.string.cat_adult));
@@ -31,8 +47,14 @@ public class PetList {
         properties.put("petLink", context.getString(R.string.cat_adult_link));
         properties.put("petButton", context.getString(R.string.cat_adult_button));
         properties.put("petImgDesc", context.getString(R.string.cat_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet catAdult = new Pet(properties, R.drawable.cat_adult);
+        Pet catAdult = new Pet(properties, R.drawable.cat_adult, 15);
         pets.add(catAdult);
 
         properties.put("petName", context.getString(R.string.cat_elderly));
@@ -40,8 +62,14 @@ public class PetList {
         properties.put("petLink", context.getString(R.string.cat_elderly_link));
         properties.put("petButton", context.getString(R.string.cat_elderly_button));
         properties.put("petImgDesc", context.getString(R.string.elderly_cat_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet catElderly = new Pet(properties, R.drawable.cat_elderly);
+        Pet catElderly = new Pet(properties, R.drawable.cat_elderly, 7);
         pets.add(catElderly);
 
         properties.put("petName", context.getString(R.string.puppy));
@@ -49,8 +77,14 @@ public class PetList {
         properties.put("petLink", context.getString(R.string.puppy_link));
         properties.put("petButton", context.getString(R.string.puppy_button));
         properties.put("petImgDesc", context.getString(R.string.puppy_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet puppy = new Pet(properties, R.drawable.dog_young);
+        Pet puppy = new Pet(properties, R.drawable.dog_young, 25);
         pets.add(puppy);
 
         properties.put("petName", context.getString(R.string.dog_adult));
@@ -58,8 +92,14 @@ public class PetList {
         properties.put("petLink", context.getString(R.string.dog_adult_link));
         properties.put("petButton", context.getString(R.string.dog_adult_button));
         properties.put("petImgDesc", context.getString(R.string.dog_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet dogAdult = new Pet(properties, R.drawable.dog_adult);
+        Pet dogAdult = new Pet(properties, R.drawable.dog_adult, 15);
         pets.add(dogAdult);
 
         properties.put("petName", context.getString(R.string.dog_elderly));
@@ -67,8 +107,14 @@ public class PetList {
         properties.put("petLink", context.getString(R.string.dog_elderly_link));
         properties.put("petButton", context.getString(R.string.dog_elderly_button));
         properties.put("petImgDesc", context.getString(R.string.elderly_dog_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet dogElderly = new Pet(properties, R.drawable.dog_elderly);
+        Pet dogElderly = new Pet(properties, R.drawable.dog_elderly, 15);
         pets.add(dogElderly);
 
         properties.put("petName", context.getString(R.string.misc_pets));
@@ -76,73 +122,17 @@ public class PetList {
         properties.put("petLink", context.getString(R.string.misc_pet_link));
         properties.put("petButton", context.getString(R.string.misc_pet_button));
         properties.put("petImgDesc", context.getString(R.string.misc_pet_img_desc));
+        properties.put("activityLevel", "");
+        properties.put("experienceRequired", "");
+        properties.put("enclosureRequired", "");
+        properties.put("outdoorRequired", "");
+        properties.put("companionType", "");
+        properties.put("groomingNeed", "");
 
-        Pet miscPets = new Pet(properties, R.drawable.misc_pets);
+        Pet miscPets = new Pet(properties, R.drawable.misc_pets, 7);
         pets.add(miscPets);
 
         return pets;
     }
 
-    public void matchProperty(PetList searchProperty) {
-        //TODO - add code to match pet property
-    }
-
-    /**
-     * addPetInfo creates an ArrayList of all possible pets
-     * @param context allows access to app resources
-     * @return ArrayList of PetInfo
-     */
-//    public static ArrayList<PetInfo> addPetInfo(Context context) {
-//        ArrayList<PetInfo> petInformation = new ArrayList<>();
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.kitten),
-//                R.drawable.cat_young,
-//                context.getString(R.string.kitten_desc),
-//                context.getString(R.string.kitten_link),
-//                context.getString(R.string.kitten_button),
-//                context.getString(R.string.kitten_img_desc)));
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.cat_adult),
-//                R.drawable.cat_adult,
-//                context.getString(R.string.cat_adult_desc),
-//                context.getString(R.string.cat_adult_link),
-//                context.getString(R.string.cat_adult_button),
-//                context.getString(R.string.cat_img_desc)));
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.cat_elderly),
-//                R.drawable.cat_elderly,
-//                context.getString(R.string.cat_elderly_desc),
-//                context.getString(R.string.cat_elderly_link),
-//                context.getString(R.string.cat_elderly_button),
-//                context.getString(R.string.elderly_cat_img_desc)));
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.puppy),
-//                R.drawable.dog_young,
-//                context.getString(R.string.puppy_desc),
-//                context.getString(R.string.puppy_link),
-//                context.getString(R.string.puppy_button),
-//                context.getString(R.string.puppy_img_desc)));
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.dog_adult),
-//                R.drawable.dog_adult,
-//                context.getString(R.string.dog_adult_desc),
-//                context.getString(R.string.dog_adult_link),
-//                context.getString(R.string.dog_adult_button),
-//                context.getString(R.string.dog_img_desc)));
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.dog_elderly),
-//                R.drawable.dog_elderly,
-//                context.getString(R.string.dog_elderly_desc),
-//                context.getString(R.string.dog_elderly_link),
-//                context.getString(R.string.dog_elderly_button),
-//                context.getString(R.string.elderly_dog_img_desc)));
-//        petInformation.add(new PetInfo(
-//                context.getString(R.string.misc_pets),
-//                R.drawable.misc_pets,
-//                context.getString(R.string.misc_pet_desc),
-//                context.getString(R.string.misc_pet_link),
-//                context.getString(R.string.misc_pet_button),
-//                context.getString(R.string.misc_pet_img_desc)));
-//        return petInformation;
-//    }
 }
