@@ -19,7 +19,9 @@ import com.ashleymccallum.thebarkinglot.R;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,25 +73,37 @@ public class PetSurveyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_survey, container, false);
 
+        //TODO - Remove test pet
+        //beginning of test
         ArrayList<Pet> allPets = PetList.addAllPets(getContext());
 
         Map<String, String> testMap = new HashMap<>();
-        testMap.put("activityLevel", PetRequirement.MINIMUM.toString());
-        testMap.put("experienceRequired", PetRequirement.MAXIMUM.toString());
-        testMap.put("enclosureRequired", PetRequirement.MAXIMUM.toString());
-        testMap.put("outdoorRequired", PetRequirement.MINIMUM.toString());
+        testMap.put("activityLevel", PetRequirement.MODERATE.toString());
+        testMap.put("experienceRequired", PetRequirement.MODERATE.toString());
+        testMap.put("enclosureRequired", PetRequirement.MINIMUM.toString());
+        testMap.put("outdoorRequired", PetRequirement.MAXIMUM.toString());
         testMap.put("companionType", PetRequirement.MINIMUM.toString());
-        testMap.put("groomingNeed", PetRequirement.MINIMUM.toString());
-        Pet testPet = new Pet(testMap, 0, 5);
-
+        testMap.put("groomingNeed", PetRequirement.MAXIMUM.toString());
+        Pet testPet = new Pet(testMap, 0, 25);
+        //end of test
 
         Button submitButton = view.findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                ArrayList<Pet> testList = Pet.matchPets(allPets, testPet);
-                Log.d("TEST", String.valueOf(testList.get(0).getProperty("petName")));
+                //TODO - Remove test pet
+                //beginning of test
+                LinkedHashSet<Pet> testList = Pet.matchPets(allPets, testPet);
+                String list = "";
+                for (Pet temp : testList) {
+                    list = temp.getProperty("petName");
+                    Log.d("**************", list);
+
+                }
+                Log.d("**************", String.valueOf(testList.size()));
+//                Log.d("TEST", String.valueOf(list));
+                //end of test
 
                 Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
             }

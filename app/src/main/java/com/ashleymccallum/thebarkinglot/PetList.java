@@ -8,18 +8,6 @@ import java.util.Map;
 
 public class PetList {
 
-    public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
-        ArrayList<Pet> petResults = new ArrayList<>();
-        int propertyMatches = 0;
-        for(int i = 0; i < allPets.size(); i++) {
-            for(String property : searchPet.getPetProperties().keySet()) {
-
-            }
-        }
-        return petResults;
-    }
-
-
     /**
      * addAllPets initializes an arraylist of all pet options
      * @param context allows use of String resources

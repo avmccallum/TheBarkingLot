@@ -1,6 +1,7 @@
 package com.ashleymccallum.thebarkinglot;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.Map;
 
 public class Pet {
@@ -38,20 +39,35 @@ public class Pet {
      * @param searchPet is the query created by the pet quiz
      * @return ArrayList of matching pets
      */
-    public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
-        ArrayList<Pet> petResults = new ArrayList<>();
+    public static LinkedHashSet<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
+        LinkedHashSet<Pet> petResults = new LinkedHashSet<>();
         int propertyMatches = 0;
-        for(int i = 0; i < allPets.size(); i++) {
+        //for each pet in the allPets list
+        for(Pet pet : allPets) {
+            //cycle through each property provided by the search pet (only search with properties provided)
             for(String property : searchPet.getPetProperties().keySet()) {
-                if(allPets.get(i).getProperty(property).equals(searchPet.getProperty(property))) {
+                //if the pet property matches the search pet property
+                if(pet.getProperty(property).equals(searchPet.getProperty(property))) {
+                    //increase property matches
                     propertyMatches ++;
+//                    if(propertyMatches > 3) {
+//                        petResults.add(pet);
+//                    }
                 }
             }
-            if(allPets.get(i).getHoursNeeded() <= searchPet.hoursNeeded) {
+
+            //if the pet hoursNeeded is less than or equal to search pet hoursNeeded
+            if(pet.getHoursNeeded() <= searchPet.hoursNeeded) {
+                //increase property matches
                 propertyMatches ++;
+//                if(propertyMatches > 3) {
+//                    petResults.add(pet);
+//                }
             }
+
+            //if property matches is greater than or equal to 3, add it to the results list
             if (propertyMatches >= 3) {
-                petResults.add(allPets.get(i));
+                petResults.add(pet);
             }
         }
         return petResults;
