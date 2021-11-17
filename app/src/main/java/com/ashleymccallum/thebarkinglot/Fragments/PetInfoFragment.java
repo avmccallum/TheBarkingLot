@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ashleymccallum.thebarkinglot.PetProperty;
+import com.ashleymccallum.thebarkinglot.PetList;
 import com.ashleymccallum.thebarkinglot.R;
 import com.ashleymccallum.thebarkinglot.RecyclerView.CustomRecyclerViewAdapter;
-import com.ashleymccallum.thebarkinglot.PetInfo;
+import com.ashleymccallum.thebarkinglot.Pet;
 
 import java.util.ArrayList;
 
@@ -66,7 +66,7 @@ public class PetInfoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_info, container, false);
-        ArrayList<PetInfo> pets = PetProperty.addPetInfo(getContext());
+        ArrayList<Pet> pets = PetList.addAllPets(getContext());
         RecyclerView petInfoRecycler = view.findViewById(R.id.petInfoRecycler);
         petInfoRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         petInfoRecycler.setAdapter(new CustomRecyclerViewAdapter(pets));

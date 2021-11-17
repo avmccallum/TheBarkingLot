@@ -13,15 +13,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ashleymccallum.thebarkinglot.PetInfo;
+import com.ashleymccallum.thebarkinglot.Pet;
 import com.ashleymccallum.thebarkinglot.R;
 
 import java.util.ArrayList;
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> {
-    private ArrayList<PetInfo> pets;
+    private ArrayList<Pet> pets;
 
-    public CustomRecyclerViewAdapter(ArrayList<PetInfo> pets) {
+    public CustomRecyclerViewAdapter(ArrayList<Pet> pets) {
         this.pets = pets;
     }
 
@@ -34,16 +34,16 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        PetInfo pet = pets.get(position);
-        holder.petName.setText(pet.getPetName());
+        Pet pet = pets.get(position);
+        holder.petName.setText(pet.getProperty("petName"));
         holder.petImage.setImageResource(pet.getPetImage());
-        holder.petImage.setContentDescription(pet.getPetImageDesc());
-        holder.petDesc.setText(pet.getDescription());
-        holder.petListButton.setText(pet.getPetButtonName());
+        holder.petImage.setContentDescription(pet.getProperty("petImgDesc"));
+        holder.petDesc.setText(pet.getProperty("petDesc"));
+        holder.petListButton.setText(pet.getProperty("petButton"));
         holder.petListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getPetLink()));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getProperty("petLink")));
                 try {
                     holder.petListButton.getContext().startActivity(i);
                 } catch (ActivityNotFoundException e) {
