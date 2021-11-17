@@ -5,12 +5,21 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.ashleymccallum.thebarkinglot.Pet;
+import com.ashleymccallum.thebarkinglot.PetList;
+import com.ashleymccallum.thebarkinglot.PetRequirement;
 import com.ashleymccallum.thebarkinglot.R;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,10 +70,27 @@ public class PetSurveyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_survey, container, false);
+
+        ArrayList<Pet> allPets = PetList.addAllPets(getContext());
+
+        Map<String, String> testMap = new HashMap<>();
+        testMap.put("activityLevel", PetRequirement.MINIMUM.toString());
+        testMap.put("experienceRequired", PetRequirement.MAXIMUM.toString());
+        testMap.put("enclosureRequired", PetRequirement.MAXIMUM.toString());
+        testMap.put("outdoorRequired", PetRequirement.MINIMUM.toString());
+        testMap.put("companionType", PetRequirement.MINIMUM.toString());
+        testMap.put("groomingNeed", PetRequirement.MINIMUM.toString());
+        Pet testPet = new Pet(testMap, 0, 5);
+
+
         Button submitButton = view.findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                ArrayList<Pet> testList = Pet.matchPets(allPets, testPet);
+                Log.d("TEST", String.valueOf(testList.get(0).getProperty("petName")));
+
                 Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
             }
         });
