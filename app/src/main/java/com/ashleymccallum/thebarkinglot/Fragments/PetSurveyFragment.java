@@ -75,16 +75,17 @@ public class PetSurveyFragment extends Fragment {
 
         //TODO - Remove test pet
         //beginning of test
-        ArrayList<Pet> allPets = PetList.addAllPets(getContext());
+        ArrayList<Pet> allPets = PetList.initializePets(getContext());
+        Pet testPet = new Pet(
+                PetRequirement.MODERATE,
+                PetRequirement.MODERATE,
+                PetRequirement.MODERATE,
+                PetRequirement.MINIMUM,
+                PetRequirement.MAXIMUM,
+                PetRequirement.MODERATE,
+                PetRequirement.MAXIMUM
+        );
 
-        Map<String, String> testMap = new HashMap<>();
-        testMap.put("activityLevel", PetRequirement.MAXIMUM.toString());
-        testMap.put("experienceRequired", PetRequirement.MODERATE.toString());
-        testMap.put("enclosureRequired", PetRequirement.MINIMUM.toString());
-        testMap.put("outdoorRequired", PetRequirement.MAXIMUM.toString());
-        testMap.put("companionType", PetRequirement.MINIMUM.toString());
-        testMap.put("groomingNeed", PetRequirement.MAXIMUM.toString());
-        Pet testPet = new Pet(testMap, 0, 25);
         //end of test
 
         Button submitButton = view.findViewById(R.id.submitButton);
@@ -94,15 +95,12 @@ public class PetSurveyFragment extends Fragment {
 
                 //TODO - Remove test pet
                 //beginning of test
-                LinkedHashSet<Pet> testList = Pet.matchPets(allPets, testPet);
-                String list = "";
-                for (Pet temp : testList) {
-                    list = temp.getProperty("petName");
-                    Log.d("**************", list);
-
+                ArrayList<Pet> petResult = Pet.matchPets(allPets, testPet);
+                for(Pet pet : petResult) {
+                    String name = pet.getPetName();
+                    Log.d("________________", name);
                 }
-                Log.d("**************", String.valueOf(testList.size()));
-//                Log.d("TEST", String.valueOf(list));
+
                 //end of test
 
                 Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
