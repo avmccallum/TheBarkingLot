@@ -155,37 +155,4 @@ public class Pet {
         }
         return petResults;
     }
-//    public static LinkedHashSet<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
-//        LinkedHashSet<Pet> petResults = new LinkedHashSet<>();
-//        int propertyMatches = 0;
-//        //for each pet in the allPets list
-//        for(Pet pet : allPets) {
-//            //cycle through each property provided by the search pet (only search with properties provided)
-//            for(String property : searchPet.getPetProperties().keySet()) {
-//                //if the pet property matches the search pet property
-//                if(pet.getProperty(property).equals(searchPet.getProperty(property))) {
-//                    //increase property matches
-//                    propertyMatches ++;
-////                    if(propertyMatches > 3) {
-////                        petResults.add(pet);
-////                    }
-//                }
-//            }
-//
-//            //if the pet hoursNeeded is less than or equal to search pet hoursNeeded
-//            if(pet.getHoursNeeded() <= searchPet.hoursNeeded) {
-//                //increase property matches
-//                propertyMatches ++;
-////                if(propertyMatches > 3) {
-////                    petResults.add(pet);
-////                }
-//            }
-//
-//            //if property matches is greater than or equal to 3, add it to the results list
-//            if (propertyMatches >= 3) {
-//                petResults.add(pet);
-//            }
-//        }
-//        return petResults;
-//    }
 }
