@@ -78,7 +78,7 @@ public class PetSurveyFragment extends Fragment {
         ArrayList<Pet> allPets = PetList.addAllPets(getContext());
 
         Map<String, String> testMap = new HashMap<>();
-        testMap.put("activityLevel", PetRequirement.MODERATE.toString());
+        testMap.put("activityLevel", PetRequirement.MAXIMUM.toString());
         testMap.put("experienceRequired", PetRequirement.MODERATE.toString());
         testMap.put("enclosureRequired", PetRequirement.MINIMUM.toString());
         testMap.put("outdoorRequired", PetRequirement.MAXIMUM.toString());
