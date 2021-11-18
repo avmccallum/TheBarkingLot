@@ -1,5 +1,6 @@
 package com.ashleymccallum.thebarkinglot;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Map;
@@ -113,6 +114,12 @@ public class Pet {
      * @param searchPet is the query created by the pet quiz
      * @return ArrayList of matching pets
      */
+
+    public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
+        ArrayList<Pet> petResults = new ArrayList<>();
+        
+        return petResults;
+    }
 //    public static LinkedHashSet<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
 //        LinkedHashSet<Pet> petResults = new LinkedHashSet<>();
 //        int propertyMatches = 0;

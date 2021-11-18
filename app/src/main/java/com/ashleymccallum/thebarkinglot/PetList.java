@@ -13,7 +13,7 @@ public class PetList {
      * @param context allows use of String resources
      * @return ArrayList of all pets
      */
-    
+
     public static ArrayList<Pet> initializePets(Context context) {
         ArrayList<Pet> pets = new ArrayList<>();
         Pet kitten = new Pet(

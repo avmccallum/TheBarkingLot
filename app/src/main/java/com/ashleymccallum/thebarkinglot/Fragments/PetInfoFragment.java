@@ -66,7 +66,7 @@ public class PetInfoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_info, container, false);
-        ArrayList<Pet> pets = PetList.addAllPets(getContext());
+        ArrayList<Pet> pets = PetList.initializePets(getContext());
         RecyclerView petInfoRecycler = view.findViewById(R.id.petInfoRecycler);
         petInfoRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         petInfoRecycler.setAdapter(new CustomRecyclerViewAdapter(pets));
