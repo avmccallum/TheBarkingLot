@@ -29,7 +29,8 @@ public class PetList {
                 PetRequirement.MINIMUM,
                 PetRequirement.MAXIMUM,
                 PetRequirement.MODERATE,
-                PetRequirement.MAXIMUM);
+                PetRequirement.MAXIMUM
+        );
 
         pets.add(kitten);
 
@@ -46,7 +47,8 @@ public class PetList {
                 PetRequirement.MINIMUM,
                 PetRequirement.MODERATE,
                 PetRequirement.MODERATE,
-                PetRequirement.MODERATE);
+                PetRequirement.MODERATE
+        );
 
         pets.add(catAdult);
 
@@ -63,7 +65,8 @@ public class PetList {
                 PetRequirement.MINIMUM,
                 PetRequirement.MINIMUM,
                 PetRequirement.MODERATE,
-                PetRequirement.MINIMUM);
+                PetRequirement.MINIMUM
+        );
 
         pets.add(catElderly);
 
@@ -80,7 +83,8 @@ public class PetList {
                 PetRequirement.MAXIMUM,
                 PetRequirement.MAXIMUM,
                 PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM);
+                PetRequirement.MAXIMUM
+        );
 
         pets.add(puppy);
 
@@ -97,7 +101,8 @@ public class PetList {
                 PetRequirement.MAXIMUM,
                 PetRequirement.MAXIMUM,
                 PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE);
+                PetRequirement.MODERATE
+        );
 
         pets.add(dogAdult);
 
@@ -114,7 +119,8 @@ public class PetList {
                 PetRequirement.MAXIMUM,
                 PetRequirement.MAXIMUM,
                 PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE);
+                PetRequirement.MODERATE
+        );
 
         pets.add(dogElderly);
 
@@ -131,7 +137,8 @@ public class PetList {
                 PetRequirement.MINIMUM,
                 PetRequirement.MINIMUM,
                 PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM);
+                PetRequirement.MINIMUM
+        );
 
         pets.add(miscPet);
 

@@ -117,7 +117,42 @@ public class Pet {
 
     public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
         ArrayList<Pet> petResults = new ArrayList<>();
-        
+
+        for(Pet pet : allPets) {
+            int propertyMatches = 0;
+
+            if(searchPet.activityLevel == pet.activityLevel) {
+                propertyMatches ++;
+            }
+
+            if(searchPet.experienceRequired == pet.experienceRequired) {
+                propertyMatches ++;
+            }
+
+            if(searchPet.enclosureRequired == pet.enclosureRequired) {
+                propertyMatches ++;
+            }
+
+            if(searchPet.outdoorRequired == pet.outdoorRequired) {
+                propertyMatches ++;
+            }
+
+            if(searchPet.companionshipLevel == pet.companionshipLevel) {
+                propertyMatches ++;
+            }
+
+            if(searchPet.groomingNeed == pet.groomingNeed) {
+                propertyMatches ++;
+            }
+
+            if(searchPet.hoursNeeded == pet.hoursNeeded) {
+                propertyMatches ++;
+            }
+
+            if(propertyMatches > 3) {
+                petResults.add(pet);
+            }
+        }
         return petResults;
     }
 //    public static LinkedHashSet<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {

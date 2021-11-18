@@ -75,6 +75,16 @@ public class PetSurveyFragment extends Fragment {
 
         //TODO - Remove test pet
         //beginning of test
+        ArrayList<Pet> allPets = PetList.initializePets(getContext());
+        Pet testPet = new Pet(
+                PetRequirement.MODERATE,
+                PetRequirement.MODERATE,
+                PetRequirement.MODERATE,
+                PetRequirement.MINIMUM,
+                PetRequirement.MAXIMUM,
+                PetRequirement.MODERATE,
+                PetRequirement.MAXIMUM
+        );
 
         //end of test
 
@@ -85,6 +95,11 @@ public class PetSurveyFragment extends Fragment {
 
                 //TODO - Remove test pet
                 //beginning of test
+                ArrayList<Pet> petResult = Pet.matchPets(allPets, testPet);
+                for(Pet pet : petResult) {
+                    String name = pet.getPetName();
+                    Log.d("________________", name);
+                }
 
                 //end of test
 
