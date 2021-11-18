@@ -13,6 +13,7 @@ public class Pet {
     private String petDesc;
     private String petLink;
     private String petButton;
+    private String petImgDesc;
     private int petImage;
 
     /**
@@ -27,11 +28,12 @@ public class Pet {
     private PetRequirement groomingNeed;
     private int hoursNeeded;
 
-    public Pet(String petName, String petDesc, String petLink, String petButton, int petImage, PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, int hoursNeeded) {
+    public Pet(String petName, String petDesc, String petLink, String petButton, String petImgDesc, int petImage, PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, int hoursNeeded) {
         this.petName = petName;
         this.petDesc = petDesc;
         this.petLink = petLink;
         this.petButton = petButton;
+        this.petImgDesc = petImgDesc;
         this.petImage = petImage;
         this.activityLevel = activityLevel;
         this.experienceRequired = experienceRequired;
@@ -66,6 +68,10 @@ public class Pet {
 
     public String getPetButton() {
         return petButton;
+    }
+
+    public String getPetImgDesc() {
+        return petImgDesc;
     }
 
     public int getPetImage() {

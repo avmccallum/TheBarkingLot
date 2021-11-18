@@ -35,15 +35,15 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Pet pet = pets.get(position);
-        holder.petName.setText(pet.getProperty("petName"));
+        holder.petName.setText(pet.getPetName());
         holder.petImage.setImageResource(pet.getPetImage());
-        holder.petImage.setContentDescription(pet.getProperty("petImgDesc"));
-        holder.petDesc.setText(pet.getProperty("petDesc"));
-        holder.petListButton.setText(pet.getProperty("petButton"));
+        holder.petImage.setContentDescription(pet.getPetImgDesc());
+        holder.petDesc.setText(pet.getPetDesc());
+        holder.petListButton.setText(pet.getPetButton());
         holder.petListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getProperty("petLink")));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getPetLink()));
                 try {
                     holder.petListButton.getContext().startActivity(i);
                 } catch (ActivityNotFoundException e) {
