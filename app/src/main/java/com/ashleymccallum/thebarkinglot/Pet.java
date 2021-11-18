@@ -26,9 +26,9 @@ public class Pet {
     private PetRequirement outdoorRequired;
     private PetRequirement companionshipLevel;
     private PetRequirement groomingNeed;
-    private int hoursNeeded;
+    private PetRequirement hoursNeeded;
 
-    public Pet(String petName, String petDesc, String petLink, String petButton, String petImgDesc, int petImage, PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, int hoursNeeded) {
+    public Pet(String petName, String petDesc, String petLink, String petButton, String petImgDesc, int petImage, PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, PetRequirement hoursNeeded) {
         this.petName = petName;
         this.petDesc = petDesc;
         this.petLink = petLink;
@@ -44,7 +44,7 @@ public class Pet {
         this.hoursNeeded = hoursNeeded;
     }
 
-    public Pet(PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, int hoursNeeded) {
+    public Pet(PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, PetRequirement hoursNeeded) {
         this.activityLevel = activityLevel;
         this.experienceRequired = experienceRequired;
         this.enclosureRequired = enclosureRequired;
@@ -102,7 +102,7 @@ public class Pet {
         return groomingNeed;
     }
 
-    public int getHoursNeeded() {
+    public PetRequirement getHoursNeeded() {
         return hoursNeeded;
     }
 
