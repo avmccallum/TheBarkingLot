@@ -105,6 +105,7 @@
     <string name="q_grooming_1"></string>
     <string name="q_grooming_2"></string>
     <string name="q_grooming_3"></string>
-    <string name="q_looking_for">What are you looking for?</string>
+    <string name="q_looking_for">What kind of companionship do you want?</string>
+    <string name="q_experience">How experienced are you as a pet owner?</string>
     <string name="submit_quiz">Submit</string>
 </resources>
