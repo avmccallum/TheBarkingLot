@@ -20,16 +20,19 @@ public class Pet {
     /**
      * Properties for the pet information
      * To be used in finding matches
+     * 0 = minimal or no need, very occasional
+     * 1 = moderate need, could be regular but not strenuous
+     * 2 = maximum need, mandatory, requires regularly
      */
-    private PetRequirement activityLevel;
-    private PetRequirement experienceRequired;
-    private PetRequirement enclosureRequired;
-    private PetRequirement outdoorRequired;
-    private PetRequirement companionshipLevel;
-    private PetRequirement groomingNeed;
-    private PetRequirement hoursNeeded;
+    private int activityLevel;
+    private int experienceRequired;
+    private int enclosureRequired;
+    private int outdoorRequired;
+    private int companionshipLevel;
+    private int groomingNeed;
+    private int hoursNeeded;
 
-    public Pet(String petName, String petDesc, String petLink, String petButton, String petImgDesc, int petImage, PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, PetRequirement hoursNeeded) {
+    public Pet(String petName, String petDesc, String petLink, String petButton, String petImgDesc, int petImage, int activityLevel, int experienceRequired, int enclosureRequired, int outdoorRequired, int companionshipLevel, int groomingNeed, int hoursNeeded) {
         this.petName = petName;
         this.petDesc = petDesc;
         this.petLink = petLink;
@@ -45,7 +48,7 @@ public class Pet {
         this.hoursNeeded = hoursNeeded;
     }
 
-    public Pet(PetRequirement activityLevel, PetRequirement experienceRequired, PetRequirement enclosureRequired, PetRequirement outdoorRequired, PetRequirement companionshipLevel, PetRequirement groomingNeed, PetRequirement hoursNeeded) {
+    public Pet(int activityLevel, int experienceRequired, int enclosureRequired, int outdoorRequired, int companionshipLevel, int groomingNeed, int hoursNeeded) {
         this.activityLevel = activityLevel;
         this.experienceRequired = experienceRequired;
         this.enclosureRequired = enclosureRequired;
@@ -77,34 +80,6 @@ public class Pet {
 
     public int getPetImage() {
         return petImage;
-    }
-
-    public PetRequirement getActivityLevel() {
-        return activityLevel;
-    }
-
-    public PetRequirement getExperienceRequired() {
-        return experienceRequired;
-    }
-
-    public PetRequirement getEnclosureRequired() {
-        return enclosureRequired;
-    }
-
-    public PetRequirement getOutdoorRequired() {
-        return outdoorRequired;
-    }
-
-    public PetRequirement getCompanionshipLevel() {
-        return companionshipLevel;
-    }
-
-    public PetRequirement getGroomingNeed() {
-        return groomingNeed;
-    }
-
-    public PetRequirement getHoursNeeded() {
-        return hoursNeeded;
     }
 
     /**
