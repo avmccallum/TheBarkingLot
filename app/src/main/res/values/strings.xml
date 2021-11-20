@@ -96,7 +96,6 @@
 
     <!-- Pet survey questions -->
     <string name="q_hours_free">How many hours of free time do you usually have?</string>
-    <string name="q_hours_hint">Enter hours</string>
     <string name="q_activity">How active are you? (Or how active do you want to be?)</string>
     <string name="q_activity_1">Inactive</string>
     <string name="q_activity_2">Moderately active</string>
@@ -107,5 +106,7 @@
     <string name="q_grooming_3"></string>
     <string name="q_looking_for">What kind of companionship do you want?</string>
     <string name="q_experience">How experienced are you as a pet owner?</string>
+    <string name="q_enclosure">Does your home have room for an enclosure?\n(Such as a cage, tank, or terrarium)</string>
+    <string name="q_outdoor">Do you have access to an outdoor space?\n(Such as a yard, or a near by park)</string>
     <string name="submit_quiz">Submit</string>
 </resources>
