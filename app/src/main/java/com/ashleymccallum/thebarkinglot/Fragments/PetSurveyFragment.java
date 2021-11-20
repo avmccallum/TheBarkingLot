@@ -5,23 +5,19 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.ashleymccallum.thebarkinglot.Pet;
 import com.ashleymccallum.thebarkinglot.PetList;
-import com.ashleymccallum.thebarkinglot.PetRequirement;
 import com.ashleymccallum.thebarkinglot.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,43 +63,55 @@ public class PetSurveyFragment extends Fragment {
         }
     }
 
+    ArrayList<Pet> allPets = PetList.initializePets(getContext());
+    int index = 0;
+    String[] questions = {
+            getString(R.string.q_activity),
+            getString(R.string.q_enclosure),
+            getString(R.string.q_experience),
+            getString(R.string.q_grooming),
+            getString(R.string.q_companion),
+            getString(R.string.q_hours),
+            getString(R.string.q_outdoor)
+    };
+
+    String[] topOptions = {
+
+    };
+
+    String[] middleOptions = {
+
+    };
+
+    String[] bottomOptions = {
+
+    };
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_survey, container, false);
+        TextView quizQuestionText = view.findViewById(R.id.quizQuestionText);
+        RadioGroup quizGroup = view.findViewById(R.id.quizQuestionGroup);
+        RadioButton question1 = view.findViewById(R.id.quizQuestion1);
+        RadioButton question2 = view.findViewById(R.id.quizQuestion2);
+        RadioButton question3 = view.findViewById(R.id.quizQuestion3);
 
-        //TODO - Remove test pet
-        //beginning of test
-        ArrayList<Pet> allPets = PetList.initializePets(getContext());
-        Pet testPet = new Pet(
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MINIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MAXIMUM
-        );
 
-        //end of test
-
-        Button submitButton = view.findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        Button nextButton = view.findViewById(R.id.quizNextButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                index ++;
+                quizQuestionText.setText(questions[index]);
 
-                //TODO - Remove test pet
-                //beginning of test
-                ArrayList<Pet> petResult = Pet.matchPets(allPets, testPet);
-                for(Pet pet : petResult) {
-                    String name = pet.getPetName();
-                    Log.d("________________", name);
+                if(index > questions.length) {
+                    nextButton.setText(getString(R.string.submit_quiz));
+                    Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
                 }
 
-                //end of test
-
-                Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
             }
         });
         return view;
