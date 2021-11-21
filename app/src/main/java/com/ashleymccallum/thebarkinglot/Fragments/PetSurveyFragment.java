@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.ashleymccallum.thebarkinglot.PetList;
 import com.ashleymccallum.thebarkinglot.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -75,10 +77,10 @@ public class PetSurveyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pet_survey, container, false);
         ArrayList<Pet> allPets = PetList.initializePets(getContext());
 
-        String[] questions = {getString(R.string.q_activity), getString(R.string.q_enclosure), getString(R.string.q_experience), getString(R.string.q_grooming), getString(R.string.q_companion), getString(R.string.q_hours), getString(R.string.q_outdoor)};
-        String[] topOptions = {getString(R.string.a_activity_1), getString(R.string.a_enclosure_1), getString(R.string.a_experience_1), getString(R.string.a_grooming_1), getString(R.string.a_companion_1), getString(R.string.a_hours_1), getString(R.string.a_outdoor_1)};
-        String[] middleOptions = {getString(R.string.a_activity_2), getString(R.string.a_enclosure_2), getString(R.string.a_experience_2), getString(R.string.a_grooming_2), getString(R.string.a_companion_2), getString(R.string.a_hours_2), getString(R.string.a_outdoor_2)};
-        String[] bottomOptions = {getString(R.string.a_activity_3), getString(R.string.a_enclosure_3), getString(R.string.a_experience_3), getString(R.string.a_grooming_3), getString(R.string.a_companion_3), getString(R.string.a_hours_3), getString(R.string.a_outdoor_3)};
+        String[] questions = {getString(R.string.q_hours), getString(R.string.q_grooming), getString(R.string.q_activity), getString(R.string.q_outdoor), getString(R.string.q_enclosure), getString(R.string.q_experience), getString(R.string.q_companion)};
+        String[] topOptions = {getString(R.string.a_hours_1), getString(R.string.a_grooming_1), getString(R.string.a_activity_1), getString(R.string.a_outdoor_1), getString(R.string.a_enclosure_1), getString(R.string.a_experience_1), getString(R.string.a_companion_1)};
+        String[] middleOptions = {getString(R.string.a_hours_2), getString(R.string.a_grooming_2), getString(R.string.a_activity_2), getString(R.string.a_outdoor_2), getString(R.string.a_enclosure_2), getString(R.string.a_experience_2), getString(R.string.a_companion_2)};
+        String[] bottomOptions = {getString(R.string.a_hours_3), getString(R.string.a_grooming_3), getString(R.string.a_activity_3), getString(R.string.a_outdoor_3), getString(R.string.a_enclosure_3), getString(R.string.a_experience_3), getString(R.string.a_companion_3)};
 
         TextView quizQuestionText = view.findViewById(R.id.quizQuestionText);
         RadioGroup quizGroup = view.findViewById(R.id.quizQuestionGroup);
@@ -91,23 +93,55 @@ public class PetSurveyFragment extends Fragment {
         question1.setText(topOptions[index]);
         question2.setText(middleOptions[index]);
         question3.setText(bottomOptions[index]);
+        answers = new int[questions.length];
 
         Button nextButton = view.findViewById(R.id.quizNextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //on click, increase the index
-                index ++;
-                //change question text to appropriate index
-                quizQuestionText.setText(questions[index]);
-                question1.setText(topOptions[index]);
-                question2.setText(middleOptions[index]);
-                question3.setText(bottomOptions[index]);
 
-                //if the index is at the last question, set text to submit and navigate to result
+                //add appropriate num to answers array
+                if(quizGroup.getCheckedRadioButtonId() == question1.getId()) {
+                    answers[index] = 0;
+                } else if (quizGroup.getCheckedRadioButtonId() == question2.getId()) {
+                    answers[index] = 1;
+                } else if (quizGroup.getCheckedRadioButtonId() == question3.getId()) {
+                    answers[index] = 2;
+                }
+                Log.d("__________________", Arrays.toString(answers));
+
+                //clear the checked option in the group
+                quizGroup.clearCheck();
+
+                //increase the index
+                index++;
+
+                //if the index is in range, change question text to next question
+                if(index <= questions.length - 1) {
+                    quizQuestionText.setText(questions[index]);
+                    question1.setText(topOptions[index]);
+                    question2.setText(middleOptions[index]);
+                    question3.setText(bottomOptions[index]);
+                }
+
+                //set button text to submit for last question
                 if(index == questions.length - 1) {
                     nextButton.setText(getString(R.string.submit_quiz));
+                }
+
+                //navigate to result on last question
+                if(index == questions.length) {
+                    index -= questions.length;
+                    Pet searchPet = new Pet(answers);
+                    ArrayList<Pet> results = Pet.matchPets(allPets, searchPet);
+                    PetList.setResultPets(results);
+
                     Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
+
+                    for(Pet pet : results) {
+                        Log.d("__________________", pet.getPetName());
+                    }
+
                 }
 
             }

@@ -95,13 +95,13 @@
     <string name="quiz_start_button">Begin the quiz</string>
 
     <!-- Pet survey questions -->
-    <string name="q_hours">How many hours of free time do you usually have?</string>
-    <string name="q_activity">How active are you? (Or how active do you want to be?)</string>
-    <string name="q_grooming">Are you okay with regular grooming?</string>
-    <string name="q_companion">What kind of companionship do you want?</string>
-    <string name="q_experience">How experienced are you as a pet owner?</string>
-    <string name="q_enclosure">Does your home have room for an enclosure?\n(Such as a cage, tank, or terrarium)</string>
-    <string name="q_outdoor">Do you have access to an outdoor space?\n(Such as a yard, or a near by park)</string>
+    <string name="q_hours">1. How many hours of free time do you usually have?</string>
+    <string name="q_activity">2. How active are you? (Or how active do you want to be?)</string>
+    <string name="q_grooming">3. Are you okay with regular grooming?</string>
+    <string name="q_companion">4. What kind of companionship do you want?</string>
+    <string name="q_experience">5. How experienced are you as a pet owner?</string>
+    <string name="q_enclosure">6. Does your home have room for an enclosure?\n(Such as a cage, tank, or terrarium)</string>
+    <string name="q_outdoor">7. Do you have access to an outdoor space?\n(Such as a yard, or a near by park)</string>
 
     <!-- Pet survey answers -->
     <string name="a_hours_1">min</string>
@@ -126,6 +126,7 @@
     <string name="a_outdoor_2">mod</string>
     <string name="a_outdoor_3">max</string>
 
+    <!-- Pet survey button -->
     <string name="next_question">Next</string>
     <string name="submit_quiz">Submit</string>
 </resources>
