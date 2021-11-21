@@ -8,12 +8,22 @@ import java.util.Map;
 
 public class PetList {
 
+
+    public static ArrayList<Pet> resultPets;
+
+    public static void setResultPets(ArrayList<Pet> resultPets) {
+        PetList.resultPets = resultPets;
+    }
+
+    public static ArrayList<Pet> getResultPets() {
+        return resultPets;
+    }
+
     /**
      * addAllPets initializes an arraylist of all pet options
      * @param context allows use of String resources
      * @return ArrayList of all pets
      */
-
     public static ArrayList<Pet> initializePets(Context context) {
         ArrayList<Pet> pets = new ArrayList<>();
         Pet kitten = new Pet(
@@ -23,14 +33,8 @@ public class PetList {
                 context.getString(R.string.kitten_button),
                 context.getString(R.string.kitten_img_desc),
                 R.drawable.cat_young,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MINIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MAXIMUM
-        );
+                2, 1, 1, 0, 1, 1, 2);
+        kitten.setPetNeeds();
 
         pets.add(kitten);
 
@@ -41,14 +45,8 @@ public class PetList {
                 context.getString(R.string.cat_adult_button),
                 context.getString(R.string.cat_img_desc),
                 R.drawable.cat_adult,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE
-        );
+                1, 1, 0, 0, 0, 0, 1);
+        catAdult.setPetNeeds();
 
         pets.add(catAdult);
 
@@ -59,14 +57,8 @@ public class PetList {
                 context.getString(R.string.cat_elderly_button),
                 context.getString(R.string.elderly_cat_img_desc),
                 R.drawable.cat_elderly,
-                PetRequirement.MINIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MINIMUM
-        );
+                0, 1, 0, 0, 0, 1, 0);
+        catElderly.setPetNeeds();
 
         pets.add(catElderly);
 
@@ -77,14 +69,8 @@ public class PetList {
                 context.getString(R.string.puppy_button),
                 context.getString(R.string.puppy_img_desc),
                 R.drawable.dog_young,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM
-        );
+                2, 2, 2, 2, 1, 1, 2);
+        puppy.setPetNeeds();
 
         pets.add(puppy);
 
@@ -95,14 +81,8 @@ public class PetList {
                 context.getString(R.string.dog_adult_button),
                 context.getString(R.string.dog_img_desc),
                 R.drawable.dog_adult,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE,
-                PetRequirement.MINIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE
-        );
+                1, 2, 2, 2, 0, 1, 2);
+        dogAdult.setPetNeeds();
 
         pets.add(dogAdult);
 
@@ -113,14 +93,8 @@ public class PetList {
                 context.getString(R.string.dog_elderly_button),
                 context.getString(R.string.elderly_dog_img_desc),
                 R.drawable.dog_elderly,
-                PetRequirement.MODERATE,
-                PetRequirement.MODERATE,
-                PetRequirement.MINIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MODERATE
-        );
+                1, 2, 1, 2, 0, 1, 2);
+        dogElderly.setPetNeeds();
 
         pets.add(dogElderly);
 
@@ -131,14 +105,8 @@ public class PetList {
                 context.getString(R.string.misc_pet_button),
                 context.getString(R.string.misc_pet_img_desc),
                 R.drawable.misc_pets,
-                PetRequirement.MINIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MAXIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM,
-                PetRequirement.MINIMUM
-        );
+                0, 0, 0, 0, 2, 2, 0);
+        miscPet.setPetNeeds();
 
         pets.add(miscPet);
 
