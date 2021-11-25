@@ -2,10 +2,16 @@
     <string name="app_name">The Barking Lot</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="nav_header_desc">The Barking Lot logo</string>
+    <string name="kitten_img_desc">Cartoon image of a kitten</string>
+    <string name="cat_img_desc">Cartoon image of a cat</string>
+    <string name="elderly_cat_img_desc">Cartoon image of an elderly cat</string>
+    <string name="puppy_img_desc">Cartoon image of a puppy</string>
+    <string name="dog_img_desc">Cartoon image of a dog</string>
+    <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
+    <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact Us</string>
@@ -28,12 +34,56 @@
     <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
     <string name="map_button">View on map</string>
 
-
     <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
     <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
         lifestyle. Keep in mind this is just a recommendation, and there are a lot of factors that
         should be considered when adopting or fostering an animal. Visit our website to see all
-        the animals we have available!</string>
+        the animals we have available, or contact us to chat with a pet expert!</string>
     <string name="quiz_start_button">Begin the quiz</string>
+
+    <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
+    <string name="credit_item1">Assets</string>
+    <string name="credit_info1">Animal images and logos created by me</string>
+
+    <string name="hello_blank_fragment">aksjdhaksj</string>
+
+    <string name="resource1">Emergency Animal Hospitals</string>
+    <string name="resourceLink1">emergency+animal+hospital</string>
+    <string name="resource2">Veterinary Clinics</string>
+    <string name="resourceLink2">vet+clinic+near+me</string>
+    <string name="resource3">Grooming Services</string>
+    <string name="resourceLink3">pet+grooming+near+me</string>
+    <string name="resource4">Supply Retailers</string>
+    <string name="resourceLink4">pet+supplies+near+me</string>
+    <string name="resource5">Animal Information</string>
+
+    <string name="kitten">Kittens</string>
+    <string name="kitten_desc">**KITTEN DESC HERE**</string>
+    <string name="kitten_link">https://www.google.com/search?q=kitten</string>
+    <string name="kitten_button">Visit our website to see our kittens!</string>
+    <string name="cat_adult">Adult Cats</string>
+    <string name="cat_adult_desc">**CAT DESC HERE**</string>
+    <string name="cat_adult_link">https://www.google.com/search?q=cat</string>
+    <string name="cat_adult_button">Visit our website to see our cats!</string>
+    <string name="cat_elderly">Elderly Cats</string>
+    <string name="cat_elderly_desc">**ELDERLY CAT DESC HERE**</string>
+    <string name="cat_elderly_link">https://www.google.com/search?q=elderly+cat</string>
+    <string name="cat_elderly_button">Visit our website to see our elderly cats!</string>
+    <string name="puppy">Puppies</string>
+    <string name="puppy_desc">**PUPPY DESC HERE**</string>
+    <string name="puppy_link">https://www.google.com/search?q=puppy</string>
+    <string name="puppy_button">Visit our website to see our puppies!</string>
+    <string name="dog_adult">Adult Dogs</string>
+    <string name="dog_adult_desc">**DOG DESC HERE**</string>
+    <string name="dog_adult_link">https://www.google.com/search?q=dog</string>
+    <string name="dog_adult_button">Visit our website to see our dogs!</string>
+    <string name="dog_elderly">Elderly Dogs</string>
+    <string name="dog_elderly_desc">**ELDERLY DOG DESC HERE**</string>
+    <string name="dog_elderly_link">https://www.google.com/search?q=elderly+dog</string>
+    <string name="dog_elderly_button">Visit our website to see our elderly dogs!</string>
+    <string name="misc_pets">Other Pets</string>
+    <string name="misc_pet_desc">**MISC PET DESC HERE**</string>
+    <string name="misc_pet_link">https://www.google.com/search?q=other+pets</string>
+    <string name="misc_pet_button">Visit our website to see all our other pets!</string>
 
 </resources>

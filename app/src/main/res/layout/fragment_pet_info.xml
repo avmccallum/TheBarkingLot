@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResourcesFragment">
+    tools:context=".PetInfoFragment">
 
-    <ListView
-        android:id="@+id/resourceList"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/petInfoRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/nav_header_vertical_spacing"
         android:layout_marginTop="@dimen/nav_header_vertical_spacing"
         android:layout_marginEnd="@dimen/nav_header_vertical_spacing"
         android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- TODO: Update blank fragment layout -->
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
