@@ -8,7 +8,6 @@ import java.util.Map;
 
 public class PetList {
 
-
     public static ArrayList<Pet> resultPets;
 
     public static void setResultPets(ArrayList<Pet> resultPets) {
