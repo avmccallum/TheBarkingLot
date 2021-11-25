@@ -3,7 +3,6 @@ package com.ashleymccallum.thebarkinglot.RecyclerView;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,16 +13,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ashleymccallum.thebarkinglot.Pet;
 import com.ashleymccallum.thebarkinglot.R;
-import com.google.android.material.snackbar.Snackbar;
 
-import java.net.URI;
 import java.util.ArrayList;
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> {
-    private ArrayList<PetInfo> pets;
+    private ArrayList<Pet> pets;
 
-    public CustomRecyclerViewAdapter(ArrayList<PetInfo> pets) {
+    public CustomRecyclerViewAdapter(ArrayList<Pet> pets) {
         this.pets = pets;
     }
 
@@ -36,12 +34,12 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        PetInfo pet = pets.get(position);
+        Pet pet = pets.get(position);
         holder.petName.setText(pet.getPetName());
         holder.petImage.setImageResource(pet.getPetImage());
-        holder.petImage.setContentDescription(pet.getPetImageDesc());
-        holder.petDesc.setText(pet.getDescription());
-        holder.petListButton.setText(pet.getPetButtonName());
+        holder.petImage.setContentDescription(pet.getPetImgDesc());
+        holder.petDesc.setText(pet.getPetDesc());
+        holder.petListButton.setText(pet.getPetButton());
         holder.petListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

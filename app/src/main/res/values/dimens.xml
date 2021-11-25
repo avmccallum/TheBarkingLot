@@ -8,4 +8,6 @@
     <dimen name="main_margin">15dp</dimen>
     <dimen name="subtitle_font">25sp</dimen>
     <dimen name="button_padding">15dp</dimen>
+    <dimen name="corner_radius">50dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
 </resources>
