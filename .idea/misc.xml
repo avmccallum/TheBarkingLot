@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="app/src/main/res/layout/fragment_pet_survey.xml" value="0.2875905797101449" />
         <entry key="app/src/main/res/layout/fragment_survey.xml" value="0.2875905797101449" />
 =======
@@ -26,6 +27,26 @@
         <entry key="..\:/Users/Ashley/AndroidStudioProjects/TheBarkingLot/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.36944444444444446" />
         <entry key="..\:/Users/Ashley/AndroidStudioProjects/TheBarkingLot/app/src/main/res/xml/adult_cat.xml" value="0.2907608695652174" />
 >>>>>>> f3eaed2edad67eca20fd5c64218961a139451b5c
+=======
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2898148148148148" />
+        <entry key="app/src/main/res/drawable/ic_launcher.xml" value="0.38333333333333336" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.38333333333333336" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2851851851851852" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.20572916666666666" />
+        <entry key="app/src/main/res/layout/fragment_pet_info.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/layout/fragment_pet_survey.xml" value="0.2875905797101449" />
+        <entry key="app/src/main/res/layout/fragment_quiz_results.xml" value="0.28442028985507245" />
+        <entry key="app/src/main/res/layout/fragment_resources.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/layout/fragment_survey.xml" value="0.2875905797101449" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.2875905797101449" />
+        <entry key="app/src/main/res/layout/pet_info_recycler.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/layout/resource_list.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3671875" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.3671875" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2898148148148148" />
+>>>>>>> 902bda3cf6c0d76b015b9d331361e2e574d615e7
       </map>
     </option>
   </component>
