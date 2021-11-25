@@ -59,7 +59,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+        if (navController.getCurrentDestination().getId() == R.id.nav_quiz_results) {
+            navController.navigate(R.id.nav_survey);
+            return true;
+        } else {
+            return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                    || super.onSupportNavigateUp();
+        }
     }
 }
