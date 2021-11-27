@@ -132,10 +132,19 @@
     <string name="a_companion_2">A cool friend that I can hangout with sometimes but does their own thing too</string>
     <string name="a_companion_3">A best friend &#10084;&#65039;</string>
 
-
     <!-- Pet survey button -->
     <string name="next_question">Next</string>
     <string name="submit_quiz">Submit</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Settings titles -->
+    <string name="animations_header">Animations</string>
+    <string name="font_header">Sync</string>
+
+    <!-- Animations preferences -->
+    <string name="animations_title">Animations</string>
+    <string name="animations_summary">Please select to disable animations</string>
+
+    <!-- Font preferences -->
+    <string name="font_title">Font Size</string>
+    <string name="font_summary">Please select font size</string>
 </resources>

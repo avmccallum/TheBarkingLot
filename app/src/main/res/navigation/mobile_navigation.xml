@@ -58,4 +58,8 @@
         android:name="com.ashleymccallum.thebarkinglot.Fragments.QuizResultsFragment"
         android:label="fragment_quiz_results"
         tools:layout="@layout/fragment_quiz_results" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
