@@ -16,13 +16,17 @@
     <PreferenceCategory app:title="@string/font_header">
 
         <SeekBarPreference
-            app:defaultValue="5"
+            android:defaultValue="5"
+            android:max="10"
             app:key="fontMenu"
             app:min="0"
             app:seekBarIncrement="5"
+            app:showSeekBarValue="false"
             app:summary="@string/font_summary"
             app:title="@string/font_title" />
 
     </PreferenceCategory>
 
 </PreferenceScreen>
+
+<!-- TODO - COMPLETE SETTINGS -->
