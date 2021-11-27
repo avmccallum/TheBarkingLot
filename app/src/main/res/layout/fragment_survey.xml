@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/main_margin"
     tools:context=".Fragments.SurveyFragment">
 
 
@@ -22,14 +23,18 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
         android:fontFamily="@font/montserrat"
         android:text="@string/survey_para_1"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:lineHeight="@dimen/subtitle_font"
         tools:layout_editor_absoluteX="16dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/view_pager_size"
         android:layout_height="@dimen/view_pager_size"
+        app:cardCornerRadius="@dimen/view_pager_size"
+        app:layout_constraintBottom_toTopOf="@+id/quizButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7">

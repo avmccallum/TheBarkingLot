@@ -14,4 +14,5 @@
     <dimen name="medium_margin">20dp</dimen>
     <dimen name="line_height_spacing">5sp</dimen>
     <dimen name="view_pager_size">300dp</dimen>
+    <dimen name="slideshow_image_size">200dp</dimen>
 </resources>

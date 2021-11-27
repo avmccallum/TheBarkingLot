@@ -14,6 +14,9 @@ import android.widget.Button;
 import com.ashleymccallum.thebarkinglot.R;
 import com.ashleymccallum.thebarkinglot.ViewPager.CustomViewPagerAdapter;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link SurveyFragment#newInstance} factory method to
@@ -58,6 +61,8 @@ public class SurveyFragment extends Fragment {
         }
     }
 
+    Timer timer;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -67,6 +72,28 @@ public class SurveyFragment extends Fragment {
         Button beginButton = view.findViewById(R.id.quizButton);
         ViewPager2 viewPager2 = view.findViewById(R.id.petSlideShow);
         viewPager2.setAdapter(new CustomViewPagerAdapter(getActivity()));
+        viewPager2.setUserInputEnabled(false);
+        viewPager2.setPageTransformer(new CustomViewPagerAdapter(getActivity()));
+
+        int imageCount = viewPager2.getAdapter().getItemCount();
+
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                viewPager2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        viewPager2.setCurrentItem((viewPager2.getCurrentItem() + 1), false);
+                        if (viewPager2.getCurrentItem() == imageCount - 1) {
+                            viewPager2.setCurrentItem(0, false);
+                        }
+                    }
+                });
+            }
+        };
+
+        timer = new Timer();
+        timer.schedule(timerTask, 3000, 3000);
 
         beginButton.setOnClickListener(new View.OnClickListener() {
             @Override

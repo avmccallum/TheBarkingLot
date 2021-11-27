@@ -8,6 +8,8 @@ import java.util.Map;
 
 public class PetList {
 
+    //TODO - Add default pet in case of no match
+
     public static ArrayList<Pet> resultPets;
 
     public static void setResultPets(ArrayList<Pet> resultPets) {

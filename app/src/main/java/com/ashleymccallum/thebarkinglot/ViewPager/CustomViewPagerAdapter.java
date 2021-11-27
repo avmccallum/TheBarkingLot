@@ -1,13 +1,20 @@
 package com.ashleymccallum.thebarkinglot.ViewPager;
 
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.ashleymccallum.thebarkinglot.R;
 
-public class CustomViewPagerAdapter extends FragmentStateAdapter {
+public class CustomViewPagerAdapter extends FragmentStateAdapter implements ViewPager2.PageTransformer {
+
+
 
     public CustomViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
@@ -24,12 +31,19 @@ public class CustomViewPagerAdapter extends FragmentStateAdapter {
             case 4: return ImageFragment.newInstance(R.drawable.misc_pets, R.string.misc_pet_img_desc);
             case 5: return ImageFragment.newInstance(R.drawable.dog_elderly, R.string.elderly_dog_img_desc);
             case 6: return ImageFragment.newInstance(R.drawable.cat_adult, R.string.cat_img_desc);
+            case 7: return ImageFragment.newInstance(R.drawable.cat_young, R.string.kitten_img_desc);
             default: return ImageFragment.newInstance(R.drawable.cat_young, R.string.kitten_img_desc);
         }
     }
 
     @Override
     public int getItemCount() {
-        return 7;
+        return 8;
+    }
+
+    @Override
+    public void transformPage(@NonNull View page, float position) {
+        Animation animation = (Animation) AnimationUtils.loadAnimation(page.getContext(), R.anim.slideshow_animation);
+        page.setAnimation(animation);
     }
 }

@@ -133,8 +133,14 @@ public class Pet {
             if(propertyMatches > 3) {
                 petResults.add(pet);
             }
-
         }
-        return petResults;
+
+        if(!petResults.isEmpty()) {
+            return petResults;
+        } else {
+            //TODO - if user gets no match or does not answer questions return default pet
+            return petResults;
+        }
+
     }
 }
