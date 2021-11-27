@@ -6,59 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.PetSurveyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:layout_marginTop="@dimen/main_margin"
+        android:fontFamily="@font/raleway"
         android:text="@string/menu_survey"
         android:textSize="@dimen/subtitle_font"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/main_margin"
+        android:layout_marginTop="@dimen/main_margin"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/questionCountText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="@dimen/quiz_number_font" />
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/quizQuestionText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin"
+        android:layout_marginEnd="@dimen/main_margin"
+        android:fontFamily="@font/montserrat"
+        android:lineSpacingExtra="@dimen/line_height_spacing"
         android:text="@string/q_activity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
     <RadioGroup
         android:id="@+id/quizQuestionGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:clipToPadding="false"
         android:orientation="vertical"
+        android:padding="@dimen/card_margin"
+        app:layout_constraintBottom_toTopOf="@+id/quizNextButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizQuestionText">
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <RadioButton
             android:id="@+id/quizQuestion1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:layout_marginBottom="@dimen/corner_radius"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="@dimen/line_height_spacing"
+            android:paddingStart="@dimen/card_margin"
+            android:text="RadioButton"
+            android:textAlignment="textStart"
+            android:textColor="#616161" />
 
         <RadioButton
             android:id="@+id/quizQuestion2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:layout_marginBottom="@dimen/corner_radius"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="@dimen/line_height_spacing"
+            android:paddingStart="@dimen/card_margin"
+            android:text="RadioButton"
+            android:textAlignment="textStart"
+            android:textColor="#616161" />
 
         <RadioButton
             android:id="@+id/quizQuestion3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:layout_marginBottom="@dimen/corner_radius"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="@dimen/line_height_spacing"
+            android:paddingStart="@dimen/card_margin"
+            android:text="RadioButton"
+            android:textAlignment="textStart"
+            android:textColor="#616161" />
     </RadioGroup>
 
     <Button
         android:id="@+id/quizNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+        android:layout_marginBottom="@dimen/main_margin"
+        android:fontFamily="@font/montserrat"
+        android:padding="@dimen/button_padding"
         android:text="@string/next_question"
+        app:cornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

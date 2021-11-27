@@ -83,6 +83,7 @@ public class PetSurveyFragment extends Fragment {
         String[] bottomOptions = {getString(R.string.a_hours_3), getString(R.string.a_grooming_3), getString(R.string.a_activity_3), getString(R.string.a_outdoor_3), getString(R.string.a_enclosure_3), getString(R.string.a_experience_3), getString(R.string.a_companion_3)};
 
         TextView quizQuestionText = view.findViewById(R.id.quizQuestionText);
+        TextView questionCount = view.findViewById(R.id.questionCountText);
         RadioGroup quizGroup = view.findViewById(R.id.quizQuestionGroup);
         RadioButton question1 = view.findViewById(R.id.quizQuestion1);
         RadioButton question2 = view.findViewById(R.id.quizQuestion2);
@@ -90,6 +91,7 @@ public class PetSurveyFragment extends Fragment {
 
         //on initial load, set text to first question
         quizQuestionText.setText(questions[index]);
+        questionCount.setText("" + (index + 1));
         question1.setText(topOptions[index]);
         question2.setText(middleOptions[index]);
         question3.setText(bottomOptions[index]);
@@ -119,6 +121,7 @@ public class PetSurveyFragment extends Fragment {
                 //if the index is in range, change question text to next question
                 if(index <= questions.length - 1) {
                     quizQuestionText.setText(questions[index]);
+                    questionCount.setText("" + (index + 1));
                     question1.setText(topOptions[index]);
                     question2.setText(middleOptions[index]);
                     question3.setText(bottomOptions[index]);
