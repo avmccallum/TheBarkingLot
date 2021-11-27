@@ -55,6 +55,7 @@
         android:paddingTop="@dimen/button_padding"
         android:paddingBottom="@dimen/button_padding"
         android:text="@string/quiz_start_button"
+        app:cornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

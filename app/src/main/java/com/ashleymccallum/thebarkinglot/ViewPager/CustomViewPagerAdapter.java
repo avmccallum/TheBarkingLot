@@ -14,8 +14,6 @@ import com.ashleymccallum.thebarkinglot.R;
 
 public class CustomViewPagerAdapter extends FragmentStateAdapter implements ViewPager2.PageTransformer {
 
-
-
     public CustomViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }

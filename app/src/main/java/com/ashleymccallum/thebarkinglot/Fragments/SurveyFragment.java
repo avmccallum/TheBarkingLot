@@ -68,15 +68,18 @@ public class SurveyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_survey, container, false);
-        //TODO - add image slideshow of possible pet results??
-        Button beginButton = view.findViewById(R.id.quizButton);
+
         ViewPager2 viewPager2 = view.findViewById(R.id.petSlideShow);
         viewPager2.setAdapter(new CustomViewPagerAdapter(getActivity()));
+
+        //viewpager does not allow user to scroll
         viewPager2.setUserInputEnabled(false);
         viewPager2.setPageTransformer(new CustomViewPagerAdapter(getActivity()));
 
+        //imageCount is the total number of ImageFragments
         int imageCount = viewPager2.getAdapter().getItemCount();
 
+        //timerTask changes the ImageFragment to the next item
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
@@ -92,9 +95,12 @@ public class SurveyFragment extends Fragment {
             }
         };
 
+        //timer controls the speed of the timerTask
         timer = new Timer();
         timer.schedule(timerTask, 3000, 3000);
 
+        //Button navigates to beginning of quiz
+        Button beginButton = view.findViewById(R.id.quizButton);
         beginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -138,7 +138,7 @@ public class Pet {
         if(!petResults.isEmpty()) {
             return petResults;
         } else {
-            //TODO - if user gets no match or does not answer questions return default pet
+            //TODO - if user gets no match or does not answer questions return default pet (also return if user does not answer a certain number of questions)
             return petResults;
         }
 
