@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.ashleymccallum.thebarkinglot.R;
+import com.ashleymccallum.thebarkinglot.ViewPager.CustomViewPagerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,6 +65,9 @@ public class SurveyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_survey, container, false);
         //TODO - add image slideshow of possible pet results??
         Button beginButton = view.findViewById(R.id.quizButton);
+        ViewPager2 viewPager2 = view.findViewById(R.id.petSlideShow);
+        viewPager2.setAdapter(new CustomViewPagerAdapter(getActivity()));
+
         beginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

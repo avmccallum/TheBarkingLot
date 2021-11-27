@@ -11,6 +11,7 @@
     <dimen name="corner_radius">50dp</dimen>
     <dimen name="card_margin">10dp</dimen>
     <dimen name="quiz_number_font">50sp</dimen>
-    <dimen name="medium_margin">15dp</dimen>
+    <dimen name="medium_margin">20dp</dimen>
     <dimen name="line_height_spacing">5sp</dimen>
+    <dimen name="view_pager_size">300dp</dimen>
 </resources>
