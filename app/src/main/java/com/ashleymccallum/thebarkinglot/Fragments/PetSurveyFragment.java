@@ -97,8 +97,32 @@ public class PetSurveyFragment extends Fragment {
         //animations for page items
         Animation questionAnimIn = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_question_in);
         Animation questionAnimOut = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_question_out);
+        Animation countAnimIn = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_number_in);
+        Animation countAnimOut = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_number_out);
 
-        //controls animation behaviour when out animation is completed
+        //controls animation behaviour when flip out animation completed
+        countAnimOut.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                //at end of flip, set text to next number
+                questionCount.setText("" + (index + 1));
+
+                //once text is set, begin flip in animation
+                questionCount.startAnimation(countAnimIn);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        //controls animation behaviour when fade out animation is completed
         questionAnimOut.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -139,6 +163,7 @@ public class PetSurveyFragment extends Fragment {
         question1.startAnimation(questionAnimIn);
         question2.startAnimation(questionAnimIn);
         question3.startAnimation(questionAnimIn);
+        questionCount.startAnimation(countAnimIn);
 
         Button nextButton = view.findViewById(R.id.quizNextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -169,7 +194,7 @@ public class PetSurveyFragment extends Fragment {
                     question1.startAnimation(questionAnimOut);
                     question2.startAnimation(questionAnimOut);
                     question3.startAnimation(questionAnimOut);
-                    questionCount.setText("" + (index + 1));
+                    questionCount.startAnimation(countAnimOut);
                 }
 
                 //set button text to submit for last question

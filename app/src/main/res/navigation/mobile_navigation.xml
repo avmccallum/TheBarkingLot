@@ -44,7 +44,9 @@
         tools:layout="@layout/fragment_pet_survey" >
         <action
             android:id="@+id/action_nav_pet_survey_to_nav_quiz_results"
-            app:destination="@id/nav_quiz_results" />
+            app:destination="@id/nav_quiz_results"
+            app:enterAnim="@anim/quiz_question_in"
+            app:exitAnim="@anim/quiz_question_out" />
     </fragment>
     <fragment
         android:id="@+id/nav_pet_info"
