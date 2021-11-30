@@ -138,7 +138,7 @@
 
     <!-- Settings titles -->
     <string name="animations_header">Animations</string>
-    <string name="font_header">Sync</string>
+    <string name="font_header">Font</string>
 
     <!-- Animations preferences -->
     <string name="animations_title">Animations</string>

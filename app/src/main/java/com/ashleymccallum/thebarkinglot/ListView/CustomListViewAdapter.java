@@ -46,7 +46,6 @@ public class CustomListViewAdapter extends ArrayAdapter<Resource> {
                 } else {
                     Uri location = Uri.parse("geo:0,0?q=" + getItem(position).getResourceLink());
                     Intent i = new Intent(Intent.ACTION_VIEW, location);
-                    Log.d("ResourceItem", location.toString());
                     try {
                         getContext().startActivity(i);
                     } catch (ActivityNotFoundException e) {

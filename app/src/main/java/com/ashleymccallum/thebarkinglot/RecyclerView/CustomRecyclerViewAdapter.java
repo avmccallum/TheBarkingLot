@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ashleymccallum.thebarkinglot.Pet;
 import com.ashleymccallum.thebarkinglot.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
