@@ -1,9 +1,11 @@
 package com.ashleymccallum.thebarkinglot.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -99,6 +101,17 @@ public class PetSurveyFragment extends Fragment {
         Animation questionAnimOut = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_question_out);
         Animation countAnimIn = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_number_in);
         Animation countAnimOut = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_number_out);
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        int animToggle = Integer.parseInt(sharedPreferences.getString("animationsMenu", "1"));
+
+        //if 0, animations are off, if 1 animations are on
+        if(animToggle == 0) {
+            countAnimOut.setDuration(0);
+            countAnimIn.setDuration(0);
+            questionAnimIn.setDuration(0);
+            questionAnimOut.setDuration(0);
+        }
 
         //controls animation behaviour when flip out animation completed
         countAnimOut.setAnimationListener(new Animation.AnimationListener() {

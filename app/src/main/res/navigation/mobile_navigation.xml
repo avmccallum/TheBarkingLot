@@ -59,7 +59,7 @@
         android:label="fragment_quiz_results"
         tools:layout="@layout/fragment_quiz_results" />
     <fragment
-        android:id="@+id/settingsFragment"
+        android:id="@+id/nav_settings"
         android:name="com.ashleymccallum.thebarkinglot.Fragments.SettingsFragment"
         android:label="SettingsFragment" />
 </navigation>

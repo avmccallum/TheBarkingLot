@@ -1,5 +1,6 @@
 package com.ashleymccallum.thebarkinglot.ViewPager;
 
+import android.content.SharedPreferences;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -7,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.preference.PreferenceManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -42,6 +44,13 @@ public class CustomViewPagerAdapter extends FragmentStateAdapter implements View
     @Override
     public void transformPage(@NonNull View page, float position) {
         Animation animation = (Animation) AnimationUtils.loadAnimation(page.getContext(), R.anim.slideshow_animation);
-        page.setAnimation(animation);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(page.getContext());
+        int animToggle = Integer.parseInt(sharedPreferences.getString("animationsMenu", "1"));
+
+        //if 1 animations are on, if 0 animations are off
+        if(animToggle == 1) {
+            page.setAnimation(animation);
+        }
+
     }
 }

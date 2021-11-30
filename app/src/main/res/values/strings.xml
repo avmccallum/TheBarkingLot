@@ -142,7 +142,7 @@
 
     <!-- Animations preferences -->
     <string name="animations_title">Animations</string>
-    <string name="animations_summary">Please select to disable animations</string>
+    <string name="animations_summary">Please select to toggle animations</string>
 
     <!-- Font preferences -->
     <string name="font_title">Font Size</string>
