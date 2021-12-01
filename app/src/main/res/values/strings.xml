@@ -58,45 +58,65 @@
     <string name="kitten">Kittens</string>
     <!-- TODO - add description -->
     <string name="kitten_desc">**KITTEN DESC HERE**</string>
-    <string name="kitten_hours">Kittens need more attention than adult and elderly cats, but </string>
+    <string name="kitten_hours">Kittens shouldn\'t be left unsupervised for long periods of time.
+        They can get into all kinds of trouble and they can get into all kinds of small places.</string>
     <string name="kitten_activity">They don\'t need a lot of strenuous activity, like walking or
         playing, but they can be a lot to keep up with and a close eye should be kept on them.</string>
     <string name="kitten_experience">Taking care of a kitten is more work than that of an adult cat,
-        but if they\'re healthy and well tempered, taking care of them shouldn\'t be very demanding.</string>
+        but if they\'re healthy and well tempered taking care of them shouldn\'t be very demanding.
+        There\'s always lots of resources to help new owners too.</string>
     <string name="kitten_enclosure">Cats generally don\'t need dedicated cages, but kittens need to
         have somewhere they can be kept while you\'re away or sleeping. Keeping them in one room
         usually works just fine, like a bathroom where they can\'t get in to a lot of trouble,
         or a single bedroom with the door closed.</string>
-    <string name="kitten_outdoor">Cats should not be let outdoors, so there\'s no need for any kind
-        of outdoor space.</string>
+    <string name="kitten_outdoor">It\'s dangerous for cats to be let outdoors, and doubly so for kittens. Unless you\'re
+        keeping them on a leash, they should be indoors.</string>
     <string name="kitten_companion">Kittens are more active and playful when they\'re younger, and
         tend to mellow out with age.</string>
-    <string name="kitten_grooming">Grooming:\nModerate. Cats very rarely need to be bathed but after
-        3 months old, brushing should be a regular occurrence.</string>
+    <string name="kitten_grooming">Kittens very rarely need to be bathed but after 3 months old,
+        brushing should be a regular occurrence. As they get older they\'ll need the occasional
+        teeth cleaning and nail trimming.</string>
     <string name="kitten_link">https://www.google.com/search?q=kitten</string>
     <string name="kitten_button">Visit our website to see our kittens!</string>
     <string name="cat_adult">Adult Cats</string>
     <!-- TODO - add description -->
     <string name="cat_adult_desc">**CAT DESC HERE**</string>
-    <string name="cat_adult_hours"></string>
-    <string name="cat_adult_activity"></string>
-    <string name="cat_adult_experience"></string>
-    <string name="cat_adult_enclosure"></string>
-    <string name="cat_adult_outdoor"></string>
-    <string name="cat_adult_companion"></string>
-    <string name="cat_adult_grooming"></string>
+    <string name="cat_adult_hours">Unless your cat is particularly aloof, you should be spending
+        some time with them, but you probably don\'t need to go out of your way to set aside the time.</string>
+    <string name="cat_adult_activity">Fully grown cats tend to be very low maintenance. They might
+        be willing to play for a little, but they can usually keep themselves entertained.</string>
+    <string name="cat_adult_experience">An adult cat is usually a very low maintenance pet and
+        there\'s a lot of resources for beginners.</string>
+    <string name="cat_adult_enclosure">Adult cats don\'t need a dedicated enclosure. They might get
+        in to some trouble, but that just comes with having a pet.</string>
+    <string name="cat_adult_outdoor">It\'s dangers for cats to be let outdoors. Unless you\'re
+        keeping them on a leash, they should be indoors.</string>
+    <string name="cat_adult_companion">Some cats are very aloof and some are very cuddly. It\'s
+        important to ask about their temperament or spend some time getting to know them before you
+        make a decision to bring them home.</string>
+    <string name="cat_adult_grooming">It\'s very rare to need to bathe a cat. Usually all they
+        need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
     <string name="cat_adult_link">https://www.google.com/search?q=cat</string>
     <string name="cat_adult_button">Visit our website to see our cats!</string>
     <string name="cat_elderly">Elderly Cats</string>
     <!-- TODO - add description -->
     <string name="cat_elderly_desc">**ELDERLY CAT DESC HERE**</string>
-    <string name="cat_elderly_hours"></string>
-    <string name="cat_elderly_activity"></string>
-    <string name="cat_elderly_experience"></string>
-    <string name="cat_elderly_enclosure"></string>
-    <string name="cat_elderly_outdoor"></string>
-    <string name="cat_elderly_companion"></string>
-    <string name="cat_elderly_grooming"></string>
+    <string name="cat_elderly_hours">An elderly cat is probably going to be very low energy.
+        If you pay attention to them when they ask, they\'ll probably be happy.</string>
+    <string name="cat_elderly_activity">An elderly cat isn\'t going to need hardly any regular
+        activity. Maybe get a laser pointer and see if they feel like chasing it.</string>
+    <string name="cat_elderly_experience">Cats are overall a fairly easy pet for beginners,
+        but as they age more attention needs to be paid to their health. Joints, teeth, diet and
+        other factors can all impact how much work they are going to be as they age.</string>
+    <string name="cat_elderly_enclosure">Elderly cats don\'t need dedicated enclosures. They\'re generally
+        more low-energy and won\'t get into as much trouble.</string>
+    <string name="cat_elderly_outdoor">It\'s dangers for cats to be let outdoors. Unless you\'re
+        keeping them on a leash, they should be indoors.</string>
+    <string name="cat_elderly_companion">Some cats are very aloof and some are very cuddly. It\'s
+        important to ask about their temperament or spend some time getting to know them before you
+        make a decision to bring them home.</string>
+    <string name="cat_elderly_grooming">It\'s very rare to need to bathe a cat. Usually all they
+        need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
     <string name="cat_elderly_link">https://www.google.com/search?q=elderly+cat</string>
     <string name="cat_elderly_button">Visit our website to see our elderly cats!</string>
     <string name="puppy">Puppies</string>
@@ -108,7 +128,8 @@
     <string name="puppy_enclosure"></string>
     <string name="puppy_outdoor"></string>
     <string name="puppy_companion"></string>
-    <string name="puppy_grooming"></string>
+    <string name="puppy_grooming">Dogs need regular grooming and this is probably going to be even
+        more true for a rowdy puppy. Bathing, brushing, teeth cleaning, etc.</string>
     <string name="puppy_link">https://www.google.com/search?q=puppy</string>
     <string name="puppy_button">Visit our website to see our puppies!</string>
     <string name="dog_adult">Adult Dogs</string>
@@ -120,7 +141,8 @@
     <string name="dog_adult_enclosure"></string>
     <string name="dog_adult_outdoor"></string>
     <string name="dog_adult_companion"></string>
-    <string name="dog_adult_grooming"></string>
+    <string name="dog_adult_grooming">Dogs need regular bathing and let\'s be real, you\'re probably
+        going to get water everywhere while you do it. Don\'t forget trying to clip their nails and brush their teeth.</string>
     <string name="dog_adult_link">https://www.google.com/search?q=dog</string>
     <string name="dog_adult_button">Visit our website to see our dogs!</string>
     <string name="dog_elderly">Elderly Dogs</string>
@@ -132,19 +154,33 @@
     <string name="dog_elderly_enclosure"></string>
     <string name="dog_elderly_outdoor"></string>
     <string name="dog_elderly_companion"></string>
-    <string name="dog_elderlygrooming"></string>
+    <string name="dog_elderly_grooming">Elderly dogs might not make as much of a mess in the bathtub,
+        but they still need regular grooming. Bathing, nail clipping, tooth brushing, the whole works.</string>
     <string name="dog_elderly_link">https://www.google.com/search?q=elderly+dog</string>
     <string name="dog_elderly_button">Visit our website to see our elderly dogs!</string>
     <string name="misc_pets">Other Pets</string>
     <!-- TODO - add description -->
     <string name="misc_pet_desc">**MISC PET DESC HERE**</string>
-    <string name="misc_pet_hours"></string>
-    <string name="misc_pet_activity"></string>
-    <string name="misc_pet_experience"></string>
-    <string name="misc_pet_enclosure"></string>
-    <string name="misc_pet_outdoor"></string>
-    <string name="misc_pet_companion"></string>
-    <string name="misc_pet_grooming"></string>
+    <string name="misc_pet_hours">Most other pets such as rodents, reptiles, and fish require
+        little dedicated attention. If you are caring for them right, they can usually be left alone
+        for most of the day.</string>
+    <string name="misc_pet_activity">If you set up their enclosure right, you\'re not going to need
+        to do a lot to make sure they\'re active and entertained. Hamster wheels exist for a reason,
+        and it\'s so you don\'t have to try and walk them.</string>
+    <string name="misc_pet_experience">Reptiles, fish, some rodents, and other animals usually have
+        pretty specific requirements for their care. Sometimes it\'s not easy to determine
+        what\'s good advice and what\'s not, so it wouldn\'t hurt to have more pet experience under your belt.</string>
+    <string name="misc_pet_enclosure">Most of these pets will require some kind of enclosure. If
+        you\'re looking to take care of them right, you should make sure it\'s the appropriate size.
+        It\'s their home, would it be fair if it was just a small, cramped box? This means sometimes
+        the enclosures can get pretty big depending on the animal and how many you\'re planning to have.</string>
+    <string name="misc_pet_outdoor">Have you ever seen someone take a lizard for a walk? You can
+        if you want but you almost definitely won\'t need to.</string>
+    <string name="misc_pet_companion">Generally these pets will keep to themselves. Some might
+        require a companion to keep them company, such as guinea pigs, but they generally won\'t be
+        all that interested in you. That doesn\'t mean you can\'t still hangout with them though.</string>
+    <string name="misc_pet_grooming">Most of these pets won\'t require dedicated grooming. Bathing
+        and brushing will be pretty much a non-issue. Make sure to keep their enclosure clean though.</string>
     <string name="misc_pet_link">https://www.google.com/search?q=other+pets</string>
     <string name="misc_pet_button">Visit our website to see all our other pets!</string>
 
