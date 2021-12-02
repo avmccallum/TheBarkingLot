@@ -31,16 +31,27 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Pet pet = pets.get(position);
-        holder.petName.setText(pet.getPetName());
-        holder.petImage.setImageResource(pet.getPetImage());
-        holder.petImage.setContentDescription(pet.getPetImgDesc());
-        holder.petHours.setText(pet.getPetHours());
-        holder.petActivity.setText(pet.getPetActivity());
-        holder.petExperience.setText(pet.getPetExperience());
-        holder.petEnclosure.setText(pet.getPetEnclosure());
-        holder.petOutdoor.setText(pet.getPetOutdoor());
-        holder.petCompanion.setText(pet.getPetCompanion());
-        holder.petGrooming.setText(pet.getPetGrooming());
+        if(pet.getPetDesc() == null) {
+            holder.petHours.setText(pet.getPetDesc());
+            holder.petActivity.setVisibility(View.GONE);
+            holder.petExperience.setVisibility(View.GONE);
+            holder.petEnclosure.setVisibility(View.GONE);
+            holder.petOutdoor.setVisibility(View.GONE);
+            holder.petCompanion.setVisibility(View.GONE);
+            holder.petGrooming.setVisibility(View.GONE);
+        } else {
+            holder.petName.setText(pet.getPetName());
+            holder.petImage.setImageResource(pet.getPetImage());
+            holder.petImage.setContentDescription(pet.getPetImgDesc());
+            holder.petHours.setText(pet.getPetHours());
+            holder.petActivity.setText(pet.getPetActivity());
+            holder.petExperience.setText(pet.getPetExperience());
+            holder.petEnclosure.setText(pet.getPetEnclosure());
+            holder.petOutdoor.setText(pet.getPetOutdoor());
+            holder.petCompanion.setText(pet.getPetCompanion());
+            holder.petGrooming.setText(pet.getPetGrooming());
+        }
+
 //        holder.petListButton.setText(pet.getPetButton());
 //        holder.petListButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
