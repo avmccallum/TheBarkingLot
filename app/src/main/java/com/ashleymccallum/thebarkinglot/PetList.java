@@ -8,10 +8,6 @@ import java.util.Map;
 
 public class PetList {
 
-    //TODO - create expert_pet and default_pet images
-
-//    public static final Pet EXPERT_PET = new Pet(R.string.expert_pet, R.string.expert_desc, R.drawable.cat_elderly);
-//    public static final Pet DEFAULT_PET = new Pet(R.string.default_pet, R.string.default_desc, R.drawable.cat_elderly);
     public static ArrayList<Pet> resultPets;
 
     public static void setResultPets(ArrayList<Pet> resultPets) {
@@ -31,9 +27,13 @@ public class PetList {
         ArrayList<Pet> pets = new ArrayList<>();
         Pet kitten = new Pet(
                 context.getString(R.string.kitten),
-                context.getString(R.string.kitten_desc),
-                context.getString(R.string.kitten_link),
-                context.getString(R.string.kitten_button),
+                context.getString(R.string.kitten_hours),
+                context.getString(R.string.kitten_activity),
+                context.getString(R.string.kitten_experience),
+                context.getString(R.string.kitten_enclosure),
+                context.getString(R.string.kitten_outdoor),
+                context.getString(R.string.kitten_companion),
+                context.getString(R.string.kitten_grooming),
                 context.getString(R.string.kitten_img_desc),
                 R.drawable.cat_young,
                 2, 1, 1, 0, 1, 1, 2);
@@ -43,9 +43,13 @@ public class PetList {
 
         Pet catAdult = new Pet(
                 context.getString(R.string.cat_adult),
-                context.getString(R.string.cat_adult_desc),
-                context.getString(R.string.cat_adult_link),
-                context.getString(R.string.cat_adult_button),
+                context.getString(R.string.cat_adult_hours),
+                context.getString(R.string.cat_adult_activity),
+                context.getString(R.string.cat_adult_experience),
+                context.getString(R.string.cat_adult_enclosure),
+                context.getString(R.string.cat_adult_outdoor),
+                context.getString(R.string.cat_adult_companion),
+                context.getString(R.string.cat_adult_grooming),
                 context.getString(R.string.cat_img_desc),
                 R.drawable.cat_adult,
                 1, 1, 0, 0, 0, 0, 1);
@@ -55,9 +59,13 @@ public class PetList {
 
         Pet catElderly = new Pet(
                 context.getString(R.string.cat_elderly),
-                context.getString(R.string.cat_elderly_desc),
-                context.getString(R.string.cat_elderly_link),
-                context.getString(R.string.cat_elderly_button),
+                context.getString(R.string.cat_elderly_hours),
+                context.getString(R.string.cat_elderly_activity),
+                context.getString(R.string.cat_elderly_experience),
+                context.getString(R.string.cat_elderly_enclosure),
+                context.getString(R.string.cat_elderly_outdoor),
+                context.getString(R.string.cat_elderly_companion),
+                context.getString(R.string.cat_elderly_grooming),
                 context.getString(R.string.elderly_cat_img_desc),
                 R.drawable.cat_elderly,
                 0, 1, 0, 0, 0, 1, 0);
@@ -67,9 +75,13 @@ public class PetList {
 
         Pet puppy = new Pet(
                 context.getString(R.string.puppy),
-                context.getString(R.string.puppy_desc),
-                context.getString(R.string.puppy_link),
-                context.getString(R.string.puppy_button),
+                context.getString(R.string.puppy_hours),
+                context.getString(R.string.puppy_activity),
+                context.getString(R.string.puppy_experience),
+                context.getString(R.string.puppy_enclosure),
+                context.getString(R.string.puppy_outdoor),
+                context.getString(R.string.puppy_companion),
+                context.getString(R.string.puppy_grooming),
                 context.getString(R.string.puppy_img_desc),
                 R.drawable.dog_young,
                 2, 2, 2, 2, 1, 1, 2);
@@ -79,9 +91,13 @@ public class PetList {
 
         Pet dogAdult = new Pet(
                 context.getString(R.string.dog_adult),
-                context.getString(R.string.dog_adult_desc),
-                context.getString(R.string.dog_adult_link),
-                context.getString(R.string.dog_adult_button),
+                context.getString(R.string.dog_adult_hours),
+                context.getString(R.string.dog_adult_activity),
+                context.getString(R.string.dog_adult_experience),
+                context.getString(R.string.dog_adult_enclosure),
+                context.getString(R.string.dog_adult_outdoor),
+                context.getString(R.string.dog_adult_companion),
+                context.getString(R.string.dog_adult_grooming),
                 context.getString(R.string.dog_img_desc),
                 R.drawable.dog_adult,
                 1, 2, 2, 2, 0, 1, 2);
@@ -91,9 +107,13 @@ public class PetList {
 
         Pet dogElderly = new Pet(
                 context.getString(R.string.dog_elderly),
-                context.getString(R.string.dog_elderly_desc),
-                context.getString(R.string.dog_elderly_link),
-                context.getString(R.string.dog_elderly_button),
+                context.getString(R.string.dog_elderly_hours),
+                context.getString(R.string.dog_elderly_activity),
+                context.getString(R.string.dog_elderly_experience),
+                context.getString(R.string.dog_elderly_enclosure),
+                context.getString(R.string.dog_elderly_outdoor),
+                context.getString(R.string.dog_elderly_companion),
+                context.getString(R.string.dog_elderly_grooming),
                 context.getString(R.string.elderly_dog_img_desc),
                 R.drawable.dog_elderly,
                 1, 2, 1, 2, 0, 1, 2);
@@ -103,9 +123,13 @@ public class PetList {
 
         Pet miscPet = new Pet(
                 context.getString(R.string.misc_pets),
-                context.getString(R.string.misc_pet_desc),
-                context.getString(R.string.misc_pet_link),
-                context.getString(R.string.misc_pet_button),
+                context.getString(R.string.misc_pet_hours),
+                context.getString(R.string.misc_pet_activity),
+                context.getString(R.string.misc_pet_experience),
+                context.getString(R.string.misc_pet_enclosure),
+                context.getString(R.string.misc_pet_outdoor),
+                context.getString(R.string.misc_pet_companion),
+                context.getString(R.string.misc_pet_grooming),
                 context.getString(R.string.misc_pet_img_desc),
                 R.drawable.misc_pets,
                 0, 0, 0, 0, 2, 2, 0);

@@ -18,30 +18,77 @@
             android:layout_height="200dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:layout_editor_absoluteY="97dp" />
 
         <TextView
             android:id="@+id/petListName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:fontFamily="@font/raleway"
             android:text="TextView"
+            android:textSize="@dimen/subtitle_font"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/petInfoImage" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/petListDesc"
+            android:id="@+id/petHours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/petListName" />
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="347dp" />
 
-<!--        <Button-->
+        <TextView
+            android:id="@+id/petActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="195dp"
+            tools:layout_editor_absoluteY="489dp" />
+
+        <TextView
+            android:id="@+id/petExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="561dp" />
+
+        <TextView
+            android:id="@+id/petEnclosure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="393dp" />
+
+        <TextView
+            android:id="@+id/petOutdoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="228dp"
+            tools:layout_editor_absoluteY="402dp" />
+
+        <TextView
+            android:id="@+id/petCompanion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="230dp"
+            tools:layout_editor_absoluteY="337dp" />
+
+        <TextView
+            android:id="@+id/petGrooming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="471dp" />
+
+        <!--        <Button-->
 <!--            android:id="@+id/petListButton"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->

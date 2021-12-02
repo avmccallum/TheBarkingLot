@@ -57,8 +57,6 @@
     <!-- Pet names, links, descriptions -->
     <!-- Kittens -->
     <string name="kitten">Kittens</string>
-    <!-- TODO - add description -->
-    <string name="kitten_desc">**KITTEN DESC HERE**</string>
     <string name="kitten_hours">Kittens shouldn\'t be left unsupervised for long periods of time.
         They can get into all kinds of trouble and they can get into all kinds of small places.</string>
     <string name="kitten_activity">They don\'t need a lot of strenuous activity, like walking or
@@ -81,8 +79,6 @@
     <string name="kitten_button">Visit our website to see our kittens!</string>
     <!-- Adult cats -->
     <string name="cat_adult">Adult Cats</string>
-    <!-- TODO - add description -->
-    <string name="cat_adult_desc">**CAT DESC HERE**</string>
     <string name="cat_adult_hours">Unless your cat is particularly aloof, you should be spending
         some time with them, but you probably don\'t need to go out of your way to set aside the time.</string>
     <string name="cat_adult_activity">Fully grown cats tend to be very low maintenance. They might
@@ -102,8 +98,6 @@
     <string name="cat_adult_button">Visit our website to see our cats!</string>
     <!-- Elderly cats -->
     <string name="cat_elderly">Elderly Cats</string>
-    <!-- TODO - add description -->
-    <string name="cat_elderly_desc">**ELDERLY CAT DESC HERE**</string>
     <string name="cat_elderly_hours">An elderly cat is probably going to be very low energy.
         If you pay attention to them when they ask, they\'ll probably be happy.</string>
     <string name="cat_elderly_activity">An elderly cat isn\'t going to need hardly any regular
@@ -124,8 +118,6 @@
     <string name="cat_elderly_button">Visit our website to see our elderly cats!</string>
     <!-- Puppies -->
     <string name="puppy">Puppies</string>
-    <!-- TODO - add description -->
-    <string name="puppy_desc">**PUPPY DESC HERE**</string>
     <string name="puppy_hours"></string>
     <string name="puppy_activity"></string>
     <string name="puppy_experience"></string>
@@ -138,8 +130,6 @@
     <string name="puppy_button">Visit our website to see our puppies!</string>
     <!-- Adult dog -->
     <string name="dog_adult">Adult Dogs</string>
-    <!-- TODO - add description -->
-    <string name="dog_adult_desc">**DOG DESC HERE**</string>
     <string name="dog_adult_hours"></string>
     <string name="dog_adult_activity"></string>
     <string name="dog_adult_experience"></string>
@@ -152,8 +142,6 @@
     <string name="dog_adult_button">Visit our website to see our dogs!</string>
     <!-- Elderly dog -->
     <string name="dog_elderly">Elderly Dogs</string>
-    <!-- TODO - add description -->
-    <string name="dog_elderly_desc">**ELDERLY DOG DESC HERE**</string>
     <string name="dog_elderly_hours"></string>
     <string name="dog_elderly_activity"></string>
     <string name="dog_elderly_experience"></string>
@@ -166,8 +154,6 @@
     <string name="dog_elderly_button">Visit our website to see our elderly dogs!</string>
     <!-- Misc pets -->
     <string name="misc_pets">Other Pets</string>
-    <!-- TODO - add description -->
-    <string name="misc_pet_desc">**MISC PET DESC HERE**</string>
     <string name="misc_pet_hours">Most other pets such as rodents, reptiles, and fish require
         little dedicated attention. If you are caring for them right, they can usually be left alone
         for most of the day.</string>

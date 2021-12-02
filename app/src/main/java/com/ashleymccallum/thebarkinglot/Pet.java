@@ -1,16 +1,8 @@
 package com.ashleymccallum.thebarkinglot;
 
-//import static com.ashleymccallum.thebarkinglot.PetList.DEFAULT_PET;
-//import static com.ashleymccallum.thebarkinglot.PetList.EXPERT_PET;
-
 import android.content.Context;
-import android.util.Log;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Map;
 
 public class Pet {
 
@@ -19,8 +11,15 @@ public class Pet {
      */
     private String petName;
     private String petDesc;
-    private String petLink;
-    private String petButton;
+    private String petHours;
+    private String petActivity;
+    private String petExperience;
+    private String petEnclosure;
+    private String petOutdoor;
+    private String petCompanion;
+    private String petGrooming;
+//    private String petLink;
+//    private String petButton;
     private String petImgDesc;
     private int petImage;
 
@@ -46,11 +45,16 @@ public class Pet {
      */
     private int[] petNeeds;
 
-    public Pet(String petName, String petDesc, String petLink, String petButton, String petImgDesc, int petImage, int hoursNeeded, int groomingNeed, int activityLevel, int outdoorRequired, int enclosureRequired, int experienceRequired, int companionshipLevel) {
+    //constructor for all pet results
+    public Pet(String petName, String petHours, String petActivity, String petExperience, String petEnclosure, String petOutdoor, String petCompanion, String petGrooming, String petImgDesc, int petImage, int hoursNeeded, int groomingNeed, int activityLevel, int outdoorRequired, int enclosureRequired, int experienceRequired, int companionshipLevel) {
         this.petName = petName;
-        this.petDesc = petDesc;
-        this.petLink = petLink;
-        this.petButton = petButton;
+        this.petHours = petHours;
+        this.petActivity = petActivity;
+        this.petExperience = petExperience;
+        this.petEnclosure = petEnclosure;
+        this.petOutdoor = petOutdoor;
+        this.petCompanion = petCompanion;
+        this.petGrooming = petGrooming;
         this.petImgDesc = petImgDesc;
         this.petImage = petImage;
         this.hoursNeeded = hoursNeeded;
@@ -62,6 +66,7 @@ public class Pet {
         this.companionshipLevel = companionshipLevel;
     }
 
+    //constructor for default and expert pet results
     public Pet(String petName, String petDesc, int petImage) {
         this.petName = petName;
         this.petDesc = petDesc;
@@ -104,13 +109,41 @@ public class Pet {
         return petDesc;
     }
 
-    public String getPetLink() {
-        return petLink;
+    public String getPetHours() {
+        return petHours;
     }
 
-    public String getPetButton() {
-        return petButton;
+    public String getPetActivity() {
+        return petActivity;
     }
+
+    public String getPetExperience() {
+        return petExperience;
+    }
+
+    public String getPetEnclosure() {
+        return petEnclosure;
+    }
+
+    public String getPetOutdoor() {
+        return petOutdoor;
+    }
+
+    public String getPetCompanion() {
+        return petCompanion;
+    }
+
+    public String getPetGrooming() {
+        return petGrooming;
+    }
+
+    //    public String getPetLink() {
+//        return petLink;
+//    }
+//
+//    public String getPetButton() {
+//        return petButton;
+//    }
 
     public String getPetImgDesc() {
         return petImgDesc;

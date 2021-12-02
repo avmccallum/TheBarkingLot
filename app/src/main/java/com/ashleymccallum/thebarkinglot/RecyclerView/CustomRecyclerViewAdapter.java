@@ -1,12 +1,8 @@
 package com.ashleymccallum.thebarkinglot.RecyclerView;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ashleymccallum.thebarkinglot.Pet;
 import com.ashleymccallum.thebarkinglot.R;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -39,7 +34,13 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         holder.petName.setText(pet.getPetName());
         holder.petImage.setImageResource(pet.getPetImage());
         holder.petImage.setContentDescription(pet.getPetImgDesc());
-        holder.petDesc.setText(pet.getPetDesc());
+        holder.petHours.setText(pet.getPetHours());
+        holder.petActivity.setText(pet.getPetActivity());
+        holder.petExperience.setText(pet.getPetExperience());
+        holder.petEnclosure.setText(pet.getPetEnclosure());
+        holder.petOutdoor.setText(pet.getPetOutdoor());
+        holder.petCompanion.setText(pet.getPetCompanion());
+        holder.petGrooming.setText(pet.getPetGrooming());
 //        holder.petListButton.setText(pet.getPetButton());
 //        holder.petListButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -67,14 +68,26 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
 class CustomViewHolder extends RecyclerView.ViewHolder {
     protected TextView petName;
     protected ImageView petImage;
-    protected TextView petDesc;
+    protected TextView petHours;
+    protected TextView petActivity;
+    protected TextView petExperience;
+    protected TextView petEnclosure;
+    protected TextView petOutdoor;
+    protected TextView petCompanion;
+    protected TextView petGrooming;
 //    protected Button petListButton;
 
     public CustomViewHolder(@NonNull View itemView) {
         super(itemView);
         this.petName = itemView.findViewById(R.id.petListName);
         this.petImage = itemView.findViewById(R.id.petInfoImage);
-        this.petDesc = itemView.findViewById(R.id.petListDesc);
+        this.petHours = itemView.findViewById(R.id.petHours);
+        this.petActivity = itemView.findViewById(R.id.petActivity);
+        this.petExperience = itemView.findViewById(R.id.petExperience);
+        this.petEnclosure = itemView.findViewById(R.id.petEnclosure);
+        this.petOutdoor = itemView.findViewById(R.id.petOutdoor);
+        this.petCompanion = itemView.findViewById(R.id.petCompanion);
+        this.petGrooming = itemView.findViewById(R.id.petGrooming);
 //        this.petListButton = itemView.findViewById(R.id.petListButton);
     }
 }
