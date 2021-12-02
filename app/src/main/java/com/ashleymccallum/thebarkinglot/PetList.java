@@ -8,8 +8,10 @@ import java.util.Map;
 
 public class PetList {
 
-    //TODO - Add default pet in case of no match
+    //TODO - create expert_pet and default_pet images
 
+//    public static final Pet EXPERT_PET = new Pet(R.string.expert_pet, R.string.expert_desc, R.drawable.cat_elderly);
+//    public static final Pet DEFAULT_PET = new Pet(R.string.default_pet, R.string.default_desc, R.drawable.cat_elderly);
     public static ArrayList<Pet> resultPets;
 
     public static void setResultPets(ArrayList<Pet> resultPets) {

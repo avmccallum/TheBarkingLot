@@ -40,19 +40,19 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         holder.petImage.setImageResource(pet.getPetImage());
         holder.petImage.setContentDescription(pet.getPetImgDesc());
         holder.petDesc.setText(pet.getPetDesc());
-        holder.petListButton.setText(pet.getPetButton());
-        holder.petListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getPetLink()));
-                try {
-                    holder.petListButton.getContext().startActivity(i);
-                } catch (ActivityNotFoundException e) {
-                    //TODO - make snackbar functional
-//                    Snackbar.make(getContext().getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
-                }
-            }
-        });
+//        holder.petListButton.setText(pet.getPetButton());
+//        holder.petListButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getPetLink()));
+//                try {
+//                    holder.petListButton.getContext().startActivity(i);
+//                } catch (ActivityNotFoundException e) {
+//                    //TODO - make snackbar functional
+////                    Snackbar.make(getContext().getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
     }
 
     @Override
@@ -68,13 +68,13 @@ class CustomViewHolder extends RecyclerView.ViewHolder {
     protected TextView petName;
     protected ImageView petImage;
     protected TextView petDesc;
-    protected Button petListButton;
+//    protected Button petListButton;
 
     public CustomViewHolder(@NonNull View itemView) {
         super(itemView);
         this.petName = itemView.findViewById(R.id.petListName);
         this.petImage = itemView.findViewById(R.id.petInfoImage);
         this.petDesc = itemView.findViewById(R.id.petListDesc);
-        this.petListButton = itemView.findViewById(R.id.petListButton);
+//        this.petListButton = itemView.findViewById(R.id.petListButton);
     }
 }

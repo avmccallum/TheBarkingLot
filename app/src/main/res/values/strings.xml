@@ -55,6 +55,7 @@
     <string name="resource5">Animal Information</string>
 
     <!-- Pet names, links, descriptions -->
+    <!-- Kittens -->
     <string name="kitten">Kittens</string>
     <!-- TODO - add description -->
     <string name="kitten_desc">**KITTEN DESC HERE**</string>
@@ -78,6 +79,7 @@
         teeth cleaning and nail trimming.</string>
     <string name="kitten_link">https://www.google.com/search?q=kitten</string>
     <string name="kitten_button">Visit our website to see our kittens!</string>
+    <!-- Adult cats -->
     <string name="cat_adult">Adult Cats</string>
     <!-- TODO - add description -->
     <string name="cat_adult_desc">**CAT DESC HERE**</string>
@@ -98,6 +100,7 @@
         need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
     <string name="cat_adult_link">https://www.google.com/search?q=cat</string>
     <string name="cat_adult_button">Visit our website to see our cats!</string>
+    <!-- Elderly cats -->
     <string name="cat_elderly">Elderly Cats</string>
     <!-- TODO - add description -->
     <string name="cat_elderly_desc">**ELDERLY CAT DESC HERE**</string>
@@ -119,6 +122,7 @@
         need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
     <string name="cat_elderly_link">https://www.google.com/search?q=elderly+cat</string>
     <string name="cat_elderly_button">Visit our website to see our elderly cats!</string>
+    <!-- Puppies -->
     <string name="puppy">Puppies</string>
     <!-- TODO - add description -->
     <string name="puppy_desc">**PUPPY DESC HERE**</string>
@@ -132,6 +136,7 @@
         more true for a rowdy puppy. Bathing, brushing, teeth cleaning, etc.</string>
     <string name="puppy_link">https://www.google.com/search?q=puppy</string>
     <string name="puppy_button">Visit our website to see our puppies!</string>
+    <!-- Adult dog -->
     <string name="dog_adult">Adult Dogs</string>
     <!-- TODO - add description -->
     <string name="dog_adult_desc">**DOG DESC HERE**</string>
@@ -145,6 +150,7 @@
         going to get water everywhere while you do it. Don\'t forget trying to clip their nails and brush their teeth.</string>
     <string name="dog_adult_link">https://www.google.com/search?q=dog</string>
     <string name="dog_adult_button">Visit our website to see our dogs!</string>
+    <!-- Elderly dog -->
     <string name="dog_elderly">Elderly Dogs</string>
     <!-- TODO - add description -->
     <string name="dog_elderly_desc">**ELDERLY DOG DESC HERE**</string>
@@ -158,6 +164,7 @@
         but they still need regular grooming. Bathing, nail clipping, tooth brushing, the whole works.</string>
     <string name="dog_elderly_link">https://www.google.com/search?q=elderly+dog</string>
     <string name="dog_elderly_button">Visit our website to see our elderly dogs!</string>
+    <!-- Misc pets -->
     <string name="misc_pets">Other Pets</string>
     <!-- TODO - add description -->
     <string name="misc_pet_desc">**MISC PET DESC HERE**</string>
@@ -183,13 +190,24 @@
         and brushing will be pretty much a non-issue. Make sure to keep their enclosure clean though.</string>
     <string name="misc_pet_link">https://www.google.com/search?q=other+pets</string>
     <string name="misc_pet_button">Visit our website to see all our other pets!</string>
+    <!-- Expert pet -->
+    <string name="expert_pet">You said you\'re a pro so…</string>
+    <string name="expert_desc">Fosters and adoption agencies are always looking for experienced
+        people to help with more challenging pets. It can be hard to find people prepared to take in
+        ill pets that need specific care, or folks with the experience to help rehabilitate abused
+        or feral animals. Talk to one of our volunteers to see who we have that needs help.</string>
+<!--    <string name="expert_button">Chat with a volunteer</string>-->
+    <!-- Default pet -->
+    <string name="default_pet">OOPS! Looks like theres no match…</string>
+    <string name="default_desc">Try taking the quiz again, or chat with our volunteers to see what they have to say!</string>
+<!--    <string name="default_button">Chat with a volunteer</string>-->
 
     <!-- Pet survey intro -->
     <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
-    <string name="survey_para_1">\t\tThis quiz will match you with any types of pet that would suit your
-        lifestyle. Keep in mind this is just a recommendation, and there are a lot of factors that
-        should be considered when adopting or fostering an animal. Visit our website to see all
-        the animals we have available, or contact us to chat with a pet expert!</string>
+    <string name="survey_para_1">\t\tNot sure what kind of furry (or not) friend you\'re looking for?
+        Let us help you decide! Take this quiz for a quick look at who might suit your lifestyle.\n\n
+        \t\tKeep in mind this is just a recommendation, and all pets have their own personalities and
+        quirks. Contact us to talk to a volunteer and see who they think would suit you!</string>
     <string name="quiz_start_button">Begin the quiz</string>
 
     <!-- Pet survey questions -->

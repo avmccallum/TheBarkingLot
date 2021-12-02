@@ -1,5 +1,9 @@
 package com.ashleymccallum.thebarkinglot;
 
+//import static com.ashleymccallum.thebarkinglot.PetList.DEFAULT_PET;
+//import static com.ashleymccallum.thebarkinglot.PetList.EXPERT_PET;
+
+import android.content.Context;
 import android.util.Log;
 
 import java.lang.reflect.Array;
@@ -19,6 +23,7 @@ public class Pet {
     private String petButton;
     private String petImgDesc;
     private int petImage;
+
 
     /**
      * Properties for the pet information
@@ -55,6 +60,12 @@ public class Pet {
         this.enclosureRequired = enclosureRequired;
         this.experienceRequired = experienceRequired;
         this.companionshipLevel = companionshipLevel;
+    }
+
+    public Pet(String petName, String petDesc, int petImage) {
+        this.petName = petName;
+        this.petDesc = petDesc;
+        this.petImage = petImage;
     }
 
     public Pet(int[] petNeeds) {
@@ -117,30 +128,49 @@ public class Pet {
      * @return ArrayList of matching pets
      */
 
-    public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet) {
+    public static ArrayList<Pet> matchPets(ArrayList<Pet> allPets, Pet searchPet, Context context) {
         ArrayList<Pet> petResults = new ArrayList<>();
+        int emptyCount = 0;
 
+        //check how many questions were not answered
+        for(int i = 0; i < searchPet.petNeeds.length; i++) {
+            if(searchPet.petNeeds[i] == 3) {
+                emptyCount ++;
+            }
+        }
+
+        //for each pet in the possible results
         for(Pet pet : allPets) {
             int propertyMatches = 0;
-
             for(int i = 0; i < pet.petNeeds.length; i++) {
 
+                //check if each need matches the search query
                 if(pet.petNeeds[i] == searchPet.petNeeds[i]) {
                     propertyMatches ++;
                 }
             }
 
+            //if there are 3 or more matches add pet to result list
             if(propertyMatches > 3) {
                 petResults.add(pet);
             }
         }
 
-        if(!petResults.isEmpty()) {
-            return petResults;
-        } else {
-            //TODO - if user gets no match or does not answer questions return default pet (also return if user does not answer a certain number of questions)
-            return petResults;
+        //if user answered they were an expert for second to last question (expertise), add exert pet to list
+        if(searchPet.petNeeds[searchPet.petNeeds.length - 2] == 2) {
+            petResults.add(new Pet(context.getString(R.string.expert_pet), context.getString(R.string.expert_desc), R.drawable.cat_elderly));
         }
 
+        //if half the questions were unanswered, remove all answers from the list
+        if(emptyCount >= searchPet.petNeeds.length / 2) {
+            petResults.clear();
+        }
+
+        //if there are no answers, return the default
+        if(petResults.isEmpty()) {
+            petResults.add(new Pet(context.getString(R.string.default_pet), context.getString(R.string.default_desc), R.drawable.cat_elderly));
+        }
+
+        return petResults;
     }
 }

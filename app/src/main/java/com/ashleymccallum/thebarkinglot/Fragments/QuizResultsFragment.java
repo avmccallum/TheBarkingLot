@@ -71,11 +71,6 @@ public class QuizResultsFragment extends Fragment {
 
         ArrayList<Pet> results = PetList.getResultPets();
 
-        //TODO - remove log.d
-        for(Pet pet : results) {
-            Log.d("````````````", "QUIZ RESULT: " + pet.getPetName());
-        }
-
         RecyclerView quizRecycler = view.findViewById(R.id.quizResultRecycler);
         quizRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         quizRecycler.setAdapter(new CustomRecyclerViewAdapter(results));

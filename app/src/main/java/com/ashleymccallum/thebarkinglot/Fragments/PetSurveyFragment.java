@@ -5,8 +5,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-import androidx.preference.PreferenceManager;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -190,10 +190,9 @@ public class PetSurveyFragment extends Fragment {
                     answers[index] = 1;
                 } else if (quizGroup.getCheckedRadioButtonId() == question3.getId()) {
                     answers[index] = 2;
+                } else {
+                    answers[index] = 3;
                 }
-
-                //TODO - remove log.d
-                Log.d("__________________", Arrays.toString(answers));
 
                 //clear the checked option in the group
                 quizGroup.clearCheck();
@@ -219,15 +218,15 @@ public class PetSurveyFragment extends Fragment {
                 if(index == questions.length) {
                     index -= questions.length;
                     Pet searchPet = new Pet(answers);
-                    ArrayList<Pet> results = Pet.matchPets(allPets, searchPet);
+                    ArrayList<Pet> results = Pet.matchPets(allPets, searchPet, getContext());
                     PetList.setResultPets(results);
 
                     Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
-
-                    //TODO - remove log.d
-                    for(Pet pet : results) {
-                        Log.d("__________________", pet.getPetName());
-                    }
+//
+//                    //TODO - remove log.d
+//                    for(Pet pet : results) {
+//                        Log.d("__________________", pet.getPetName());
+//                    }
 
                 }
 
