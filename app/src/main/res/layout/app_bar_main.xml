@@ -17,15 +17,15 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/yellow_500"
             android:textAlignment="center"
-            app:contentInsetStart="0dp"
-            app:contentInsetStartWithNavigation="0dp"
+            app:contentInsetStart="@dimen/remove_margin"
+            app:contentInsetStartWithNavigation="@dimen/remove_margin"
             app:popupTheme="@style/Theme.TheBarkingLot.PopupOverlay" >
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/logo_1_white"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center_horizontal"/>
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

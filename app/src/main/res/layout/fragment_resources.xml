@@ -14,6 +14,8 @@
         android:layout_marginTop="@dimen/nav_header_vertical_spacing"
         android:layout_marginEnd="@dimen/nav_header_vertical_spacing"
         android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+        android:divider="@color/white"
+        android:dividerHeight="@dimen/button_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

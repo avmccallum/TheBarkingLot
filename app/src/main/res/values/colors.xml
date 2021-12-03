@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red_700">#D32F2F</color>
-    <color name="yellow_500">#E3B238</color>
-    <color name="yellow_200">#B6AD42</color>
-    <color name="yellow_700">#7E682B</color>
+    <color name="yellow_500">#000000</color>
+    <color name="yellow_200">#000000</color>
+    <color name="yellow_700">#000000</color>
 </resources>
