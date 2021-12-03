@@ -13,6 +13,12 @@
     <string name="dog_img_desc">Cartoon image of a dog</string>
     <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
     <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
+    <string name="default_pet_img_desc"></string>
+    <string name="expert_pet_img_desc"></string>
+    <string name="facebook_logo">Facebook logo</string>
+    <string name="instagram_logo">Instagram logo</string>
+    <string name="twitter_logo">Twitter logo</string>
+    <string name="website_logo">Website logo</string>
 
     <!-- Main navigation -->
     <string name="menu_home">Home</string>
@@ -22,12 +28,20 @@
     <string name="menu_credits">Credits</string>
 
     <!-- Home page -->
-    <string name="emergency_services">FIND EMERGENCY PET CARE</string>
-    <string name="emergency_title">Need Help Urgently?</string>
     <string name="home_intro">Who We Are</string>
-    <string name="mission_statement">\t\tThe Barking Lot is a Windsor/Essex County pet rescue and
-        fostering agency. We are dedicated to providing compassionate care to pets and assistance
-        to pet owners. </string>
+    <string name="mission_statement">The Barking Lot is a volunteer-run pet rescue. We take in
+        animals of all kinds and strive to find each and every one of them a home!</string>
+    <string name="foster_subtitle">If you\'re here to foster…</string>
+    <string name="foster_message">Then thank you for considering it! Fostering is very important,
+        and saves countless pets daily. By doing so you\'re helping all kinds of animals find safe and happy homes!</string>
+    <string name="adopt_subtitle">If you\'re here to adopt…</string>
+    <string name="adopt_message">Then thank you for adopting, not shopping! Stop puppy mills,
+        inhumane breeders, and exotic pet dealers by adopting the animals that are already here and need you.</string>
+    <string name="social_media">Find us online!</string>
+    <string name="donation_message">We\'re a volunteer run organization that is funded exclusively
+        by donations. If you\'re able, consider donating to support us!</string>
+    <string name="donate_button">Donate</string>
+
 
     <!-- Contact info -->
     <string name="contact_message">Have questions?</string>
@@ -40,8 +54,12 @@
 
     <!-- Credits -->
     <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
-    <string name="credit_item1">Assets</string>
-    <string name="credit_info1">Animal images and logos created by me</string>
+    <string name="assets_credit">Assets</string>
+    <string name="my_assets">All other assets made by me</string>
+    <string name="facebook_asset">Facebook logo from the Facebook logo pack</string>
+    <string name="instagram_asset">Instagram logo from the Instagram logo pack</string>
+    <string name="twitter_asset">Twitter logo from the Twitter logo pack</string>
+
 
     <!-- Resources -->
     <string name="resource1">Emergency Animal Hospitals</string>

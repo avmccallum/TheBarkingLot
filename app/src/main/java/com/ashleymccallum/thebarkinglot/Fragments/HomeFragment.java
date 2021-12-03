@@ -65,19 +65,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        Button emergencyButton = view.findViewById(R.id.emergencyButton);
-        emergencyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_WEB_SEARCH);
-                i.putExtra(SearchManager.QUERY, "24 hour animal hospital");
-                try {
-                    startActivity(i);
-                } catch (ActivityNotFoundException e) {
-                    Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
-                }
-            }
-        });
+
         return view;
     }
 }

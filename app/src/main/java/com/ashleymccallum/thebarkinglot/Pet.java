@@ -67,10 +67,11 @@ public class Pet {
     }
 
     //constructor for default and expert pet results
-    public Pet(String petName, String petDesc, int petImage) {
+    public Pet(String petName, String petDesc, int petImage, String petImgDesc) {
         this.petName = petName;
         this.petDesc = petDesc;
         this.petImage = petImage;
+        this.petImgDesc = petImgDesc;
     }
 
     public Pet(int[] petNeeds) {
@@ -137,14 +138,6 @@ public class Pet {
         return petGrooming;
     }
 
-    //    public String getPetLink() {
-//        return petLink;
-//    }
-//
-//    public String getPetButton() {
-//        return petButton;
-//    }
-
     public String getPetImgDesc() {
         return petImgDesc;
     }
@@ -191,7 +184,7 @@ public class Pet {
 
         //if user answered they were an expert for second to last question (expertise), add exert pet to list
         if(searchPet.petNeeds[searchPet.petNeeds.length - 2] == 2) {
-            petResults.add(new Pet(context.getString(R.string.expert_pet), context.getString(R.string.expert_desc), R.drawable.cat_elderly));
+            petResults.add(new Pet(context.getString(R.string.expert_pet), context.getString(R.string.expert_desc), R.drawable.cat_elderly, context.getString(R.string.expert_pet_img_desc)));
         }
 
         //if half the questions were unanswered, remove all answers from the list
@@ -201,7 +194,7 @@ public class Pet {
 
         //if there are no answers, return the default
         if(petResults.isEmpty()) {
-            petResults.add(new Pet(context.getString(R.string.default_pet), context.getString(R.string.default_desc), R.drawable.cat_elderly));
+            petResults.add(new Pet(context.getString(R.string.default_pet), context.getString(R.string.default_desc), R.drawable.cat_elderly, context.getString(R.string.default_pet_img_desc)));
         }
 
         return petResults;

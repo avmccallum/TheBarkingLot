@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,14 +33,11 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Pet pet = pets.get(position);
         if(pet.getPetDesc() != null) {
-            holder.petHours.setText(pet.getPetDesc());
-            holder.petActivity.setVisibility(View.GONE);
-            holder.petExperience.setVisibility(View.GONE);
-            holder.petEnclosure.setVisibility(View.GONE);
-            holder.petOutdoor.setVisibility(View.GONE);
-            holder.petCompanion.setVisibility(View.GONE);
-            holder.petGrooming.setVisibility(View.GONE);
+            //if there is a description, set the
+            holder.petDescription.setText(pet.getPetDesc());
+            holder.scrollView.setVisibility(View.GONE);
         } else {
+            holder.petDescription.setVisibility(View.GONE);
             holder.petHours.setText(pet.getPetHours());
             holder.petActivity.setText(pet.getPetActivity());
             holder.petExperience.setText(pet.getPetExperience());
@@ -51,22 +49,6 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         holder.petName.setText(pet.getPetName());
         holder.petImage.setImageResource(pet.getPetImage());
         holder.petImage.setContentDescription(pet.getPetImgDesc());
-
-
-
-//        holder.petListButton.setText(pet.getPetButton());
-//        holder.petListButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(pet.getPetLink()));
-//                try {
-//                    holder.petListButton.getContext().startActivity(i);
-//                } catch (ActivityNotFoundException e) {
-//                    //TODO - make snackbar functional
-////                    Snackbar.make(getContext().getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
     }
 
     @Override
@@ -88,7 +70,8 @@ class CustomViewHolder extends RecyclerView.ViewHolder {
     protected TextView petOutdoor;
     protected TextView petCompanion;
     protected TextView petGrooming;
-//    protected Button petListButton;
+    protected TextView petDescription;
+    protected ScrollView scrollView;
 
     public CustomViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -101,6 +84,8 @@ class CustomViewHolder extends RecyclerView.ViewHolder {
         this.petOutdoor = itemView.findViewById(R.id.petOutdoor);
         this.petCompanion = itemView.findViewById(R.id.petCompanion);
         this.petGrooming = itemView.findViewById(R.id.petGrooming);
-//        this.petListButton = itemView.findViewById(R.id.petListButton);
+        this.petDescription = itemView.findViewById(R.id.petDescText);
+        this.scrollView = itemView.findViewById(R.id.petInfoScroll);
+
     }
 }

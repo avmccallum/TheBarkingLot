@@ -117,6 +117,7 @@
         android:fontFamily="@font/montserrat"
         android:padding="@dimen/button_padding"
         android:text="@string/next_question"
+        android:textColor="@color/white"
         app:cornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
