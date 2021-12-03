@@ -52,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        //Add logo to main header
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setLogo(R.drawable.logo_1);
-        setSupportActionBar(toolbar);
     }
 
     @Override

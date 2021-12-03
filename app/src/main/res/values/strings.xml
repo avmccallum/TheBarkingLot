@@ -54,7 +54,15 @@
     <string name="resourceLink4">pet+supplies+near+me</string>
     <string name="resource5">Animal Information</string>
 
-    <!-- Pet names, links, descriptions -->
+    <!-- Pet names, descriptions, info headers -->
+    <string name="hours_header">How much attention do they need?</string>
+    <string name="activity_header">How active are they?</string>
+    <string name="experience_header">Are they difficult to care for?</string>
+    <string name="enclosure_header">Do they need a cage/tank/terrarium?</string>
+    <string name="outdoor_header">Do they need outdoor space?</string>
+    <string name="companion_header">What kind of friend am I getting?</string>
+    <string name="grooming_header">How much upkeep do they need?</string>
+
     <!-- Kittens -->
     <string name="kitten">Kittens</string>
     <string name="kitten_hours">Kittens shouldn\'t be left unsupervised for long periods of time.
@@ -75,8 +83,6 @@
     <string name="kitten_grooming">Kittens very rarely need to be bathed but after 3 months old,
         brushing should be a regular occurrence. As they get older they\'ll need the occasional
         teeth cleaning and nail trimming.</string>
-    <string name="kitten_link">https://www.google.com/search?q=kitten</string>
-    <string name="kitten_button">Visit our website to see our kittens!</string>
     <!-- Adult cats -->
     <string name="cat_adult">Adult Cats</string>
     <string name="cat_adult_hours">Unless your cat is particularly aloof, you should be spending
@@ -87,15 +93,13 @@
         there\'s a lot of resources for beginners.</string>
     <string name="cat_adult_enclosure">Adult cats don\'t need a dedicated enclosure. They might get
         in to some trouble, but that just comes with having a pet.</string>
-    <string name="cat_adult_outdoor">It\'s dangers for cats to be let outdoors. Unless you\'re
+    <string name="cat_adult_outdoor">It\'s dangerous for cats to be let outdoors. Unless you\'re
         keeping them on a leash, they should be indoors.</string>
     <string name="cat_adult_companion">Some cats are very aloof and some are very cuddly. It\'s
         important to ask about their temperament or spend some time getting to know them before you
         make a decision to bring them home.</string>
     <string name="cat_adult_grooming">It\'s very rare to need to bathe a cat. Usually all they
         need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
-    <string name="cat_adult_link">https://www.google.com/search?q=cat</string>
-    <string name="cat_adult_button">Visit our website to see our cats!</string>
     <!-- Elderly cats -->
     <string name="cat_elderly">Elderly Cats</string>
     <string name="cat_elderly_hours">An elderly cat is probably going to be very low energy.
@@ -107,15 +111,13 @@
         other factors can all impact how much work they are going to be as they age.</string>
     <string name="cat_elderly_enclosure">Elderly cats don\'t need dedicated enclosures. They\'re generally
         more low-energy and won\'t get into as much trouble.</string>
-    <string name="cat_elderly_outdoor">It\'s dangers for cats to be let outdoors. Unless you\'re
+    <string name="cat_elderly_outdoor">It\'s dangerous for cats to be let outdoors. Unless you\'re
         keeping them on a leash, they should be indoors.</string>
     <string name="cat_elderly_companion">Some cats are very aloof and some are very cuddly. It\'s
         important to ask about their temperament or spend some time getting to know them before you
         make a decision to bring them home.</string>
     <string name="cat_elderly_grooming">It\'s very rare to need to bathe a cat. Usually all they
         need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
-    <string name="cat_elderly_link">https://www.google.com/search?q=elderly+cat</string>
-    <string name="cat_elderly_button">Visit our website to see our elderly cats!</string>
     <!-- Puppies -->
     <string name="puppy">Puppies</string>
     <string name="puppy_hours"></string>
@@ -126,8 +128,6 @@
     <string name="puppy_companion"></string>
     <string name="puppy_grooming">Dogs need regular grooming and this is probably going to be even
         more true for a rowdy puppy. Bathing, brushing, teeth cleaning, etc.</string>
-    <string name="puppy_link">https://www.google.com/search?q=puppy</string>
-    <string name="puppy_button">Visit our website to see our puppies!</string>
     <!-- Adult dog -->
     <string name="dog_adult">Adult Dogs</string>
     <string name="dog_adult_hours"></string>
@@ -138,8 +138,6 @@
     <string name="dog_adult_companion"></string>
     <string name="dog_adult_grooming">Dogs need regular bathing and let\'s be real, you\'re probably
         going to get water everywhere while you do it. Don\'t forget trying to clip their nails and brush their teeth.</string>
-    <string name="dog_adult_link">https://www.google.com/search?q=dog</string>
-    <string name="dog_adult_button">Visit our website to see our dogs!</string>
     <!-- Elderly dog -->
     <string name="dog_elderly">Elderly Dogs</string>
     <string name="dog_elderly_hours"></string>
@@ -150,8 +148,6 @@
     <string name="dog_elderly_companion"></string>
     <string name="dog_elderly_grooming">Elderly dogs might not make as much of a mess in the bathtub,
         but they still need regular grooming. Bathing, nail clipping, tooth brushing, the whole works.</string>
-    <string name="dog_elderly_link">https://www.google.com/search?q=elderly+dog</string>
-    <string name="dog_elderly_button">Visit our website to see our elderly dogs!</string>
     <!-- Misc pets -->
     <string name="misc_pets">Other Pets</string>
     <string name="misc_pet_hours">Most other pets such as rodents, reptiles, and fish require
@@ -174,20 +170,15 @@
         all that interested in you. That doesn\'t mean you can\'t still hangout with them though.</string>
     <string name="misc_pet_grooming">Most of these pets won\'t require dedicated grooming. Bathing
         and brushing will be pretty much a non-issue. Make sure to keep their enclosure clean though.</string>
-    <string name="misc_pet_link">https://www.google.com/search?q=other+pets</string>
-    <string name="misc_pet_button">Visit our website to see all our other pets!</string>
     <!-- Expert pet -->
     <string name="expert_pet">You said you\'re a pro so…</string>
     <string name="expert_desc">Fosters and adoption agencies are always looking for experienced
         people to help with more challenging pets. It can be hard to find people prepared to take in
         ill pets that need specific care, or folks with the experience to help rehabilitate abused
         or feral animals. Talk to one of our volunteers to see who we have that needs help.</string>
-<!--    <string name="expert_button">Chat with a volunteer</string>-->
     <!-- Default pet -->
     <string name="default_pet">OOPS! Looks like theres no match…</string>
     <string name="default_desc">Try taking the quiz again, or chat with our volunteers to see what they have to say!</string>
-<!--    <string name="default_button">Chat with a volunteer</string>-->
-
     <!-- Pet survey intro -->
     <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
     <string name="survey_para_1">\t\tNot sure what kind of furry (or not) friend you\'re looking for?
@@ -244,4 +235,5 @@
     <!-- Font preferences -->
     <string name="font_title">Font Size</string>
     <string name="font_summary">Please select font size</string>
+    <string name="next_button_hint">next page</string>
 </resources>
