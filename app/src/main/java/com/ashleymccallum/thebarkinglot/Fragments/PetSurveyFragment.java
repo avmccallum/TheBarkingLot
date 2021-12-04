@@ -222,14 +222,7 @@ public class PetSurveyFragment extends Fragment {
                     PetList.setResultPets(results);
 
                     Navigation.findNavController(view).navigate(R.id.action_nav_pet_survey_to_nav_quiz_results);
-//
-//                    //TODO - remove log.d
-//                    for(Pet pet : results) {
-//                        Log.d("__________________", pet.getPetName());
-//                    }
-
                 }
-
             }
         });
         return view;

@@ -23,14 +23,12 @@ import com.google.android.material.snackbar.Snackbar;
  */
 public class HomeInfoFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String ARG_PARAM3 = "param3";
     private static final String ARG_PARAM4 = "param4";
 
-    // TODO: Rename and change types of parameters
     private int mParam1;
     private int mParam2;
     private int mParam3;
@@ -50,7 +48,6 @@ public class HomeInfoFragment extends Fragment {
      * @param param4 Parameter 4.
      * @return A new instance of fragment HomeInfoFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static HomeInfoFragment newInstance(int param1, int param2, int param3, int param4) {
         HomeInfoFragment fragment = new HomeInfoFragment();
         Bundle args = new Bundle();
