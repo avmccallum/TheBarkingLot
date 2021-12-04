@@ -1,18 +1,24 @@
 package com.ashleymccallum.thebarkinglot.Fragments;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.graphics.pdf.PdfDocument;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
 import android.os.Environment;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.ashleymccallum.thebarkinglot.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -26,12 +32,10 @@ import java.io.IOException;
  */
 public class FormFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -47,7 +51,6 @@ public class FormFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment FormFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static FormFragment newInstance(String param1, String param2) {
         FormFragment fragment = new FormFragment();
         Bundle args = new Bundle();
@@ -72,56 +75,35 @@ public class FormFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_form, container, false);
 
+        EditText fname = view.findViewById(R.id.fnameField);
+        EditText lname = view.findViewById(R.id.lnameField);
+        EditText email = view.findViewById(R.id.emailField);
+        EditText phone = view.findViewById(R.id.phoneField);
+        EditText petType = view.findViewById(R.id.petTypeField);
+        EditText experience = view.findViewById(R.id.experienceField);
+
         Button formSubmit = view.findViewById(R.id.formSubmit);
         formSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //create document
-                PdfDocument document = new PdfDocument();
 
-                //create page description
-                PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(view.getWidth(), view.getHeight(), 1).create();
+                //body of email retrieved from edittext fields
+                String body = "First Name: " + fname.getText() + "\n\n" +
+                        "Last Name: " + lname.getText() + "\n\n" +
+                        "Email Address: " + email.getText() + "\n\n" +
+                        "Phone: " + phone.getText() + "\n\n" +
+                        "Preferred Foster Animal(s): " + petType.getText() + "\n\n" +
+                        "Fostering Experience: " + experience.getText() + "\n\n";
 
-                //start page
-                PdfDocument.Page page = document.startPage(pageInfo);
-
-                //draw content to page
-                view.draw(page.getCanvas());
-
-                //finish page
-                document.finishPage(page);
-
-                String dirName = "TBL";
-                String fileName = "tbl_form.pdf";
-                String extStorage = Environment.getExternalStorageDirectory().getAbsolutePath();
-                File directory = new File(extStorage + File.separator + dirName);
-                if(!directory.exists()) {
-                    directory.mkdir();
-                }
-
-                File outputFile = new File(extStorage + File.separator + dirName + File.separator + fileName);
-
-
-//                File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-
-                Log.d("---------------", directory.toString());
-//                File directory = new File(path);
-//                if(!directory.exists()) {
-//                    directory.mkdir();
-//                }
-
-//                File file = new File(directory, "tbl_form.pdf");
-
-
+                Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
+                i.putExtra(Intent.EXTRA_EMAIL, new String[] {"contact@thebarkinglot.ca"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "Foster Application: " + fname.getText() + " " + lname.getText());
+                i.putExtra(Intent.EXTRA_TEXT, body);
                 try {
-                    outputFile.createNewFile();
-                    FileOutputStream out = new FileOutputStream(outputFile, true);
-//                    file = File.createTempFile("tbl_form", ".pdf");
-
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
                 }
-                document.close();
             }
         });
 
