@@ -61,6 +61,13 @@
     <string name="foster_application">Want to become a foster family? Fill out this survey:</string>
     <string name="issue_message">Report an issue with our app:</string>
 
+    <string name="form_fname">First Name</string>
+    <string name="form_lname">Last Name</string>
+    <string name="form_email">Email Address</string>
+    <string name="form_phone">Phone Number</string>
+    <string name="form_petField">Which pets are you looking to foster:</string>
+    <string name="form_experience">Please list previous fostering experience (if any):</string>
+
     <!-- Credits -->
     <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
     <string name="assets_credit">Assets</string>
@@ -259,8 +266,8 @@
     <string name="animations_summary">Toggle animations</string>
 
     <!-- Font preferences -->
-<!--    <string name="font_title">Font Size</string>-->
-<!--    <string name="font_summary">Select font size</string>-->
+    <!--    <string name="font_title">Font Size</string>-->
+    <!--    <string name="font_summary">Select font size</string>-->
 
     <!-- Pet preference -->
     <string name="pet_pref_title">Pet Preference</string>
