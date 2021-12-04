@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.ashleymccallum.thebarkinglot.R;
-import com.ashleymccallum.thebarkinglot.ViewPager.CustomViewPagerAdapter;
+import com.ashleymccallum.thebarkinglot.SurveyViewPager.SurveyViewPagerAdapter;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -70,11 +70,11 @@ public class SurveyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_survey, container, false);
 
         ViewPager2 viewPager2 = view.findViewById(R.id.petSlideShow);
-        viewPager2.setAdapter(new CustomViewPagerAdapter(getActivity()));
+        viewPager2.setAdapter(new SurveyViewPagerAdapter(getActivity()));
 
         //viewpager does not allow user to scroll
         viewPager2.setUserInputEnabled(false);
-        viewPager2.setPageTransformer(new CustomViewPagerAdapter(getActivity()));
+        viewPager2.setPageTransformer(new SurveyViewPagerAdapter(getActivity()));
 
         //imageCount is the total number of ImageFragments
         int imageCount = viewPager2.getAdapter().getItemCount();

@@ -87,3 +87,5 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 }
+
+//TODO - change launcher icon colours

@@ -1,4 +1,4 @@
-package com.ashleymccallum.thebarkinglot.ViewPager;
+package com.ashleymccallum.thebarkinglot.SurveyViewPager;
 
 import android.os.Bundle;
 
@@ -61,7 +61,7 @@ public class ImageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_image, container, false);
         ImageView petImage = view.findViewById(R.id.slideshowImage);
-        if(mParam1 >= 0 && mParam2 >= 0) {
+        if(mParam1 > 0 && mParam2 > 0) {
             petImage.setImageResource(mParam1);
             petImage.setContentDescription(getString(mParam2));
         }

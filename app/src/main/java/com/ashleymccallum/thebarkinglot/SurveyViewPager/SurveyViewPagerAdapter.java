@@ -1,4 +1,4 @@
-package com.ashleymccallum.thebarkinglot.ViewPager;
+package com.ashleymccallum.thebarkinglot.SurveyViewPager;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -14,9 +14,9 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.ashleymccallum.thebarkinglot.R;
 
-public class CustomViewPagerAdapter extends FragmentStateAdapter implements ViewPager2.PageTransformer {
+public class SurveyViewPagerAdapter extends FragmentStateAdapter implements ViewPager2.PageTransformer {
 
-    public CustomViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+    public SurveyViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 
