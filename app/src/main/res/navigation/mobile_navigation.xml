@@ -13,7 +13,11 @@
         android:id="@+id/nav_contact"
         android:name="com.ashleymccallum.thebarkinglot.Fragments.ContactFragment"
         android:label="@string/menu_contact"
-        tools:layout="@layout/fragment_contact" />
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_nav_contact_to_nav_form"
+            app:destination="@id/nav_form" />
+    </fragment>
     <fragment
         android:id="@+id/nav_survey"
         android:name="com.ashleymccallum.thebarkinglot.Fragments.SurveyFragment"
@@ -62,4 +66,9 @@
         android:id="@+id/nav_settings"
         android:name="com.ashleymccallum.thebarkinglot.Fragments.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/nav_form"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" />
 </navigation>

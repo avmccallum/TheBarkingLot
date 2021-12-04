@@ -9,7 +9,7 @@
     <dimen name="subtitle_font">25sp</dimen>
     <dimen name="button_padding">15dp</dimen>
     <dimen name="corner_radius">50dp</dimen>
-    <dimen name="small_radius">30dp</dimen>
+    <dimen name="small_radius">20dp</dimen>
     <dimen name="card_margin">10dp</dimen>
     <dimen name="quiz_number_font">50sp</dimen>
     <dimen name="medium_margin">30dp</dimen>
@@ -19,4 +19,5 @@
     <dimen name="info_header_font">17sp</dimen>
     <dimen name="minimal_margin">5dp</dimen>
     <dimen name="remove_margin">0dp</dimen>
+    <dimen name="medium_header_font">20sp</dimen>
 </resources>

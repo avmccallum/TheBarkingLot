@@ -41,7 +41,7 @@ public class CustomListViewAdapter extends ArrayAdapter<Resource> {
             @Override
             public void onClick(View view) {
 
-                if(text.getText() == getContext().getString(R.string.resource5)) {
+                if(text.getText() == getContext().getString(R.string.resource6)) {
                     Navigation.findNavController(view).navigate(R.id.action_nav_resources_to_nav_pet_info);
                 } else {
                     Uri location = Uri.parse("geo:0,0?q=" + getItem(position).getResourceLink());
@@ -50,7 +50,7 @@ public class CustomListViewAdapter extends ArrayAdapter<Resource> {
                         getContext().startActivity(i);
                     } catch (ActivityNotFoundException e) {
                         //TODO - make snackbar functional
-//                        Snackbar.make(getContext().getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+//                        Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
                     }
                 }
 

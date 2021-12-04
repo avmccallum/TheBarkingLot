@@ -13,6 +13,7 @@
     <string name="dog_img_desc">Cartoon image of a dog</string>
     <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
     <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
+    <!-- TODO - add content descriptions -->
     <string name="default_pet_img_desc"></string>
     <string name="expert_pet_img_desc"></string>
     <string name="facebook_logo">Facebook logo</string>
@@ -57,6 +58,15 @@
     <string name="address_message">Come visit us and our friends:</string>
     <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
     <string name="map_button">View on map</string>
+    <string name="foster_application">Want to become a foster family? Fill out this survey:</string>
+    <string name="issue_message">Report an issue with our app:</string>
+
+    <string name="form_fname">First Name</string>
+    <string name="form_lname">Last Name</string>
+    <string name="form_email">Email Address</string>
+    <string name="form_phone">Phone Number</string>
+    <string name="form_petField">Which pets are you looking to foster:</string>
+    <string name="form_experience">Please list previous fostering experience (if any):</string>
 
     <!-- Credits -->
     <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
@@ -75,8 +85,10 @@
     <string name="resource3">Grooming Services</string>
     <string name="resourceLink3">pet+grooming+near+me</string>
     <string name="resource4">Supply Retailers</string>
-    <string name="resourceLink4">pet+supplies+near+me</string>
-    <string name="resource5">Animal Information</string>
+    <string name="resourceLink4">+supplies+near+me</string>
+    <string name="resource5">Boarding Services</string>
+    <string name="resourceLink5">+boarding+near+me</string>
+    <string name="resource6">Animal Information</string>
 
     <!-- Pet names, descriptions, info headers -->
     <string name="hours_header">How much attention do they need?</string>
@@ -143,6 +155,7 @@
     <string name="cat_elderly_grooming">It\'s very rare to need to bathe a cat. Usually all they
         need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
     <!-- Puppies -->
+    <!-- TODO - complete pet descriptions -->
     <string name="puppy">Puppies</string>
     <string name="puppy_hours"></string>
     <string name="puppy_activity"></string>
@@ -248,18 +261,18 @@
     <string name="next_question">Next</string>
     <string name="submit_quiz">Submit</string>
 
-    <!-- Settings titles -->
-    <string name="animations_header">Animations</string>
-    <string name="font_header">Font</string>
-
     <!-- Animations preferences -->
     <string name="animations_title">Animations</string>
-    <string name="animations_summary">Please select to toggle animations</string>
+    <string name="animations_summary">Toggle animations</string>
 
     <!-- Font preferences -->
-    <string name="font_title">Font Size</string>
-    <string name="font_summary">Please select font size</string>
-    <string name="next_button_hint">next page</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!--    <string name="font_title">Font Size</string>-->
+    <!--    <string name="font_summary">Select font size</string>-->
+
+    <!-- Pet preference -->
+    <string name="pet_pref_title">Pet Preference</string>
+    <string name="pet_pref_summary">Select the type of pet you want to get results for in the Resources tab</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
