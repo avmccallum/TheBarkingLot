@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.navigation.Navigation;
 
+import com.ashleymccallum.thebarkinglot.MainActivity;
 import com.ashleymccallum.thebarkinglot.R;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -49,12 +50,9 @@ public class CustomListViewAdapter extends ArrayAdapter<Resource> {
                     try {
                         getContext().startActivity(i);
                     } catch (ActivityNotFoundException e) {
-                        //TODO - make snackbar functional
-//                        Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(parent.getRootView().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
                     }
                 }
-
-
             }
         });
         return convertView;

@@ -77,8 +77,8 @@ public class FormFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_form, container, false);
 
+        //retrieve fields from settings menu and set text field default text to user information
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-//        String phoneNumber = sharedPreferences.getString("userPhone", "");
 
         EditText fname = view.findViewById(R.id.fnameField);
         fname.setText(sharedPreferences.getString("userFirstName", ""));

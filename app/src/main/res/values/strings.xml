@@ -48,6 +48,11 @@
         by donations. If you\'re able, consider donating to support us!</string>
     <string name="donate_button">Donate</string>
     <string name="donate_link">https://ontariospca.ca/how-to-help/other-ways-to-donate/</string>
+    <string name="event_title">Did you know?</string>
+    <string name="event_message">We hold adoption events monthly! Come see who\'s ready for a
+        forever home, chat with other pet owners, and enter draws for prizes!</string>
+    <string name="event_button">Add to calendar</string>
+    <string name="event_link">EVENT_LINK</string>
 
 
     <!-- Contact info -->
@@ -61,12 +66,14 @@
     <string name="foster_application">Want to become a foster family? Fill out this survey:</string>
     <string name="issue_message">Report an issue with our app:</string>
 
+    <!-- Foster form -->
     <string name="form_fname">First Name</string>
     <string name="form_lname">Last Name</string>
     <string name="form_email">Email Address</string>
     <string name="form_phone">Phone Number</string>
     <string name="form_petField">Which pets are you looking to foster:</string>
     <string name="form_experience">Please list previous fostering experience (if any):</string>
+    <string name="form_button">Submit</string>
 
     <!-- Credits -->
     <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
@@ -75,7 +82,6 @@
     <string name="facebook_asset">Facebook logo from the Facebook logo pack</string>
     <string name="instagram_asset">Instagram logo from the Instagram logo pack</string>
     <string name="twitter_asset">Twitter logo from the Twitter logo pack</string>
-
 
     <!-- Resources -->
     <string name="resource1">Emergency Animal Hospitals</string>
@@ -271,8 +277,5 @@
 
     <!-- User preference -->
     <string name="user_title">User Information</string>
-    <string name="user_summary">Enter user information</string>
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_summary">Enter user information to auto-populate forms and emails</string>
 </resources>

@@ -1,12 +1,21 @@
 package com.ashleymccallum.thebarkinglot.HomeViewPager;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.provider.CalendarContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +25,16 @@ import android.widget.TextView;
 import com.ashleymccallum.thebarkinglot.R;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Calendar;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeInfoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class HomeInfoFragment extends Fragment {
+
+    public static final int PERMISSION_WRITE_CALENDAR = 0;
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -85,12 +98,72 @@ public class HomeInfoFragment extends Fragment {
             homeInfoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Uri website = Uri.parse(getString(mParam4));
-                    Intent i = new Intent(Intent.ACTION_VIEW, website);
-                    try {
-                        getContext().startActivity(i);
-                    } catch (ActivityNotFoundException e) {
-                        Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                    if(getString(mParam4).equals(getString(R.string.event_link))) {
+
+                        if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
+                            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.WRITE_CALENDAR)) {
+                                final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                                alertDialog.setTitle("Calendar Permission");
+                                alertDialog.setMessage("We need access to your calendar to add the event");
+                                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        alertDialog.dismiss();
+                                        ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
+                                    }
+                                });
+                                alertDialog.show();
+                            } else {
+                                ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
+                            }
+                        } else {
+                            String title = "The Barking Lot - Adoption Event";
+
+                            Calendar calendar = Calendar.getInstance();
+                            calendar.set(2021, 11, 18, 12, 0, 0);
+                            long startTime = calendar.getTimeInMillis();
+                            long endTime = calendar.getTimeInMillis() + 4 * 60 * 60 * 1000;
+
+//                            ContentResolver resolver = getContext().getContentResolver();
+//                            ContentValues values = new ContentValues();
+//
+//                            values.put(CalendarContract.Events.TITLE, title);
+//                            values.put(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
+//                            values.put(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+//                            values.put(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
+//
+//                            Uri uri = resolver.insert(CalendarContract.Events.CONTENT_URI, values);
+//
+//                            Intent i = new Intent(Intent.ACTION_INSERT);
+//                            i.setData(uri);
+
+
+                        Intent i = new Intent(Intent.ACTION_INSERT);
+                        i.setData(CalendarContract.Events.CONTENT_URI);
+                        i.putExtra(CalendarContract.Events.TITLE, title);
+                        i.putExtra(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
+                        i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+                        i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
+
+                            try{
+                                startActivity(i);
+                            } catch (ActivityNotFoundException e) {
+                                Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                            }
+                        }
+
+
+
+
+
+                    } else {
+                        Uri website = Uri.parse(getString(mParam4));
+                        Intent i = new Intent(Intent.ACTION_VIEW, website);
+                        try {
+                            startActivity(i);
+                        } catch (ActivityNotFoundException e) {
+                            Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                        }
                     }
                 }
             });
