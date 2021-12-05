@@ -6,24 +6,26 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/ic_twotone_home_24"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_survey"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/ic_twotone_cruelty_free_24"
             android:title="@string/menu_survey" />
         <item
             android:id="@+id/nav_resources"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/ic_twotone_volunteer_activism_24"
             android:title="@string/menu_resources" />
         <item
             android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/ic_twotone_question_answer_24"
             android:title="@string/menu_contact" />
         <item
             android:id="@+id/nav_credits"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/ic_twotone_waving_hand_24"
             android:title="@string/menu_credits" />
 
     </group>
 </menu>
+
+<!-- TODO - correct icons -->

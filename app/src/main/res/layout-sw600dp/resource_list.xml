@@ -14,8 +14,10 @@
 
         <ImageView
             android:id="@+id/resourceImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="@dimen/small_radius"
+            android:padding="@dimen/button_padding"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -26,6 +28,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="TextView"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintBottom_toBottomOf="@+id/resourceImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/resourceImage"
