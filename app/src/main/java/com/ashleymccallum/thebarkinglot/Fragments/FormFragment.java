@@ -2,11 +2,13 @@ package com.ashleymccallum.thebarkinglot.Fragments;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.os.Environment;
 import android.text.Html;
@@ -75,10 +77,21 @@ public class FormFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_form, container, false);
 
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+//        String phoneNumber = sharedPreferences.getString("userPhone", "");
+
         EditText fname = view.findViewById(R.id.fnameField);
+        fname.setText(sharedPreferences.getString("userFirstName", ""));
+
         EditText lname = view.findViewById(R.id.lnameField);
+        lname.setText(sharedPreferences.getString("userLastName", ""));
+
         EditText email = view.findViewById(R.id.emailField);
+        email.setText(sharedPreferences.getString("userEmail", ""));
+
         EditText phone = view.findViewById(R.id.phoneField);
+        phone.setText(sharedPreferences.getString("userPhone", "").replaceAll("[^\\d]", ""));
+
         EditText petType = view.findViewById(R.id.petTypeField);
         EditText experience = view.findViewById(R.id.experienceField);
 

@@ -265,13 +265,13 @@
     <string name="animations_title">Animations</string>
     <string name="animations_summary">Toggle animations</string>
 
-    <!-- Font preferences -->
-    <!--    <string name="font_title">Font Size</string>-->
-    <!--    <string name="font_summary">Select font size</string>-->
-
     <!-- Pet preference -->
     <string name="pet_pref_title">Pet Preference</string>
     <string name="pet_pref_summary">Select the type of pet you want to get results for in the Resources tab</string>
+
+    <!-- User preference -->
+    <string name="user_title">User Information</string>
+    <string name="user_summary">Enter user information</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
