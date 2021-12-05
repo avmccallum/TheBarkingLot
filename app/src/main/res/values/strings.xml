@@ -64,6 +64,7 @@
     <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
     <string name="map_button">View on map</string>
     <string name="foster_application">Want to become a foster family? Fill out this survey:</string>
+    <string name="application_button">Begin</string>
     <string name="issue_message">Report an issue with our app:</string>
 
     <!-- Foster form -->

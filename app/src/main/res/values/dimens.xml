@@ -20,4 +20,10 @@
     <dimen name="minimal_margin">5dp</dimen>
     <dimen name="remove_margin">0dp</dimen>
     <dimen name="medium_header_font">20sp</dimen>
+
+    <!-- tablet specific dimens -->
+    <dimen name="tablet_body_font">20sp</dimen>
+    <dimen name="tablet_button_padding">20dp</dimen>
+    <dimen name="tablet_medium_margin">30dp</dimen>
+    <dimen name="tablet_subtitle_font">35sp</dimen>
 </resources>

@@ -107,14 +107,26 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:text="@string/foster_application"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapButton" />
 
         <Button
             android:id="@+id/formButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:fontFamily="@font/montserrat"
+            android:paddingLeft="@dimen/medium_margin"
+            android:paddingTop="@dimen/button_padding"
+            android:paddingRight="@dimen/medium_margin"
+            android:paddingBottom="@dimen/button_padding"
+            android:text="@string/application_button"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/corner_radius"
+            app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:iconGravity="end"
+            app:iconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />

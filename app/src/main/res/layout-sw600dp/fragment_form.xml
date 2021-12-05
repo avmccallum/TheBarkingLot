@@ -28,6 +28,7 @@
                 android:fontFamily="@font/montserrat"
                 android:labelFor="@id/petTypeField"
                 android:text="@string/form_petField"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/phoneField" />
 
@@ -38,6 +39,7 @@
                 android:fontFamily="@font/montserrat"
                 android:labelFor="@id/fnameField"
                 android:text="@string/form_fname"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,6 +60,7 @@
                 android:fontFamily="@font/montserrat"
                 android:labelFor="@id/lnameField"
                 android:text="@string/form_lname"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fnameField" />
 
@@ -68,6 +71,7 @@
                 android:fontFamily="@font/montserrat"
                 android:labelFor="@id/emailField"
                 android:text="@string/form_email"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lnameField" />
 
@@ -78,6 +82,7 @@
                 android:fontFamily="@font/montserrat"
                 android:labelFor="@id/phoneField"
                 android:text="@string/form_phone"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/emailField" />
 
@@ -130,6 +135,7 @@
                 android:fontFamily="@font/montserrat"
                 android:labelFor="@id/experienceField"
                 android:text="@string/form_experience"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/petTypeField" />
 
@@ -154,9 +160,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
         android:gravity="bottom"
-        android:padding="@dimen/button_padding"
+        android:padding="@dimen/tablet_button_padding"
         android:text="@string/form_button"
         android:textColor="@color/white"
+        android:textSize="@dimen/tablet_body_font"
         app:cornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
