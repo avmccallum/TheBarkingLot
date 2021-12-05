@@ -74,10 +74,10 @@ public class ResourcesFragment extends Fragment {
         ArrayList<Resource> resources = new ArrayList<>();
         resources.add(new Resource(getString(R.string.resource6), R.drawable.ic_twotone_pest_control_rodent_24));
         resources.add(new Resource(getString(R.string.resource1), R.drawable.ic_twotone_local_hospital_24, getString(R.string.resourceLink1)));
-        resources.add(new Resource(getString(R.string.resource2), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink2)));
-        resources.add(new Resource(getString(R.string.resource3), R.drawable.ic_launcher_foreground, getString(R.string.resourceLink3)));
-        resources.add(new Resource(getString(R.string.resource4), R.drawable.store, petToggle + getString(R.string.resourceLink4)));
-        resources.add(new Resource(getString(R.string.resource5), R.drawable.ic_launcher_foreground, petToggle + getString(R.string.resourceLink5)));
+        resources.add(new Resource(getString(R.string.resource2), R.drawable.ic_twotone_healing_24, getString(R.string.resourceLink2)));
+        resources.add(new Resource(getString(R.string.resource3), R.drawable.ic_twotone_cleaning_services_24, getString(R.string.resourceLink3)));
+        resources.add(new Resource(getString(R.string.resource4), R.drawable.ic_twotone_store_24, petToggle + getString(R.string.resourceLink4)));
+        resources.add(new Resource(getString(R.string.resource5), R.drawable.ic_twotone_hotel_24, petToggle + getString(R.string.resourceLink5)));
         resourceList.setAdapter(new CustomListViewAdapter(getContext(), resources));
         return view;
     }
