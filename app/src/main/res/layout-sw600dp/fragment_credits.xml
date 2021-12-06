@@ -10,8 +10,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/small_radius"
+        android:layout_margin="@dimen/small_radius"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -26,7 +27,7 @@
                 android:fontFamily="@font/montserrat"
                 android:text="@string/main_credit"
                 android:textAlignment="center"
-                android:textSize="@dimen/medium_header_font"
+                android:textSize="@dimen/tab_med_subtitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +39,7 @@
                 android:layout_marginTop="@dimen/medium_margin"
                 android:fontFamily="@font/raleway"
                 android:text="@string/assets_credit"
-                android:textSize="@dimen/subtitle_font"
+                android:textSize="@dimen/tablet_subtitle_font"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +52,7 @@
                 android:layout_marginTop="@dimen/card_margin"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/facebook_asset"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/twitter_asset"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -72,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/instagram_asset"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -82,6 +86,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/my_assets"
+                android:textSize="@dimen/tablet_body_font"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView24" />
