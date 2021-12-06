@@ -226,11 +226,12 @@
     <!-- Default pet -->
     <string name="default_pet">OOPS! Looks like theres no match…</string>
     <string name="default_desc">Try taking the quiz again, or chat with our volunteers to see what they have to say!</string>
+
     <!-- Pet survey intro -->
     <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
-    <string name="survey_para_1">\t\tNot sure what kind of furry (or not) friend you\'re looking for?
+    <string name="survey_para_1">Not sure what kind of furry (or not) friend you\'re looking for?
         Let us help you decide! Take this quiz for a quick look at who might suit your lifestyle.\n\n
-        \t\tKeep in mind this is just a recommendation, and all pets have their own personalities and
+        Keep in mind this is just a recommendation, and all pets have their own personalities and
         quirks. Contact us to talk to a volunteer and see who they think would suit you!</string>
     <string name="quiz_start_button">Begin the quiz</string>
 
