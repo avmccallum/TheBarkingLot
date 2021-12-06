@@ -27,4 +27,6 @@
     <dimen name="tablet_medium_margin">30dp</dimen>
     <dimen name="tablet_subtitle_font">35sp</dimen>
     <dimen name="tablet_info_header_font">26sp</dimen>
+
+    <!-- TODO - add dimens for hardcoded items -->
 </resources>

@@ -71,6 +71,7 @@
     <string name="issue_message">Report an issue with our app:</string>
 
     <!-- Foster form -->
+    <string name="form_title">Foster Application Form</string>
     <string name="form_fname">First Name</string>
     <string name="form_lname">Last Name</string>
     <string name="form_email">Email Address</string>
