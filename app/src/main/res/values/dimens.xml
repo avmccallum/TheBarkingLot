@@ -22,9 +22,9 @@
     <dimen name="medium_header_font">20sp</dimen>
 
     <!-- tablet specific dimens -->
-    <dimen name="tablet_body_font">20sp</dimen>
+    <dimen name="tablet_body_font">23sp</dimen>
     <dimen name="tablet_button_padding">20dp</dimen>
     <dimen name="tablet_medium_margin">30dp</dimen>
     <dimen name="tablet_subtitle_font">35sp</dimen>
-    <dimen name="tablet_info_header_font">25sp</dimen>
+    <dimen name="tablet_info_header_font">26sp</dimen>
 </resources>

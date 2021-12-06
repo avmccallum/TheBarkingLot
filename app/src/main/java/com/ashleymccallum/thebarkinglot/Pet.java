@@ -182,10 +182,9 @@ public class Pet {
             }
         }
 
-        //TODO - replace placeholder image
         //if user answered they were an expert for second to last question (expertise), add exert pet to list
         if(searchPet.petNeeds[searchPet.petNeeds.length - 2] == 2) {
-            petResults.add(new Pet(context.getString(R.string.expert_pet), context.getString(R.string.expert_desc), R.drawable.cat_elderly, context.getString(R.string.expert_pet_img_desc)));
+            petResults.add(new Pet(context.getString(R.string.expert_pet), context.getString(R.string.expert_desc), R.drawable.pet_expert, context.getString(R.string.expert_pet_img_desc)));
         }
 
         //if half the questions were unanswered, remove all answers from the list
@@ -193,10 +192,9 @@ public class Pet {
             petResults.clear();
         }
 
-        //TODO - replace placeholder image
         //if there are no answers, return the default
         if(petResults.isEmpty()) {
-            petResults.add(new Pet(context.getString(R.string.default_pet), context.getString(R.string.default_desc), R.drawable.cat_elderly, context.getString(R.string.default_pet_img_desc)));
+            petResults.add(new Pet(context.getString(R.string.default_pet), context.getString(R.string.default_desc), R.drawable.pet_default, context.getString(R.string.default_pet_img_desc)));
         }
 
         return petResults;

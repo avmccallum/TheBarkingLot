@@ -13,13 +13,13 @@
     <string name="dog_img_desc">Cartoon image of a dog</string>
     <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
     <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
-    <!-- TODO - add content descriptions -->
-    <string name="default_pet_img_desc"></string>
-    <string name="expert_pet_img_desc"></string>
+    <string name="default_pet_img_desc">Outline of a cat\'s head with question mark on it</string>
+    <string name="expert_pet_img_desc">Cartoon image of a cat wearing glasses and a tie</string>
     <string name="facebook_logo">Facebook logo</string>
     <string name="instagram_logo">Instagram logo</string>
     <string name="twitter_logo">Twitter logo</string>
     <string name="website_logo">Website logo</string>
+    <string name="home_img">Cartoon image of a dog and a girl hugging</string>
 
     <!-- Main navigation -->
     <string name="menu_home">Home</string>
