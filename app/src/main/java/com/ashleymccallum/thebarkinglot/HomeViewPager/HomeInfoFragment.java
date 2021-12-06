@@ -124,26 +124,12 @@ public class HomeInfoFragment extends Fragment {
                             long startTime = calendar.getTimeInMillis();
                             long endTime = calendar.getTimeInMillis() + 4 * 60 * 60 * 1000;
 
-//                            ContentResolver resolver = getContext().getContentResolver();
-//                            ContentValues values = new ContentValues();
-//
-//                            values.put(CalendarContract.Events.TITLE, title);
-//                            values.put(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
-//                            values.put(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
-//                            values.put(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
-//
-//                            Uri uri = resolver.insert(CalendarContract.Events.CONTENT_URI, values);
-//
-//                            Intent i = new Intent(Intent.ACTION_INSERT);
-//                            i.setData(uri);
-
-
-                        Intent i = new Intent(Intent.ACTION_INSERT);
-                        i.setData(CalendarContract.Events.CONTENT_URI);
-                        i.putExtra(CalendarContract.Events.TITLE, title);
-                        i.putExtra(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
-                        i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
-                        i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
+                            Intent i = new Intent(Intent.ACTION_INSERT);
+                            i.setData(CalendarContract.Events.CONTENT_URI);
+                            i.putExtra(CalendarContract.Events.TITLE, title);
+                            i.putExtra(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
+                            i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+                            i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
 
                             try{
                                 startActivity(i);
@@ -152,13 +138,10 @@ public class HomeInfoFragment extends Fragment {
                             }
                         }
 
-
-
-
-
                     } else {
                         Uri website = Uri.parse(getString(mParam4));
                         Intent i = new Intent(Intent.ACTION_VIEW, website);
+
                         try {
                             startActivity(i);
                         } catch (ActivityNotFoundException e) {

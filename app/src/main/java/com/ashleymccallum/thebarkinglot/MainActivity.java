@@ -1,7 +1,10 @@
 package com.ashleymccallum.thebarkinglot;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -21,6 +24,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ashleymccallum.thebarkinglot.databinding.ActivityMainBinding;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,30 +81,48 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //TODO - get quiz results to return to SurveyFragment
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-//        if (navController.getCurrentDestination().getId() == R.id.nav_quiz_results) {
-//            navController.navigate(R.id.nav_survey);
-//            return true;
-//        } else {
+        if (navController.getCurrentDestination().getId() == R.id.nav_quiz_results) {
+            navController.popBackStack(R.id.nav_survey, false);
+            return true;
+        } else {
             return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                     || super.onSupportNavigateUp();
-//        }
+        }
     }
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        switch (requestCode) {
-//            case HomeInfoFragment
-//                    .PERMISSION_WRITE_CALENDAR:
-//                if(grantResults.length > 0 & grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//
-//                }
-//        }
-//    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case HomeInfoFragment.PERMISSION_WRITE_CALENDAR:
+                if(grantResults.length > 0 & grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    String title = "The Barking Lot - Adoption Event";
+
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(2021, 11, 18, 12, 0, 0);
+                    long startTime = calendar.getTimeInMillis();
+                    long endTime = calendar.getTimeInMillis() + 4 * 60 * 60 * 1000;
+
+                    Intent i = new Intent(Intent.ACTION_INSERT);
+                    i.setData(CalendarContract.Events.CONTENT_URI);
+                    i.putExtra(CalendarContract.Events.TITLE, title);
+                    i.putExtra(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
+                    i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+                    i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
+
+                    try{
+                        startActivity(i);
+                    } catch (ActivityNotFoundException e) {
+                        Snackbar.make(this.findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                    }
+                }
+            break;
+        }
+    }
 }
 
 //TODO - add permissions
+//TODO - add more animations
