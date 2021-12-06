@@ -27,7 +27,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/raleway"
                 android:text="@string/form_title"
-                android:textSize="@dimen/subtitle_font" />
+                android:textSize="@dimen/subtitle_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView27"
