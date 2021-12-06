@@ -38,6 +38,4 @@
     <dimen name="survey_vp_land">450dp</dimen>
     <dimen name="pet_info_img">100dp</dimen>
     <dimen name="pet_info_tab_img">150dp</dimen>
-
-    <!-- TODO - add dimens for hardcoded items -->
 </resources>

@@ -103,4 +103,3 @@ public class MainActivity extends AppCompatActivity {
 }
 
 //TODO - add permissions
-//TODO - change launcher icon colours
