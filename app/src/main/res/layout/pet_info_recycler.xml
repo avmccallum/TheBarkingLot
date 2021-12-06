@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/petInfoImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/pet_info_img"
+            android:layout_height="@dimen/pet_info_img"
             android:layout_marginTop="@dimen/button_padding"
             android:adjustViewBounds="true"
             app:layout_constraintEnd_toEndOf="parent"

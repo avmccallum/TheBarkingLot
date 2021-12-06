@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clipToPadding="false"
-    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardCornerRadius="@dimen/pet_info_img"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,14 +14,14 @@
 
         <ImageView
             android:id="@+id/resourceImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/pet_info_tab_img"
+            android:layout_height="@dimen/pet_info_tab_img"
             android:layout_marginStart="@dimen/small_radius"
             android:padding="@dimen/button_padding"
-            android:tint="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            app:tint="@color/black" />
 
         <TextView
             android:id="@+id/resourceText"

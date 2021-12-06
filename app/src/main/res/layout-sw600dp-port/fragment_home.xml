@@ -96,8 +96,8 @@
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="400dp"
-                    android:layout_height="400dp"
+                    android:layout_width="@dimen/tb_home_img_p"
+                    android:layout_height="@dimen/tb_home_img_p"
                     android:contentDescription="@string/home_img"
                     android:src="@drawable/home_img"
                     app:layout_constraintEnd_toEndOf="parent"

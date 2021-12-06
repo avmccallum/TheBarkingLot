@@ -104,8 +104,8 @@
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="300dp"
-                    android:layout_height="300dp"
+                    android:layout_width="@dimen/tb_home_img"
+                    android:layout_height="@dimen/tb_home_img"
                     android:contentDescription="@string/home_img"
                     android:src="@drawable/home_img"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -137,8 +137,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView3"
-                android:layout_width="600dp"
-                android:layout_height="350dp"
+                android:layout_width="@dimen/tb_home_vp_w"
+                android:layout_height="@dimen/home_vp_height"
                 android:outlineProvider="background"
                 app:cardCornerRadius="@dimen/corner_radius"
                 app:cardUseCompatPadding="true"

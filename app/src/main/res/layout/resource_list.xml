@@ -14,12 +14,12 @@
 
         <ImageView
             android:id="@+id/resourceImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/corner_radius"
+            android:layout_height="@dimen/corner_radius"
             android:layout_marginStart="@dimen/small_radius"
             android:layout_marginTop="@dimen/button_padding"
             android:layout_marginBottom="@dimen/button_padding"
-            android:tint="@color/black"
+            app:tint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

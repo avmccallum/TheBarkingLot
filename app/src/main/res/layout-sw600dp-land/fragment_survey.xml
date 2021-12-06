@@ -9,7 +9,7 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="600dp"
+        android:layout_width="@dimen/tb_home_vp_w"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/small_radius"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,8 +96,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
-            android:layout_width="450dp"
-            android:layout_height="450dp"
+            android:layout_width="@dimen/survey_vp_land"
+            android:layout_height="@dimen/survey_vp_land"
             app:cardCornerRadius="@dimen/view_pager_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

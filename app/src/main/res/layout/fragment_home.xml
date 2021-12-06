@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="@dimen/reg_home_img"
+                android:layout_height="@dimen/reg_home_img"
                 android:contentDescription="@string/home_img"
                 android:src="@drawable/home_img"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="@dimen/home_vp_height"
         android:outlineProvider="background"
         app:cardCornerRadius="@dimen/corner_radius"
         app:cardUseCompatPadding="true"
@@ -69,7 +69,9 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/homeInfoViewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/card_margin"
+            android:layout_marginEnd="@dimen/card_margin" />
 
         <LinearLayout
             android:layout_width="wrap_content"
