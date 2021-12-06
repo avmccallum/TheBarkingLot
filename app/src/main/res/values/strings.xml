@@ -57,13 +57,16 @@
 
     <!-- Contact info -->
     <string name="contact_message">Have questions?</string>
-    <string name="contact_message_2">Reach us by phone or email:</string>
-    <string name="phone_button">Phone</string>
-    <string name="email_button">Email</string>
-    <string name="address_message">Come visit us and our friends:</string>
-    <string name="street_address">6424 County Rd 42 Tecumseh, Ontario</string>
+    <string name="contact_message_2">Give us a shout!</string>
+    <string name="phone_button">Call now</string>
+    <string name="phone_number">123–456–7890</string>
+    <string name="email_button">Email now</string>
+    <string name="email_address">contact@thebarkinglot.ca</string>
+    <string name="address_message">Come visit!</string>
+    <string name="street_address">123 Barking Lot Lane, Elmira, Ontario</string>
     <string name="map_button">View on map</string>
-    <string name="foster_application">Want to become a foster family? Fill out this survey:</string>
+    <string name="foster_app_title">Want to become a foster family?</string>
+    <string name="foster_app_message">Fill out this survey:</string>
     <string name="application_button">Begin</string>
     <string name="issue_message">Report an issue with our app:</string>
 

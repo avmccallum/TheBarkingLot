@@ -94,8 +94,7 @@ public class ContactFragment extends Fragment {
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri location = Uri.parse("geo:0,0?q=42.271614841603736,-82.92161566608964(The Barking Lot)");
-                //TODO - label not working for map location
+                Uri location = Uri.parse("geo:0,0?q=43.60057304043616,-80.56305246391902");
                 Intent i = new Intent(Intent.ACTION_VIEW, location);
                 try {
                     startActivity(i);
