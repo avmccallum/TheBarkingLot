@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/button_padding"
+    android:layout_margin="@dimen/small_radius"
     tools:context=".Fragments.ContactFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/small_radius">
 
         <TextView
             android:id="@+id/textView31"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway"
             android:text="@string/foster_app_title"
-            android:textSize="@dimen/subtitle_font"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/tablet_subtitle_font"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +30,7 @@
             android:layout_marginTop="@dimen/corner_radius"
             android:fontFamily="@font/raleway"
             android:text="@string/contact_message"
-            android:textSize="@dimen/subtitle_font"
+            android:textSize="@dimen/tablet_subtitle_font"
             app:layout_constraintTop_toBottomOf="@+id/formButton" />
 
         <TextView
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="@string/contact_message_2"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             tools:layout_editor_absoluteX="7dp" />
 
@@ -45,23 +47,21 @@
             android:id="@+id/textView30"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/card_margin"
             android:fontFamily="@font/montserrat"
             android:text="@string/email_address"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintBottom_toBottomOf="@+id/emailButton"
-            app:layout_constraintEnd_toStartOf="@+id/emailButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/emailButton" />
 
         <TextView
             android:id="@+id/textView29"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/card_margin"
             android:fontFamily="@font/montserrat"
             android:text="@string/phone_number"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintBottom_toBottomOf="@+id/phoneButton"
-            app:layout_constraintEnd_toStartOf="@+id/phoneButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/phoneButton" />
 
@@ -73,11 +73,12 @@
             android:layout_weight="1"
             android:fontFamily="@font/montserrat"
             android:paddingLeft="@dimen/small_radius"
-            android:paddingTop="@dimen/button_padding"
+            android:paddingTop="@dimen/small_radius"
             android:paddingRight="@dimen/small_radius"
-            android:paddingBottom="@dimen/button_padding"
+            android:paddingBottom="@dimen/small_radius"
             android:text="@string/email_button"
             android:textColor="@color/white"
+            android:textSize="@dimen/tablet_body_font"
             app:cornerRadius="@dimen/corner_radius"
             app:icon="@drawable/ic_baseline_email_24"
             app:iconTint="@color/white"
@@ -87,21 +88,23 @@
 
         <Button
             android:id="@+id/phoneButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/small_radius"
             android:layout_weight="1"
             android:fontFamily="@font/montserrat"
             android:paddingLeft="@dimen/small_radius"
-            android:paddingTop="@dimen/button_padding"
+            android:paddingTop="@dimen/small_radius"
             android:paddingRight="@dimen/small_radius"
-            android:paddingBottom="@dimen/button_padding"
+            android:paddingBottom="@dimen/small_radius"
             android:text="@string/phone_button"
             android:textColor="@color/white"
+            android:textSize="@dimen/tablet_body_font"
             app:cornerRadius="@dimen/corner_radius"
             app:icon="@drawable/ic_baseline_phone_24"
             app:iconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/formButton"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
@@ -111,7 +114,7 @@
             android:layout_marginTop="@dimen/corner_radius"
             android:fontFamily="@font/raleway"
             android:text="@string/address_message"
-            android:textSize="@dimen/subtitle_font"
+            android:textSize="@dimen/tablet_subtitle_font"
             app:layout_constraintTop_toBottomOf="@+id/emailButton"
             tools:layout_editor_absoluteX="7dp" />
 
@@ -119,11 +122,10 @@
             android:id="@+id/textView8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/card_margin"
             android:fontFamily="@font/montserrat"
             android:text="@string/street_address"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintBottom_toBottomOf="@+id/mapButton"
-            app:layout_constraintEnd_toStartOf="@+id/mapButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/mapButton" />
 
@@ -134,11 +136,12 @@
             android:layout_marginTop="@dimen/small_radius"
             android:fontFamily="@font/montserrat"
             android:paddingLeft="@dimen/small_radius"
-            android:paddingTop="@dimen/button_padding"
+            android:paddingTop="@dimen/small_radius"
             android:paddingRight="@dimen/small_radius"
-            android:paddingBottom="@dimen/button_padding"
+            android:paddingBottom="@dimen/small_radius"
             android:text="@string/map_button"
             android:textColor="@color/white"
+            android:textSize="@dimen/tablet_body_font"
             app:cornerRadius="@dimen/corner_radius"
             app:icon="@drawable/ic_baseline_location_on_24"
             app:iconTint="@color/white"
@@ -150,11 +153,10 @@
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/card_margin"
             android:fontFamily="@font/montserrat"
             android:text="@string/foster_app_message"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintBottom_toBottomOf="@+id/formButton"
-            app:layout_constraintEnd_toStartOf="@+id/formButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/formButton" />
 
@@ -165,17 +167,18 @@
             android:layout_marginTop="@dimen/small_radius"
             android:fontFamily="@font/montserrat"
             android:paddingLeft="@dimen/small_radius"
-            android:paddingTop="@dimen/button_padding"
+            android:paddingTop="@dimen/small_radius"
             android:paddingRight="@dimen/small_radius"
-            android:paddingBottom="@dimen/button_padding"
+            android:paddingBottom="@dimen/small_radius"
             android:text="@string/application_button"
             android:textColor="@color/white"
+            android:textSize="@dimen/tablet_body_font"
             app:cornerRadius="@dimen/corner_radius"
             app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
             app:iconGravity="end"
             app:iconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/phoneButton"
+            app:layout_constraintStart_toEndOf="@+id/textView31"
             app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
