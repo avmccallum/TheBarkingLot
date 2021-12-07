@@ -161,6 +161,14 @@
                     android:src="@drawable/ic_baseline_circle_24" />
 
                 <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="@dimen/button_padding"
+                    android:layout_height="@dimen/button_padding"
+                    android:layout_weight="1"
+                    android:padding="@dimen/minimal_margin"
+                    android:src="@drawable/ic_baseline_circle_24" />
+
+                <ImageView
                     android:id="@+id/indicatorLeft"
                     android:layout_width="@dimen/button_padding"
                     android:layout_height="@dimen/button_padding"

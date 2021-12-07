@@ -100,8 +100,8 @@ public class HomeInfoFragment extends Fragment {
                 public void onClick(View view) {
                     if(getString(mParam4).equals(getString(R.string.event_link))) {
 
-                        if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
-                            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.WRITE_CALENDAR)) {
+                        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
+                            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.WRITE_CALENDAR)) {
                                 final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
                                 alertDialog.setTitle("Calendar Permission");
                                 alertDialog.setMessage("We need access to your calendar to add the event");
@@ -109,12 +109,12 @@ public class HomeInfoFragment extends Fragment {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         alertDialog.dismiss();
-                                        ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
+                                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
                                     }
                                 });
                                 alertDialog.show();
                             } else {
-                                ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
+                                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
                             }
                         } else {
                             String title = "The Barking Lot - Adoption Event";
@@ -131,13 +131,22 @@ public class HomeInfoFragment extends Fragment {
                             i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
                             i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
 
-                            try{
+                            try {
                                 startActivity(i);
                             } catch (ActivityNotFoundException e) {
                                 Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
                             }
                         }
 
+                    } else if(getString(mParam4).equals(getString(R.string.invite_link))) {
+
+                        Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"));
+                        i.putExtra("sms_body", getString(R.string.invite_body));
+                        try {
+                            startActivity(i);
+                        } catch (ActivityNotFoundException e) {
+                            Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
+                        }
                     } else {
                         Uri website = Uri.parse(getString(mParam4));
                         Intent i = new Intent(Intent.ACTION_VIEW, website);

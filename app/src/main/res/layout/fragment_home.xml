@@ -109,6 +109,12 @@
                 android:layout_height="@dimen/button_padding"
                 android:padding="@dimen/minimal_margin"
                 android:src="@drawable/ic_baseline_circle_24" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/button_padding"
+                android:layout_height="@dimen/button_padding"
+                android:padding="@dimen/minimal_margin"
+                android:src="@drawable/ic_baseline_circle_24" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

@@ -50,10 +50,14 @@
     <string name="donate_link">https://ontariospca.ca/how-to-help/other-ways-to-donate/</string>
     <string name="event_title">Did you know?</string>
     <string name="event_message">We hold adoption events monthly! Come see who\'s ready for a
-        forever home, chat with other pet owners, and enter draws for prizes!</string>
+        forever home, chat with other pet owners, and enter draws for prizes! The next event is Saturday Dec. 18!</string>
     <string name="event_button">Add to calendar</string>
     <string name="event_link">EVENT_LINK</string>
-
+    <string name="invite_title">Spread the word!</string>
+    <string name="invite_message">Know someone looking for a new friend? Invite someone to come along to the next adoption event!</string>
+    <string name="invite_button">Pick a friend</string>
+    <string name="invite_link">INVITE_LINK</string>
+    <string name="invite_body">Check out this adoption event from The Barking Lot! https://www.stclaircollege.ca/events</string>
 
     <!-- Contact info -->
     <string name="contact_message">Have questions?</string>
@@ -68,7 +72,6 @@
     <string name="foster_app_title">Want to become a foster family?</string>
     <string name="foster_app_message">Fill out this survey:</string>
     <string name="application_button">Begin</string>
-    <string name="issue_message">Report an issue with our app:</string>
 
     <!-- Foster form -->
     <string name="form_title">Foster Application Form</string>
