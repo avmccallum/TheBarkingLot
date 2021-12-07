@@ -169,34 +169,54 @@
     <string name="cat_elderly_grooming">It\'s very rare to need to bathe a cat. Usually all they
         need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
     <!-- Puppies -->
-    <!-- TODO - complete pet descriptions -->
     <string name="puppy">Puppies</string>
-    <string name="puppy_hours"></string>
-    <string name="puppy_activity"></string>
-    <string name="puppy_experience"></string>
-    <string name="puppy_enclosure"></string>
-    <string name="puppy_outdoor"></string>
-    <string name="puppy_companion"></string>
+    <string name="puppy_hours">A puppy is going to need a lot of time from your day. They need regular exercise,
+        and preferably should not be left alone for a long time. </string>
+    <string name="puppy_activity">Most puppies are going to be extremely energetic. They need a lot
+        of exercise and attention, so be prepared to be on the move a lot. You\'re going to need to
+        tire them out if you want to get a good night\'s sleep.</string>
+    <string name="puppy_experience">Puppies are a lot of work and training them can be difficult,
+        but there\'s plenty of resources available to help first-time owners.</string>
+    <string name="puppy_enclosure">A puppy should probably have somewhere to stay when you\'re
+        sleeping or not home. They can get into all kinds of trouble when you\'re away. A comfy
+        crate or a closed off room would suffice.</string>
+    <string name="puppy_outdoor">Dogs need outdoor space to use the bathroom and exercise. You need
+        to have a yard or somewhere you can take them so they can fulfill those needs.</string>
+    <string name="puppy_companion">A happy puppy is a best friend for life. They love attention,
+        will want to go anywhere, and will love spending time with you.</string>
     <string name="puppy_grooming">Dogs need regular grooming and this is probably going to be even
         more true for a rowdy puppy. Bathing, brushing, teeth cleaning, etc.</string>
     <!-- Adult dog -->
     <string name="dog_adult">Adult Dogs</string>
-    <string name="dog_adult_hours"></string>
-    <string name="dog_adult_activity"></string>
-    <string name="dog_adult_experience"></string>
-    <string name="dog_adult_enclosure"></string>
-    <string name="dog_adult_outdoor"></string>
-    <string name="dog_adult_companion"></string>
+    <string name="dog_adult_hours">Adult dogs aren\'t going to need as much time as puppies, but
+        they still need regular attention and exercise.</string>
+    <string name="dog_adult_activity">Dogs need a lot of regular exercise to keep them happy and
+        healthy. Daily walks and then some aren\'t uncommon for dog owners.</string>
+    <string name="dog_adult_experience">Dogs can be a lot of work, and have specific needs like
+        diet and medication. Fortunately, there\'s plenty of resources for owners.</string>
+    <string name="dog_adult_enclosure">A trained dog should be fine being left alone without an
+        enclosure. In fact, keeping a dog in a cage could make them very bored or anxious.</string>
+    <string name="dog_adult_outdoor">Dogs need outdoor space to use the bathroom and exercise. You need
+        to have a yard or somewhere you can take them so they can fulfill those needs.</string>
+    <string name="dog_adult_companion">Dogs aren\'t called man\'s best friend for nothing. A happy
+        dog is going to be a loyal friend that you can spend lots of time with.</string>
     <string name="dog_adult_grooming">Dogs need regular bathing and let\'s be real, you\'re probably
         going to get water everywhere while you do it. Don\'t forget trying to clip their nails and brush their teeth.</string>
     <!-- Elderly dog -->
     <string name="dog_elderly">Elderly Dogs</string>
-    <string name="dog_elderly_hours"></string>
-    <string name="dog_elderly_activity"></string>
-    <string name="dog_elderly_experience"></string>
-    <string name="dog_elderly_enclosure"></string>
-    <string name="dog_elderly_outdoor"></string>
-    <string name="dog_elderly_companion"></string>
+    <string name="dog_elderly_hours">Elderly dogs aren\'t going to need as much time as puppies, but
+        they still need regular attention and exercise.</string>
+    <string name="dog_elderly_activity">Dogs need a lot of regular exercise to keep them happy and
+        healthy. Daily walks and then some aren\'t uncommon for dog owners. That being said, elderly
+        dogs could tire easier or have difficulty walking, so they might not need quite as much as your average adult dog.</string>
+    <string name="dog_elderly_experience">Dogs can be a lot of work, and have specific needs like
+        diet and medication. These needs only increase with age. Fortunately, there\'s plenty of resources for owners.</string>
+    <string name="dog_elderly_enclosure">A trained dog should be fine being left alone without an
+        enclosure. In fact, keeping a dog in a cage could make them very bored or anxious.</string>
+    <string name="dog_elderly_outdoor">Dogs need outdoor space to use the bathroom and exercise. You need
+        to have a yard or somewhere you can take them so they can fulfill those needs.</string>
+    <string name="dog_elderly_companion">Elderly dogs are just as loyal as younger dogs. They might
+        not get around as much, but they love you just as much.</string>
     <string name="dog_elderly_grooming">Elderly dogs might not make as much of a mess in the bathtub,
         but they still need regular grooming. Bathing, nail clipping, tooth brushing, the whole works.</string>
     <!-- Misc pets -->
@@ -247,7 +267,6 @@
     <string name="q_enclosure">Does your home have room for an enclosure?\n(Such as a cage, tank, or terrarium)</string>
     <string name="q_experience">How experienced are you as a pet owner?</string>
     <string name="q_companion">What kind of companionship do you want?</string>
-
 
     <!-- Pet survey answers -->
     <string name="a_hours_1">Enough time to take this quiz but not much else</string>
