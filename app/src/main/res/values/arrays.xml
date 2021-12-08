@@ -1,0 +1,32 @@
+<resources>
+    <!-- Animations Preference -->
+    <string-array name="animations_menu">
+        <item>Enable Animations</item>
+        <item>Disable Animations</item>
+    </string-array>
+
+    <string-array name="animations_value">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="pet_menu">
+        <item>None (Get general results)</item>
+        <item>Kittens</item>
+        <item>Cats</item>
+        <item>Puppies</item>
+        <item>Dogs</item>
+        <item>Rodents</item>
+        <item>Reptiles</item>
+    </string-array>
+
+    <string-array name="pet_value">
+        <item>pet</item>
+        <item>kitten</item>
+        <item>cat</item>
+        <item>puppy</item>
+        <item>dog</item>
+        <item>rodent</item>
+        <item>reptile</item>
+    </string-array>
+</resources>

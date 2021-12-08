@@ -3,23 +3,74 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@id/nav_home">
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.ashleymccallum.thebarkinglot.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.HomeFragment"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.ashleymccallum.thebarkinglot.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_contact"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_nav_contact_to_nav_form"
+            app:destination="@id/nav_form" />
+    </fragment>
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.ashleymccallum.thebarkinglot.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_survey"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.SurveyFragment"
+        android:label="@string/menu_survey"
+        tools:layout="@layout/fragment_survey" >
+        <action
+            android:id="@+id/action_nav_survey_to_petSurveyFragment"
+            app:destination="@id/nav_pet_survey"
+            app:popUpTo="@id/nav_survey" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_resources"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.ResourcesFragment"
+        android:label="@string/menu_resources"
+        tools:layout="@layout/fragment_resources" >
+        <action
+            android:id="@+id/action_nav_resources_to_nav_pet_info"
+            app:destination="@id/nav_pet_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.CreditsFragment"
+        android:label="@string/menu_credits"
+        tools:layout="@layout/fragment_credits" />
+    <fragment
+        android:id="@+id/nav_pet_survey"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.PetSurveyFragment"
+        android:label="@string/menu_survey"
+        tools:layout="@layout/fragment_pet_survey" >
+        <action
+            android:id="@+id/action_nav_pet_survey_to_nav_quiz_results"
+            app:destination="@id/nav_quiz_results"
+            app:enterAnim="@anim/quiz_question_in"
+            app:exitAnim="@anim/quiz_question_out"
+            app:popUpTo="@id/nav_survey" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pet_info"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.PetInfoFragment"
+        android:label="@string/resource5"
+        tools:layout="@layout/fragment_pet_info" />
+    <fragment
+        android:id="@+id/nav_quiz_results"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.QuizResultsFragment"
+        android:label="fragment_quiz_results"
+        tools:layout="@layout/fragment_quiz_results" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/nav_form"
+        android:name="com.ashleymccallum.thebarkinglot.Fragments.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" />
 </navigation>

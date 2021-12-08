@@ -5,4 +5,38 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="main_margin">15dp</dimen>
+    <dimen name="subtitle_font">25sp</dimen>
+    <dimen name="button_padding">15dp</dimen>
+    <dimen name="corner_radius">50dp</dimen>
+    <dimen name="small_radius">20dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="quiz_number_font">50sp</dimen>
+    <dimen name="medium_margin">30dp</dimen>
+    <dimen name="line_height_spacing">5sp</dimen>
+    <dimen name="view_pager_size">250dp</dimen>
+    <dimen name="slideshow_image_size">200dp</dimen>
+    <dimen name="info_header_font">17sp</dimen>
+    <dimen name="minimal_margin">5dp</dimen>
+    <dimen name="remove_margin">0dp</dimen>
+    <dimen name="medium_header_font">20sp</dimen>
+
+    <!-- tablet specific dimens -->
+    <dimen name="tablet_body_font">23sp</dimen>
+    <dimen name="tablet_button_padding">20dp</dimen>
+    <dimen name="tablet_medium_margin">30dp</dimen>
+    <dimen name="tablet_subtitle_font">35sp</dimen>
+    <dimen name="tablet_info_header_font">26sp</dimen>
+    <dimen name="home_vp_height">350dp</dimen>
+    <dimen name="tb_home_vp_w">600dp</dimen>
+    <dimen name="tb_home_img">300dp</dimen>
+    <dimen name="tb_home_img_p">400dp</dimen>
+    <dimen name="reg_home_img">200dp</dimen>
+    <dimen name="tb_q_count_land">100sp</dimen>
+    <dimen name="land_radio">700dp</dimen>
+    <dimen name="q_count_port">75sp</dimen>
+    <dimen name="survey_vp_land">450dp</dimen>
+    <dimen name="pet_info_img">100dp</dimen>
+    <dimen name="pet_info_tab_img">150dp</dimen>
+    <dimen name="tab_med_subtitle">28sp</dimen>
 </resources>

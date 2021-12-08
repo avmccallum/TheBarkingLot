@@ -1,0 +1,63 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+
+        <ListPreference
+            app:defaultValue="1"
+            app:entries="@array/animations_menu"
+            app:entryValues="@array/animations_value"
+            app:key="animationsMenu"
+            app:summary="@string/animations_summary"
+            app:title="@string/animations_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+
+        <ListPreference
+            app:defaultValue="pet"
+            app:entries="@array/pet_menu"
+            app:entryValues="@array/pet_value"
+            app:key="petMenu"
+            app:summary="@string/pet_pref_summary"
+            app:title="@string/pet_pref_title"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/user_title"
+        app:summary="@string/user_summary"
+        app:key="userMenu">
+
+        <EditTextPreference
+            app:defaultValue=""
+            app:key="userFirstName"
+            app:title="@string/form_fname"
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true"/>
+
+        <EditTextPreference
+            app:defaultValue=""
+            app:key="userLastName"
+            app:title="@string/form_lname"
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true"/>
+
+        <EditTextPreference
+            app:defaultValue=""
+            app:key="userEmail"
+            app:title="@string/form_email"
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true"/>
+
+        <EditTextPreference
+            app:defaultValue=""
+            app:key="userPhone"
+            app:title="@string/form_phone"
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
