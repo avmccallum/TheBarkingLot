@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/slideshowImage"
-        android:layout_width="@dimen/home_vp_height"
-        android:layout_height="@dimen/home_vp_height"
+        android:layout_width="@dimen/slideshow_image_size"
+        android:layout_height="@dimen/slideshow_image_size"
         android:src="@drawable/cat_young"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

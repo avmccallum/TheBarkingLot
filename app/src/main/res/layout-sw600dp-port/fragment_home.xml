@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,75 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/corner_radius"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/facebookLogo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/facebook_logo"
-            android:padding="@dimen/minimal_margin"
-            android:src="@drawable/facebook" />
-
-        <ImageView
-            android:id="@+id/instagramLogo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/instagram_logo"
-            android:padding="@dimen/minimal_margin"
-            android:src="@drawable/instagram" />
-
-        <ImageView
-            android:id="@+id/twitterLogo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/twitter_logo"
-            android:padding="@dimen/minimal_margin"
-            android:src="@drawable/twitter" />
-
-        <ImageView
-            android:id="@+id/websiteLogo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/website_logo"
-            android:padding="@dimen/minimal_margin"
-            android:src="@drawable/ic_baseline_language_24" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_padding"
-        android:fontFamily="@font/raleway"
-        android:text="@string/social_media"
-        android:textSize="@dimen/tablet_body_font"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,7 +65,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
             android:layout_width="0dp"
-            android:layout_height="350dp"
+            android:layout_height="@dimen/tb_home_img_p"
             android:layout_marginTop="@dimen/small_radius"
             android:outlineProvider="background"
             app:cardCornerRadius="@dimen/corner_radius"
@@ -192,5 +127,73 @@
 
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/corner_radius"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/facebookLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/facebook_logo"
+                android:padding="@dimen/minimal_margin"
+                android:src="@drawable/facebook" />
+
+            <ImageView
+                android:id="@+id/instagramLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/instagram_logo"
+                android:padding="@dimen/minimal_margin"
+                android:src="@drawable/instagram" />
+
+            <ImageView
+                android:id="@+id/twitterLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/twitter_logo"
+                android:padding="@dimen/minimal_margin"
+                android:src="@drawable/twitter" />
+
+            <ImageView
+                android:id="@+id/websiteLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/website_logo"
+                android:padding="@dimen/minimal_margin"
+                android:src="@drawable/ic_baseline_language_24" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:fontFamily="@font/raleway"
+            android:text="@string/social_media"
+            android:textSize="@dimen/tablet_body_font"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
