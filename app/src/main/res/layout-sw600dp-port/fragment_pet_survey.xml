@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/small_radius"
+    tools:context=".Fragments.PetSurveyFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_radius"
+        android:fontFamily="@font/raleway"
+        android:text="@string/menu_survey"
+        android:textSize="@dimen/tablet_subtitle_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/quizNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_radius"
+        android:fontFamily="@font/montserrat"
+        android:paddingStart="@dimen/medium_margin"
+        android:paddingTop="@dimen/small_radius"
+        android:paddingEnd="@dimen/medium_margin"
+        android:paddingBottom="@dimen/small_radius"
+        android:text="@string/next_question"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tablet_body_font"
+        app:cornerRadius="@dimen/corner_radius"
+        app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_radius"
+        app:layout_constraintBottom_toTopOf="@+id/quizNextButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="@dimen/main_margin"
+                app:cardCornerRadius="75dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/questionCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="@dimen/q_count_port" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/quizQuestionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/main_margin"
+                android:fontFamily="@font/montserrat"
+                android:lineSpacingExtra="@dimen/line_height_spacing"
+                android:text="@string/q_activity"
+                android:textSize="@dimen/tablet_body_font"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+            <RadioGroup
+                android:id="@+id/quizQuestionGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:padding="@dimen/card_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <RadioButton
+                    android:id="@+id/quizQuestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/corner_radius"
+                    android:fontFamily="@font/montserrat"
+                    android:lineSpacingExtra="@dimen/line_height_spacing"
+                    android:paddingLeft="@dimen/main_margin"
+                    android:text="RadioButton"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/tablet_body_font" />
+
+                <RadioButton
+                    android:id="@+id/quizQuestion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/corner_radius"
+                    android:fontFamily="@font/montserrat"
+                    android:lineSpacingExtra="@dimen/line_height_spacing"
+                    android:paddingLeft="@dimen/main_margin"
+                    android:text="RadioButton"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/tablet_body_font" />
+
+                <RadioButton
+                    android:id="@+id/quizQuestion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/corner_radius"
+                    android:fontFamily="@font/montserrat"
+                    android:lineSpacingExtra="@dimen/line_height_spacing"
+                    android:paddingLeft="@dimen/main_margin"
+                    android:text="RadioButton"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/tablet_body_font" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

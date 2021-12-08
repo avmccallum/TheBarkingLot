@@ -1,13 +1,309 @@
 <resources>
-    <string name="app_name">TheBarkingLot</string>
+    <string name="app_name">The Barking Lot</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Content descriptions -->
+    <string name="nav_header_desc">The Barking Lot logo</string>
+    <string name="kitten_img_desc">Cartoon image of a kitten</string>
+    <string name="cat_img_desc">Cartoon image of a cat</string>
+    <string name="elderly_cat_img_desc">Cartoon image of an elderly cat</string>
+    <string name="puppy_img_desc">Cartoon image of a puppy</string>
+    <string name="dog_img_desc">Cartoon image of a dog</string>
+    <string name="elderly_dog_img_desc">Cartoon image of an elderly dog</string>
+    <string name="misc_pet_img_desc">Cartoon image of a rabbit, snake, and fish</string>
+    <string name="default_pet_img_desc">Outline of a cat\'s head with question mark on it</string>
+    <string name="expert_pet_img_desc">Cartoon image of a cat wearing glasses and a tie</string>
+    <string name="facebook_logo">Facebook logo</string>
+    <string name="instagram_logo">Instagram logo</string>
+    <string name="twitter_logo">Twitter logo</string>
+    <string name="website_logo">Website logo</string>
+    <string name="home_img">Cartoon image of a dog and a girl hugging</string>
+
+    <!-- Main navigation -->
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_contact">Contact Us</string>
+    <string name="menu_survey">PetMatcher Quiz</string>
+    <string name="menu_resources">Resources</string>
+    <string name="menu_credits">Credits</string>
+
+    <!-- Home page -->
+    <string name="home_intro">Who We Are</string>
+    <string name="mission_statement">The Barking Lot is a volunteer-run pet rescue. We take in
+        animals of all kinds and strive to find each and every one of them a home!</string>
+    <string name="foster_subtitle">If you\'re here to foster…</string>
+    <string name="foster_message">Then thank you for considering it! Fostering is very important,
+        and saves countless pets daily. By doing so you\'re helping all kinds of animals find safe and happy homes!</string>
+    <string name="foster_button">Read more about fostering</string>
+    <string name="foster_link">https://ontariospca.ca/adopt/become-a-foster-family/</string>
+    <string name="adopt_subtitle">If you\'re here to adopt…</string>
+    <string name="adopt_message">Then thank you for adopting, not shopping! Stop puppy mills,
+        inhumane breeders, and exotic pet dealers by adopting the animals that are already here and need you.</string>
+    <string name="adopt_button">See who\'s ready for adoption</string>
+    <string name="adopt_link">https://www.adoptapet.com/</string>
+    <string name="social_media">Find us online!</string>
+    <string name="donation_title">We hate to ask but…</string>
+    <string name="donation_message">We\'re a volunteer run organization that is funded exclusively
+        by donations. If you\'re able, consider donating to support us!</string>
+    <string name="donate_button">Donate</string>
+    <string name="donate_link">https://ontariospca.ca/how-to-help/other-ways-to-donate/</string>
+    <string name="event_title">Did you know?</string>
+    <string name="event_message">We hold adoption events monthly! Come see who\'s ready for a
+        forever home, chat with other pet owners, and enter draws for prizes! The next event is Saturday Dec. 18!</string>
+    <string name="event_button">Add to calendar</string>
+    <string name="event_link">EVENT_LINK</string>
+    <string name="invite_title">Spread the word!</string>
+    <string name="invite_message">Know someone looking for a new friend? Invite someone to come along to the next adoption event!</string>
+    <string name="invite_button">Pick a friend</string>
+    <string name="invite_link">INVITE_LINK</string>
+    <string name="invite_body">Check out this adoption event from The Barking Lot! https://www.stclaircollege.ca/events</string>
+
+    <!-- Contact info -->
+    <string name="contact_message">Have questions?</string>
+    <string name="contact_message_2">Give us a shout!</string>
+    <string name="phone_button">Call now</string>
+    <string name="phone_number">123–456–7890</string>
+    <string name="email_button">Email now</string>
+    <string name="email_address">contact@thebarkinglot.ca</string>
+    <string name="address_message">Come visit!</string>
+    <string name="street_address">123 Barking Lot Lane, Elmira, Ontario</string>
+    <string name="map_button">View on map</string>
+    <string name="foster_app_title">Want to become a foster family?</string>
+    <string name="foster_app_message">Fill out this survey:</string>
+    <string name="application_button">Begin</string>
+
+    <!-- Foster form -->
+    <string name="form_title">Foster Application Form</string>
+    <string name="form_fname">First Name</string>
+    <string name="form_lname">Last Name</string>
+    <string name="form_email">Email Address</string>
+    <string name="form_phone">Phone Number</string>
+    <string name="form_petField">Which pets are you looking to foster:</string>
+    <string name="form_experience">Please list previous fostering experience (if any):</string>
+    <string name="form_button">Submit</string>
+
+    <!-- Credits -->
+    <string name="main_credit">Thank you to Emily for providing her fostering expertise!</string>
+    <string name="assets_credit">Assets</string>
+    <string name="my_assets">All other assets made by me</string>
+    <string name="facebook_asset">Facebook logo from the Facebook logo pack</string>
+    <string name="instagram_asset">Instagram logo from the Instagram logo pack</string>
+    <string name="twitter_asset">Twitter logo from the Twitter logo pack</string>
+
+    <!-- Resources -->
+    <string name="resource1">Emergency Animal Hospitals</string>
+    <string name="resourceLink1">emergency+animal+hospital</string>
+    <string name="resource2">Veterinary Clinics</string>
+    <string name="resourceLink2">vet+clinic+near+me</string>
+    <string name="resource3">Grooming Services</string>
+    <string name="resourceLink3">pet+grooming+near+me</string>
+    <string name="resource4">Supply Retailers</string>
+    <string name="resourceLink4">+supplies+near+me</string>
+    <string name="resource5">Boarding Services</string>
+    <string name="resourceLink5">+boarding+near+me</string>
+    <string name="resource6">Animal Information</string>
+
+    <!-- Pet names, descriptions, info headers -->
+    <string name="hours_header">How much attention do they need?</string>
+    <string name="activity_header">How active are they?</string>
+    <string name="experience_header">Are they difficult to care for?</string>
+    <string name="enclosure_header">Do they need a cage/tank/terrarium?</string>
+    <string name="outdoor_header">Do they need outdoor space?</string>
+    <string name="companion_header">What kind of friend am I getting?</string>
+    <string name="grooming_header">How much upkeep do they need?</string>
+
+    <!-- Kittens -->
+    <string name="kitten">Kittens</string>
+    <string name="kitten_hours">Kittens shouldn\'t be left unsupervised for long periods of time.
+        They can get into all kinds of trouble and they can get into all kinds of small places.</string>
+    <string name="kitten_activity">They don\'t need a lot of strenuous activity, like walking or
+        playing, but they can be a lot to keep up with and a close eye should be kept on them.</string>
+    <string name="kitten_experience">Taking care of a kitten is more work than that of an adult cat,
+        but if they\'re healthy and well tempered taking care of them shouldn\'t be very demanding.
+        There\'s always lots of resources to help new owners too.</string>
+    <string name="kitten_enclosure">Cats generally don\'t need dedicated cages, but kittens need to
+        have somewhere they can be kept while you\'re away or sleeping. Keeping them in one room
+        usually works just fine, like a bathroom where they can\'t get in to a lot of trouble,
+        or a single bedroom with the door closed.</string>
+    <string name="kitten_outdoor">It\'s dangerous for cats to be let outdoors, and doubly so for kittens. Unless you\'re
+        keeping them on a leash, they should be indoors.</string>
+    <string name="kitten_companion">Kittens are more active and playful when they\'re younger, and
+        tend to mellow out with age.</string>
+    <string name="kitten_grooming">Kittens very rarely need to be bathed but after 3 months old,
+        brushing should be a regular occurrence. As they get older they\'ll need the occasional
+        teeth cleaning and nail trimming.</string>
+    <!-- Adult cats -->
+    <string name="cat_adult">Adult Cats</string>
+    <string name="cat_adult_hours">Unless your cat is particularly aloof, you should be spending
+        some time with them, but you probably don\'t need to go out of your way to set aside the time.</string>
+    <string name="cat_adult_activity">Fully grown cats tend to be very low maintenance. They might
+        be willing to play for a little, but they can usually keep themselves entertained.</string>
+    <string name="cat_adult_experience">An adult cat is usually a very low maintenance pet and
+        there\'s a lot of resources for beginners.</string>
+    <string name="cat_adult_enclosure">Adult cats don\'t need a dedicated enclosure. They might get
+        in to some trouble, but that just comes with having a pet.</string>
+    <string name="cat_adult_outdoor">It\'s dangerous for cats to be let outdoors. Unless you\'re
+        keeping them on a leash, they should be indoors.</string>
+    <string name="cat_adult_companion">Some cats are very aloof and some are very cuddly. It\'s
+        important to ask about their temperament or spend some time getting to know them before you
+        make a decision to bring them home.</string>
+    <string name="cat_adult_grooming">It\'s very rare to need to bathe a cat. Usually all they
+        need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
+    <!-- Elderly cats -->
+    <string name="cat_elderly">Elderly Cats</string>
+    <string name="cat_elderly_hours">An elderly cat is probably going to be very low energy.
+        If you pay attention to them when they ask, they\'ll probably be happy.</string>
+    <string name="cat_elderly_activity">An elderly cat isn\'t going to need hardly any regular
+        activity. Maybe get a laser pointer and see if they feel like chasing it.</string>
+    <string name="cat_elderly_experience">Cats are overall a fairly easy pet for beginners,
+        but as they age more attention needs to be paid to their health. Joints, teeth, diet and
+        other factors can all impact how much work they are going to be as they age.</string>
+    <string name="cat_elderly_enclosure">Elderly cats don\'t need dedicated enclosures. They\'re generally
+        more low-energy and won\'t get into as much trouble.</string>
+    <string name="cat_elderly_outdoor">It\'s dangerous for cats to be let outdoors. Unless you\'re
+        keeping them on a leash, they should be indoors.</string>
+    <string name="cat_elderly_companion">Some cats are very aloof and some are very cuddly. It\'s
+        important to ask about their temperament or spend some time getting to know them before you
+        make a decision to bring them home.</string>
+    <string name="cat_elderly_grooming">It\'s very rare to need to bathe a cat. Usually all they
+        need is regular brushing, nail trimming, and the occasional tooth cleaning.</string>
+    <!-- Puppies -->
+    <string name="puppy">Puppies</string>
+    <string name="puppy_hours">A puppy is going to need a lot of time from your day. They need regular exercise,
+        and preferably should not be left alone for a long time. </string>
+    <string name="puppy_activity">Most puppies are going to be extremely energetic. They need a lot
+        of exercise and attention, so be prepared to be on the move a lot. You\'re going to need to
+        tire them out if you want to get a good night\'s sleep.</string>
+    <string name="puppy_experience">Puppies are a lot of work and training them can be difficult,
+        but there\'s plenty of resources available to help first-time owners.</string>
+    <string name="puppy_enclosure">A puppy should probably have somewhere to stay when you\'re
+        sleeping or not home. They can get into all kinds of trouble when you\'re away. A comfy
+        crate or a closed off room would suffice.</string>
+    <string name="puppy_outdoor">Dogs need outdoor space to use the bathroom and exercise. You need
+        to have a yard or somewhere you can take them so they can fulfill those needs.</string>
+    <string name="puppy_companion">A happy puppy is a best friend for life. They love attention,
+        will want to go anywhere, and will love spending time with you.</string>
+    <string name="puppy_grooming">Dogs need regular grooming and this is probably going to be even
+        more true for a rowdy puppy. Bathing, brushing, teeth cleaning, etc.</string>
+    <!-- Adult dog -->
+    <string name="dog_adult">Adult Dogs</string>
+    <string name="dog_adult_hours">Adult dogs aren\'t going to need as much time as puppies, but
+        they still need regular attention and exercise.</string>
+    <string name="dog_adult_activity">Dogs need a lot of regular exercise to keep them happy and
+        healthy. Daily walks and then some aren\'t uncommon for dog owners.</string>
+    <string name="dog_adult_experience">Dogs can be a lot of work, and have specific needs like
+        diet and medication. Fortunately, there\'s plenty of resources for owners.</string>
+    <string name="dog_adult_enclosure">A trained dog should be fine being left alone without an
+        enclosure. In fact, keeping a dog in a cage could make them very bored or anxious.</string>
+    <string name="dog_adult_outdoor">Dogs need outdoor space to use the bathroom and exercise. You need
+        to have a yard or somewhere you can take them so they can fulfill those needs.</string>
+    <string name="dog_adult_companion">Dogs aren\'t called man\'s best friend for nothing. A happy
+        dog is going to be a loyal friend that you can spend lots of time with.</string>
+    <string name="dog_adult_grooming">Dogs need regular bathing and let\'s be real, you\'re probably
+        going to get water everywhere while you do it. Don\'t forget trying to clip their nails and brush their teeth.</string>
+    <!-- Elderly dog -->
+    <string name="dog_elderly">Elderly Dogs</string>
+    <string name="dog_elderly_hours">Elderly dogs aren\'t going to need as much time as puppies, but
+        they still need regular attention and exercise.</string>
+    <string name="dog_elderly_activity">Dogs need a lot of regular exercise to keep them happy and
+        healthy. Daily walks and then some aren\'t uncommon for dog owners. That being said, elderly
+        dogs could tire easier or have difficulty walking, so they might not need quite as much as your average adult dog.</string>
+    <string name="dog_elderly_experience">Dogs can be a lot of work, and have specific needs like
+        diet and medication. These needs only increase with age. Fortunately, there\'s plenty of resources for owners.</string>
+    <string name="dog_elderly_enclosure">A trained dog should be fine being left alone without an
+        enclosure. In fact, keeping a dog in a cage could make them very bored or anxious.</string>
+    <string name="dog_elderly_outdoor">Dogs need outdoor space to use the bathroom and exercise. You need
+        to have a yard or somewhere you can take them so they can fulfill those needs.</string>
+    <string name="dog_elderly_companion">Elderly dogs are just as loyal as younger dogs. They might
+        not get around as much, but they love you just as much.</string>
+    <string name="dog_elderly_grooming">Elderly dogs might not make as much of a mess in the bathtub,
+        but they still need regular grooming. Bathing, nail clipping, tooth brushing, the whole works.</string>
+    <!-- Misc pets -->
+    <string name="misc_pets">Other Pets</string>
+    <string name="misc_pet_hours">Most other pets such as rodents, reptiles, and fish require
+        little dedicated attention. If you are caring for them right, they can usually be left alone
+        for most of the day.</string>
+    <string name="misc_pet_activity">If you set up their enclosure right, you\'re not going to need
+        to do a lot to make sure they\'re active and entertained. Hamster wheels exist for a reason,
+        and it\'s so you don\'t have to try and walk them.</string>
+    <string name="misc_pet_experience">Reptiles, fish, some rodents, and other animals usually have
+        pretty specific requirements for their care. Sometimes it\'s not easy to determine
+        what\'s good advice and what\'s not, so it wouldn\'t hurt to have more pet experience under your belt.</string>
+    <string name="misc_pet_enclosure">Most of these pets will require some kind of enclosure. If
+        you\'re looking to take care of them right, you should make sure it\'s the appropriate size.
+        It\'s their home, would it be fair if it was just a small, cramped box? This means sometimes
+        the enclosures can get pretty big depending on the animal and how many you\'re planning to have.</string>
+    <string name="misc_pet_outdoor">Have you ever seen someone take a lizard for a walk? You can
+        if you want but you almost definitely won\'t need to.</string>
+    <string name="misc_pet_companion">Generally these pets will keep to themselves. Some might
+        require a companion to keep them company, such as guinea pigs, but they generally won\'t be
+        all that interested in you. That doesn\'t mean you can\'t still hangout with them though.</string>
+    <string name="misc_pet_grooming">Most of these pets won\'t require dedicated grooming. Bathing
+        and brushing will be pretty much a non-issue. Make sure to keep their enclosure clean though.</string>
+    <!-- Expert pet -->
+    <string name="expert_pet">You said you\'re a pro so…</string>
+    <string name="expert_desc">Fosters and adoption agencies are always looking for experienced
+        people to help with more challenging pets. It can be hard to find people prepared to take in
+        ill pets that need specific care, or folks with the experience to help rehabilitate abused
+        or feral animals. Talk to one of our volunteers to see who we have that needs help.</string>
+    <!-- Default pet -->
+    <string name="default_pet">OOPS! Looks like theres no match…</string>
+    <string name="default_desc">Try taking the quiz again, or chat with our volunteers to see what they have to say!</string>
+
+    <!-- Pet survey intro -->
+    <string name="survey_title">Welcome to the PetMatcher Quiz!</string>
+    <string name="survey_para_1">Not sure what kind of furry (or not) friend you\'re looking for?
+        Let us help you decide! Take this quiz for a quick look at who might suit your lifestyle.\n\n
+        Keep in mind this is just a recommendation, and all pets have their own personalities and
+        quirks. Contact us to talk to a volunteer and see who they think would suit you!</string>
+    <string name="quiz_start_button">Begin the quiz</string>
+
+    <!-- Pet survey questions -->
+    <string name="q_hours">How many hours of free time do you usually have?</string>
+    <string name="q_grooming">Are you okay with regular grooming?</string>
+    <string name="q_activity">How active are you? (Or how active do you want to be?)</string>
+    <string name="q_outdoor">Do you have access to an outdoor space?\n(Such as a yard, or a near by park)</string>
+    <string name="q_enclosure">Does your home have room for an enclosure?\n(Such as a cage, tank, or terrarium)</string>
+    <string name="q_experience">How experienced are you as a pet owner?</string>
+    <string name="q_companion">What kind of companionship do you want?</string>
+
+    <!-- Pet survey answers -->
+    <string name="a_hours_1">Enough time to take this quiz but not much else</string>
+    <string name="a_hours_2">I have a healthy work/life balance</string>
+    <string name="a_hours_3">All the time in the world</string>
+    <string name="a_grooming_1">I\'d really rather not…</string>
+    <string name="a_grooming_2">I\'ll do it when it needs to be done but I\'ll hate every minute of it</string>
+    <string name="a_grooming_3">Listen, no one likes to do it but I\'d do it as much as needed if not more to care of my little buddy</string>
+    <string name="a_activity_1">Not a lot okay? I don\'t need your judgement</string>
+    <string name="a_activity_2">A fair bit but I don\'t always want to be or have time</string>
+    <string name="a_activity_3">I\'m an active person or I want to be</string>
+    <string name="a_outdoor_1">Nope</string>
+    <string name="a_outdoor_2">Yes but I can\'t say I\'ll always be able to go</string>
+    <string name="a_outdoor_3">Yes and I\'m willing to be there regularly</string>
+    <string name="a_enclosure_1">No not really</string>
+    <string name="a_enclosure_2">Yes if it\'s not too big</string>
+    <string name="a_enclosure_3">Yes I can set up a pet palace</string>
+    <string name="a_experience_1">Not a lot (I\'m new to taking care of animals or I don\'t want to do a lot of research)</string>
+    <string name="a_experience_2">A fair amount (I\'ve had a pet or two before or I\'m willing to learn more)</string>
+    <string name="a_experience_3">They call me the Jackson Galaxy of all pets (I\'m an expert or I\'d be willing to put in a lot of work)</string>
+    <string name="a_companion_1">More like, a casual roommate?</string>
+    <string name="a_companion_2">A cool friend that I can hangout with sometimes but does their own thing too</string>
+    <string name="a_companion_3">A best friend &#10084;&#65039;</string>
+
+    <!-- Pet survey button -->
+    <string name="next_question">Next</string>
+    <string name="submit_quiz">Submit</string>
+
+    <!-- Animations preferences -->
+    <string name="animations_title">Animations</string>
+    <string name="animations_summary">Toggle animations</string>
+
+    <!-- Pet preference -->
+    <string name="pet_pref_title">Pet Preference</string>
+    <string name="pet_pref_summary">Select the type of pet you want to get results for in the Resources tab</string>
+
+    <!-- User preference -->
+    <string name="user_title">User Information</string>
+    <string name="user_summary">Enter user information to auto-populate forms and emails</string>
 </resources>
