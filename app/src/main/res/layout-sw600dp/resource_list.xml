@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/resourceImage"
-            android:layout_width="@dimen/pet_info_tab_img"
-            android:layout_height="@dimen/pet_info_tab_img"
+            android:layout_width="@dimen/pet_info_img"
+            android:layout_height="@dimen/pet_info_img"
             android:layout_marginStart="@dimen/small_radius"
             android:padding="@dimen/button_padding"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="TextView"
-            android:textSize="@dimen/tablet_subtitle_font"
+            android:textSize="@dimen/tablet_body_font"
             app:layout_constraintBottom_toBottomOf="@+id/resourceImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/resourceImage"
