@@ -18,8 +18,6 @@ public class Pet {
     private String petOutdoor;
     private String petCompanion;
     private String petGrooming;
-//    private String petLink;
-//    private String petButton;
     private String petImgDesc;
     private int petImage;
 
@@ -74,6 +72,7 @@ public class Pet {
         this.petImgDesc = petImgDesc;
     }
 
+    //constructor for the query pet from the quiz
     public Pet(int[] petNeeds) {
         this.petNeeds = petNeeds;
     }

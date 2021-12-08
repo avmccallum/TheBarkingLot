@@ -69,6 +69,7 @@ public class ContactFragment extends Fragment {
         phoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //phone intent
                 Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:5191234567"));
                 try {
                     startActivity(i);
@@ -77,10 +78,12 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
+
         Button emailButton = view.findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //email intent
                 Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
                 i.putExtra(Intent.EXTRA_EMAIL, new String[] {"contact@thebarkinglot.ca"});
                 try {
@@ -90,10 +93,12 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
+
         Button mapButton = view.findViewById(R.id.mapButton);
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //map intent
                 Uri location = Uri.parse("geo:0,0?q=43.60057304043616,-80.56305246391902");
                 Intent i = new Intent(Intent.ACTION_VIEW, location);
                 try {
@@ -108,6 +113,7 @@ public class ContactFragment extends Fragment {
         formButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //navigate to the form
                 Navigation.findNavController(view).navigate(R.id.action_nav_contact_to_nav_form);
             }
         });

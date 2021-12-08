@@ -67,6 +67,7 @@ public class ResourcesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_resources, container, false);
 
+        //get pet type preference
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         String petToggle = sharedPreferences.getString("petMenu", "pet");
 

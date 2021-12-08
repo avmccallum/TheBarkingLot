@@ -42,8 +42,11 @@ public class CustomListViewAdapter extends ArrayAdapter<Resource> {
             @Override
             public void onClick(View view) {
 
+                //if its the animal info item, navigate to the info page
                 if(text.getText() == getContext().getString(R.string.resource6)) {
                     Navigation.findNavController(view).navigate(R.id.action_nav_resources_to_nav_pet_info);
+
+                //else navigate to the map intent
                 } else {
                     Uri location = Uri.parse("geo:0,0?q=" + getItem(position).getResourceLink());
                     Intent i = new Intent(Intent.ACTION_VIEW, location);

@@ -102,6 +102,7 @@ public class PetSurveyFragment extends Fragment {
         Animation countAnimIn = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_number_in);
         Animation countAnimOut = (Animation) AnimationUtils.loadAnimation(getContext(), R.anim.quiz_number_out);
 
+        //get animation preference
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         int animToggle = Integer.parseInt(sharedPreferences.getString("animationsMenu", "1"));
 

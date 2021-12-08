@@ -32,10 +32,13 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Pet pet = pets.get(position);
+
+        //if there is a description, set the scroll view to hidden
         if(pet.getPetDesc() != null) {
-            //if there is a description, set the
             holder.petDescription.setText(pet.getPetDesc());
             holder.scrollView.setVisibility(View.GONE);
+
+        //else, hide the description textview and add the scrollview contents
         } else {
             holder.petDescription.setVisibility(View.GONE);
             holder.petHours.setText(pet.getPetHours());

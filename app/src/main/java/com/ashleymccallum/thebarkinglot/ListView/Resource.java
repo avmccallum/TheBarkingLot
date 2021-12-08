@@ -1,5 +1,10 @@
 package com.ashleymccallum.thebarkinglot.ListView;
 
+/**
+ * Resource pojo
+ * Holds a string item name, int image id, string resource link
+ */
+
 public class Resource {
     private String resourceItem;
     private int resourceImage;

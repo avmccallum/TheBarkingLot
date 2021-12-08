@@ -98,46 +98,31 @@ public class HomeInfoFragment extends Fragment {
             homeInfoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+                    //calendar intent
                     if(getString(mParam4).equals(getString(R.string.event_link))) {
 
-                        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
-                            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.WRITE_CALENDAR)) {
-                                final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
-                                alertDialog.setTitle("Calendar Permission");
-                                alertDialog.setMessage("We need access to your calendar to add the event");
-                                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        alertDialog.dismiss();
-                                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
-                                    }
-                                });
-                                alertDialog.show();
-                            } else {
-                                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_CALENDAR}, PERMISSION_WRITE_CALENDAR);
-                            }
-                        } else {
-                            String title = "The Barking Lot - Adoption Event";
+                        String title = "The Barking Lot - Adoption Event";
 
-                            Calendar calendar = Calendar.getInstance();
-                            calendar.set(2021, 11, 18, 12, 0, 0);
-                            long startTime = calendar.getTimeInMillis();
-                            long endTime = calendar.getTimeInMillis() + 4 * 60 * 60 * 1000;
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(2021, 11, 18, 12, 0, 0);
+                        long startTime = calendar.getTimeInMillis();
+                        long endTime = calendar.getTimeInMillis() + 4 * 60 * 60 * 1000;
 
-                            Intent i = new Intent(Intent.ACTION_INSERT);
-                            i.setData(CalendarContract.Events.CONTENT_URI);
-                            i.putExtra(CalendarContract.Events.TITLE, title);
-                            i.putExtra(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
-                            i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
-                            i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
+                        Intent i = new Intent(Intent.ACTION_INSERT);
+                        i.setData(CalendarContract.Events.CONTENT_URI);
+                        i.putExtra(CalendarContract.Events.TITLE, title);
+                        i.putExtra(CalendarContract.Events.RRULE, "FREQ=MONTHLY;BYDAY=SA");
+                        i.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+                        i.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
 
-                            try {
-                                startActivity(i);
-                            } catch (ActivityNotFoundException e) {
-                                Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
-                            }
+                        try {
+                            startActivity(i);
+                        } catch (ActivityNotFoundException e) {
+                            Snackbar.make(getActivity().findViewById(android.R.id.content), "No application found", Snackbar.LENGTH_SHORT).show();
                         }
 
+                    //SMS intent
                     } else if(getString(mParam4).equals(getString(R.string.invite_link))) {
 
                         Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"));

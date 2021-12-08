@@ -43,6 +43,8 @@ public class SurveyViewPagerAdapter extends FragmentStateAdapter implements View
 
     @Override
     public void transformPage(@NonNull View page, float position) {
+
+        //load animation preference and add animation
         Animation animation = (Animation) AnimationUtils.loadAnimation(page.getContext(), R.anim.slideshow_animation);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(page.getContext());
         int animToggle = Integer.parseInt(sharedPreferences.getString("animationsMenu", "1"));

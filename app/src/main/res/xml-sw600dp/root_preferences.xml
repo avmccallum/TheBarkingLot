@@ -21,45 +21,43 @@
             app:entryValues="@array/pet_value"
             app:key="petMenu"
             app:summary="@string/pet_pref_summary"
-            app:title="@string/pet_pref_title" />
+            app:title="@string/pet_pref_title"/>
 
     </PreferenceCategory>
 
     <PreferenceCategory
-        app:key="userMenu"
+        app:title="@string/user_title"
         app:summary="@string/user_summary"
-        app:title="@string/user_title">
+        app:key="userMenu">
 
         <EditTextPreference
-            android:persistent="true"
             app:defaultValue=""
             app:key="userFirstName"
             app:title="@string/form_fname"
-            app:useSimpleSummaryProvider="true" />
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true"/>
 
         <EditTextPreference
-            android:persistent="true"
             app:defaultValue=""
             app:key="userLastName"
             app:title="@string/form_lname"
-            app:useSimpleSummaryProvider="true" />
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true"/>
 
         <EditTextPreference
-            android:persistent="true"
             app:defaultValue=""
             app:key="userEmail"
             app:title="@string/form_email"
-            app:useSimpleSummaryProvider="true" />
+            android:persistent="true"
+            app:useSimpleSummaryProvider="true"/>
 
         <EditTextPreference
-            android:persistent="true"
             app:defaultValue=""
             app:key="userPhone"
             app:title="@string/form_phone"
+            android:persistent="true"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
 </PreferenceScreen>
-
-<!-- TODO - make tablet compatible layout -->
